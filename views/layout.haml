@@ -1,0 +1,101 @@
+!!! 5
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "Apptentive, Inc.", name: "author"}
+    %meta{content: "True", name: "HandheldFriendly"}
+    %meta{content: "320", name: "MobileOptimized"}
+    %meta{content: "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}
+    %meta{content: "on", "http-equiv" => "cleartype"}
+
+    %title Apptentive Developer Center
+
+    %link{href: "/favicon.ico", rel: "shortcut icon"}
+    %link{href: stylesheet_path("application.css"), rel: "stylesheet", type: "text/css"}
+    %script{src: javascript_path("application.js"), type: "text/javascript"}
+
+    -# = render 'layouts/analytics' if Rails.env == 'production'
+
+  %body
+    .container.wrapper
+      .navbar.brand
+        .navbar-inner
+          #profile_menu
+          .brand
+            %a{href: "/"}
+              %img{src: "/assets/logo.png", alt: 'Apptentive', height: "19px", width: "105px"}
+      .row-fluid.header
+        .span7
+          %h1 Apptentive Dev Center
+        .span5.pull-right
+          %input.search{placeholder: "Search dev center", type:"text"}
+      .row-fluid.main
+        .span3.navigation
+          .navigation
+            %a.btn.btn-navbar.visible-phone{'data-toggle' => 'collapse', 'data-target' => '.nav-collapse'}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .brand
+            .nav-collapse.collapse
+              %ul.nav
+                %li.main-item.simple
+                  %a{href: "/status_good"}
+                    %img{alt:"Status", height:"19", src:"/assets/dashboard.png", width:"20"} Status Good
+                %li.main-item.simple
+                  %a{href: "/status_bad"}
+                    %img{alt:"Status", height:"19", src:"/assets/dashboard.png", width:"20"} Status Bad
+                %li.main-item.simple
+                  %a{href: "/"}
+                    %img{alt:"Overview", height:"14", src:"/assets/overview.png", width:"17"} Overview
+                %li.main-item.menu
+                  %a
+                    %img{alt:"Platforms", src:"/assets/platforms.png", class:"plat"} Platforms & Integration
+                  %ul
+                    %li.simple
+                      %a IOS
+                    %li.simple
+                      %a Android
+                    %li.simple
+                      %a OSX
+                    .separator
+                    %li.simple
+                      %a Trigger.io
+                    %li.simple
+                      %a PhoneGap
+                    .separator
+                %li.main-item.menu
+                  %a
+                    %img{alt:"Conversations", src:"/assets/features.png"} Features
+                  %ul
+                    %li.simple
+                      %a Ratings Promts
+                    %li.simple
+                      %a Surveys
+                    %li.simple
+                      %a Message Center
+                    .separator
+
+                %li.main-item.black.simple
+                  %a
+                    %img{alt:"Changelog", src:"/assets/changelog.png"} Changelog
+                %li.main-item.black.simple
+                  %a
+                    %img{alt:"Reference", src:"/assets/reference.png"} Reference
+                %li.main-item.black.simple
+                  %a
+                    %img{alt:"Contact", src:"/assets/contact.png"} Contact
+
+        .span9#content= yield
+
+      %footer
+        .container
+          .row-fluid
+            .span6
+              -# = link_to 'About', about_url
+              -# = link_to 'Blog', blog_url
+              -# = link_to 'Developers', developers_url
+            .span6
+              &copy; #{Time.now.year} Apptentive
+      -# = render 'layouts/hubspot_analytics' if Rails.env == 'production'

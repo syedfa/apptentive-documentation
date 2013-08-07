@@ -1,0 +1,308 @@
+@import "bootstrap"
+@import "bootstrap-responsive"
+@import "compass/reset"
+@import "compass/typography/lists"
+@import "compass/typography/links/unstyled-link"
+@import "compass/layout/sticky-footer"
+@import "compass/css3/images"
+@import "compass/css3/border-radius"
+@import "compass/css3/box-sizing"
+@import "compass/css3/box-shadow"
+@import "compass/css3/text-shadow"
+@import "compass/css3/background-clip"
+@import "compass/css3/box"
+
+// COLOR DEFINITIONS
+$header_dark_blue: #1b3d43
+$light_blue_highlight: #dcf1fd
+$mid_blue_header: #3692ca
+$light_grey_accent: #edeee9
+
+$normal_text: #545454
+$blue_links: #4180b1
+$footer_links: #4b5a63
+
+$off_black_text: #111f22
+$blue_subhead_accent: #2ea0e6
+$apptentive_red: #e62a32
+
+$panelWidth: 75%
+$panelBackgroundColor: #d0dee6
+$panelTitleFontSize: 24px
+$panelSecondaryTitleFontSize: 18px
+$secondaryBackgroundColor: #e4e4e4
+$panelActionsBackgroundColor: #d6d6d6
+$panelItemBorderColor: #d6d6d6
+$addItemInactiveColor: #7aa100
+$addItemActiveColor: #6c8e00
+$addItemBackgroundColor: #f5f5f5
+$primaryItemLabelColor: #3c6fa3
+$secondaryListItemNumberColor: #060606
+
+@import "fonts"
+
+a
+  text-decoration: none
+
+p
+  margin-bottom: 12px
+  line-height: 21px
+
+strong
+  font-family: 'OpenSansBold'
+
+input:focus, select:focus, textarea:focus, button:focus
+  outline: none
+
+@mixin line
+  clear: both
+  display: block
+  overflow: hidden
+  *overflow: visible
+  *zoom: 1
+
+@mixin unit
+  float: left
+
+$right_head_margin: 22px
+$header_footer_links: 12px/normal $light
+
+@mixin frame-links
+  &,a
+    padding: 0
+    font: 12px/normal $light
+    color: #B6B6B6
+    text-shadow: none
+
+// FRAME
+html, body
+  height: 100%
+
+body
+  text-align: left
+  background: #f7f7f7
+  font: 14px/18px $regular
+  -webkit-transform: translateZ(0)
+
+  .btn
+    padding: 7px 12px
+
+  .container.wrapper
+    @media (min-width: 768px)
+      height: 100%
+      +box-sizing(border-box)
+
+  .navbar.brand
+    margin: 0
+
+    #profile_menu
+      .btn-group.profile
+        margin-top: 15px
+        margin-left: 15px
+        @media (max-width: 980px)
+          margin-top: 1px
+          margin-bottom: 10px
+
+    .navbar-inner
+      background: inherit
+      border: none
+      box-shadow: none
+      padding: 0
+
+      .brand, ul.nav
+        float: right
+        vertical-align: middle
+        @media (min-width: 980px)
+          padding: 0 24px
+        li
+          @include frame-links
+          @media (min-width: 980px)
+            padding: 24px
+        img
+          @media (min-width: 980px)
+            margin: $right_head_margin 0px
+
+  .row-fluid.header
+    +border-top-radius
+    background: #4b5a63
+
+  .header .span5
+    padding: 17px
+  .header .span7
+    @media (max-width: 767px)
+      text-align: center
+
+  .header .search
+    +border-radius(6px)
+    +box-shadow(inset 0px 2px 1px #dadde0)
+    background: #ebeced image-url('search-icon.png') no-repeat 97%
+    border: none
+    color: #566a7a
+    float: right
+    height: 28px
+    margin: 0
+    padding: 1px 30px 1px 10px
+    text-align: right
+    width: 64%
+    &:focus
+      background-color: #f7f7f7
+    @media (max-width: 767px)
+      padding-right: 8%
+      padding: 1px 8% 1px 2%
+      width: 89%
+
+  .header h1
+    +text-shadow(1px 1px 1px black)
+    color: #e4f0f9
+    padding: 17px 17px 17px 60px
+    font: 22px/normal $bold
+    background: transparent image-url('mesh-app.png') no-repeat 17px
+    @media (max-width: 767px)
+      background: none
+      displaY: inline-block
+    .btn-group.profile
+      margin: 20px $right_head_margin 20px 20px
+
+  .row-fluid.main
+    background: #FFF
+    +border-bottom-radius
+    @media (min-width: 768px)
+      height: 70%
+    .span3.navigation
+      +border-bottom-left-radius
+      overflow: auto
+      @media (min-width: 768px)
+        height: 100%
+      @media (max-width: 767px)
+        padding: 0
+        min-height: 0
+      padding: 15px 0
+      background: #efefef
+      +box-shadow(inset -1px 0px 4px rgba(0,0,0,0.2))
+      ul
+        list-style: none
+        margin: 0
+        li
+          padding: 5px 15px
+          margin-left: 10px
+          cursor: pointer
+          +border-top-left-radius(4px)
+          +border-bottom-left-radius(4px)
+          a
+            font: 15px/normal $semibold
+            color: $blue_links
+            text-decoration: none
+            img
+              margin-right: 5px
+              vertical-align: middle
+            .plat
+              margin: -4px 8px 0px 5px
+            &:hover
+              background: transparent
+          ul
+            display: none
+            margin-top: 0px
+            width: 101%
+            margin-left: 13px
+            li
+              padding: 3px 0px 3px 10px
+              font: 12px/normal $semibold
+              color: #437591
+              &:hover
+                background: #E8E8E8
+                color: #22445E
+          &:hover
+            background: #E8E8E8
+          &.selected
+            background: #DCDCDC
+            &.menu
+              background: transparent
+        .selected.menu
+          & > a
+            +opacity(60)
+            color: $normal_text
+          &:hover
+            background: transparent
+        .separator
+          border-bottom: 1px solid #dedede
+          margin: 5px 0
+          width: 85%
+        .black a
+          color: $normal_text
+        .main-item
+          margin-right: 3px
+
+    .span3.navigation
+      .btn-navbar
+        overflow: hidden
+        width: 30px
+        margin-right: 18px
+        background: #3a444b
+        position: absolute
+        top: 52px
+        left: 4%
+        span
+          float: left
+          height: 4px
+          line-height: 14px
+          margin: 2px
+          width: 87%
+          background: #ddd
+      .nav-collapse.collapse
+        @media (min-width: 768px) and (max-width: 979px) 
+          overflow: visible
+          height: auto
+          li a
+            padding: 0
+        @media (max-width: 768px)
+          overflow: hidden
+          height: 0
+          ul
+            padding: 15px 0
+
+    .span9#content
+      overflow-y: scroll !important
+      overflow-x: hidden
+      position: relative
+      padding: 0px
+      +display-box
+      +box-orient(vertical)
+      padding: 0
+      margin: 0
+      width: 76.92508%
+      overflow: hidden
+      @media (min-width: 768px)
+        height: 100%
+
+    .span3
+      background: #EFEFEF
+      height: 100%
+      padding: 20px 10px
+
+  .row-fluid
+    &:last-child
+      +border-bottom-radius
+      .span3
+        &:first-child
+          +border-bottom-left-radius
+        &:last-child
+          +border-bottom-right-radius
+
+  footer
+    color: $footer_links
+    margin: 20px 0
+    font: 12px/normal $regular
+    .container .span6
+      &:last-child
+        text-align: right
+        float: right
+      @media (max-width: 767px)
+        width: 48.93617%
+        float: left
+        padding: 0 20px
+    a
+      color: $footer_links
+      margin-right: 9px
+
+@import "status"
+@import "dev_help"
