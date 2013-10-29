@@ -1,5 +1,5 @@
-# Welcome to the Apptentive Developer Center
- 
+# Apptentive Documentation
+
 Here you can find a collection of resources on how to best implement and use Apptentive.  At its most basic, an Apptentive integration should be a very quick process.
 
 ## Getting Started
