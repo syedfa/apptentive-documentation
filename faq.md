@@ -183,24 +183,191 @@
 
 <dl>
   <dt>
+    How can we test it in our development environment? We tried with days = 0 plus events = 1 but it isn't working.
   </dt>
   <dd>
+    Making any of the ratings prompt values 0 makes them ignored (there's a note to this effect in the settings page). It sounds like you haven't passed along a significant event. This is a variable you can program against so it's unique to your app. As an example, some of our customers will increment the events account every time an app customer passes a level. Since you've 0'd out the days and you're not passing along an event value as of yet, this should explain why you're not seeing it. The easiest way to test this would be to use the "Launches" variable and make it a low number. When you're in development mode in Xcode on iOS the normal 24 hour refresh of app settings are ignored and refreshed with each launch. 
+  </dd>
+</dl>
+
+
+## Ratings
+
+<dl>
+  <dt>
+    Do you have best practices on setting up your ratings prompt?  
+  </dt>
+  <dd>
+    Every app is different so it is important to experiment with when and how often you use the ratings prompt.
   </dd>
 </dl>
 
 <dl>
   <dt>
+    Can I edit the "Do you love...?" prompt that users see?
   </dt>
   <dd>
+    ?
   </dd>
 </dl>
+
+<dl>
+  <dt>
+    How can I change the language of the ratings prompt?
+  </dt>
+  <dd>
+    To change the language of the "rating prompt" you need to change it directly in the code. Currently it is not possible to change it through the dashboard. Here is an example of how one of our customers changed the "rating prompt" to spanish: https://github.com/apptentive/apptentive-ios/blob/master/ApptentiveConnect/resources/localization/es.lproj/Localizable.strings
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    As far as suggestions go, here are a few:
+  </dt>
+  <dd>
+    Make sure that you've also created a "Feedback" or "Contact Us" navigation component in your app in a logical place for customers to find it. This will assist in helping you get more of the direct feedback and ensuring that your customers know how to speak to you instead of going to the app store - We find that thinking about significant events and passing along counts for those variables helps our customers get more granular about their prompts and are able to tie them to moments of success more effectively - When launching, it's a good idea to start conservatively and then change the settings over time as you learn about customer behavior. For example, a pretty common set of generic triggers is 10 days on device and 5 app launches. After a couple of weeks you should have some data and be able to change the settings up and see how your love ratio (the % of people who see the prompt and click "Yes" to the question) shapes up.
+  </dd>
+</dl>
+
+
+## Feedback
+
+<dl>
+  <dt>
+    How do I integrate Apptentive with my 3rd party CRM?
+  </dt>
+  <dd>
+    Contact us. You must be on a corporate plan or above for this feature.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    Can I reply to feedback straight from my e-mail?
+  </dt>
+  <dd>
+    Yes, if the e-mail address is included in the message you can reply directly from your e-mail.
+  </dd>
+</dl>
+
+
+## Surveys
+
+<dl>
+  <dt>
+    Only certain plans offer ‘Multiple Surveys’. How is that different than having Surveys?
+  </dt>
+  <dd>
+    ?
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    I was under the impression that if there was an active survey, it would be presented in place of the normal “send us an email” flow.  Is that not the case?
+  </dt>
+  <dd>
+    If it isn’t what rules are used to send people to the survey? Also, concerning the rule “Multiple Responses Per Device” – is that per device type or per unique device (user)? Can surveys be edited once they are published? Surveys require a bit of work in your app in order to ensure that they show. Your engineers will have to make a specific call for the survey they'd like to show in your app, at the point in time you'd like to show it. So, as far as "rules" go, it's really up to you. We often see customers calling a survey after someone has completed a level or hit a certain point in usage.  As far as "Multiple Responses Per Device" - this is per unique device. The idea here is that some surveys are ongoing sentiment analyses and others are one-time research exercises. Surveys can definitely be edited once published. You can stop the survey or modify it at any point in time through the dashboard. Once you've created a survey, those options will be available to you, along with the reports of the results.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    Does Apptentive support multiple surveys”?
+  </dt>
+  <dd>
+    We do support multiple surveys for our paid customers (Pro and above), that might be part of the confusion here. Using "tags" we support calling different surveys and we can actually allow you to add custom data to each of your communications in order to get more granular.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    How do the live surveys work?
+  </dt>
+  <dd>
+    You can take them through the high level that they add our SDK to their app, pick the location in their code that they might want a survey to appear, add the API call at that point, and then use our server to define and deliver the survey to their clients.
+  </dd>
+</dl>
+
+
+## Apptentive Support
+
+<dl>
+  <dt>
+    Why don’t I see any data in the Love Ratio?
+  </dt>
+  <dd>
+    The Love Ratio is based on responses to the "Do you love..." ratings prompt and will be empty until you've had users respond to that dialog. If you've gotten feedback or had users go through these dialogs and still aren't seeing data, please let me know and I'll take a look.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    What is the Love Ratio?
+  </dt>
+  <dd>
+    The Love Ratio is a calculation based upon if you're using our Ratings Prompts. The ratio will display the % of the time that your customers are clicking "Yes" to the question, "Do you love [app name]?" and does so on a daily basis, so you can see the changes in the ratio over time, depending on your settings. The feedback volume keeps track of how much feedback you're receiving from your customers over time. It's just based upon the number of people who give feedback through any place you've implemented our feedback capabilities, including feedback received as a result of showing the ratings prompt.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    What is Ratings Done Right?
+  </dt>
+  <dd>
+    Ratings Done Right is what we call our intelligent ratings prompts that lead customers to give you feedback if they aren't thrilled with your app, or rate you in the app store if they are loving the experience. When and how often your customers are prompted with the ratings dialog is controlled by you.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    How can I build my own feedback/question form and put it into my app (iOS/Android)?
+  </dt>
+  <dd>
+    You don't have to build a form - you just make a call to our feedback form and it'll display inside your app. We've done all the hard work around offline support, designing the form, collecting device information etc - you just need a button that says "Give Feedback" or "Contact Us" or an icon for help in your app that calls us.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    What does “Monthly Active Users” specifically mean?
+  </dt>
+  <dd>
+    Monthly Active Users is for your app - however many people you have using your app(s) on a monthly basis. It means the number of unique devices identified using the app over the period of a calendar month.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    Can I use the “Starter” (free) plan for multiple apps if the together they all have less than 5,000 monthly active users?
+  </dt>
+  <dd>
+    With the Starter plan, you can use us for up to 2 apps, with up to 2 collaborators, until your collective audience of monthly active users exceeds 5,000.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    What is the best word to effectively get people to send feedback?
+  </dt>
+  <dd>
+    "Give Feedback", "Send Feedback" and "Contact Us" are all pretty standard and use action-oriented language that helps increase consumer activities. If you are space limited, "Feedback" can work as well.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    How often does my dashboard update with data?
+  </dt>
+  <dd>
+    Daily, weekly? Am I able to update this manually? The data in the dashboard updates in real time.
+  </dd>
+</dl>
+
+----
 <dl>
   <dt>
   </dt>
   <dd>
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
   </dd>
 </dl>
