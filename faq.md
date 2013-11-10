@@ -1,5 +1,6 @@
 # FAQ
 
+
 ## Signing Up
 
 <dl>
@@ -29,7 +30,6 @@
   </dd>
 </dl>
 
-
 <dl>
   <dt>What should I set for "App Store ID" when adding a new app on?</dt>
   <dd>
@@ -39,6 +39,7 @@
     </ul>
   </dd>
 </dl>
+
 
 ## Setting Up Your Account
 
@@ -114,7 +115,9 @@
   </dd>
 </dl>
 
+
 ## Installation
+
 <dl>
   <dt>
     How can I connect my application from AppStore/Google Play with your data system and monitor feedback from users?
@@ -124,7 +127,9 @@
   </dd>
 </dl>
 
+
 ## Build Issue
+
 <dl>
   <dt>
     Your intro docs indicate that the linker flags -ObjC -all_load are required, but this causes a conflict with another library we're using in our app
@@ -134,12 +139,47 @@
   </dd>
 </dl>
 
+
+## Testing
+
 <dl>
   <dt>
+    I have a build that has Apptentive integrated and I’m testing it.  However, I’m running into an issue where I can only get the prompt to appear once on the device, and then it doesn’t show up anymore.  This is good for users but makes it hard to test.  Is there any-way to reset the count (e.g., of app launches for a particular device) for testing purposes?
   </dt>
   <dd>
+    <strong>Android:</strong> This is expected behavior. We only show the prompt once per app version. There are two normal ways to have the prompt show up again:
+    <ol>
+      <li>
+        You can bump the version code (android:versionCode="1") in your app's manifest. Then, just redeploy the app. Note: This requires that you have the "Reset rating prompt counters when app version changes" checkbox checked in your app's settings on the website.
+      </li>
+      <li>
+        You can delete the app's local settings through Android's Settings->Apps menu. This will return the app to a fresh install state.
+      </li>
+    </ol>
+    <strong>iOS:</strong> typically you wouldd delete and reinstall the app if this is just in testing. You can also use these methods to reset the ratings flow:
   </dd>
 </dl>
+```
+// To reset the user interactions with the ratings flow.
+- (void)resetApptentiveRatings {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults removeObjectForKey:@"ATAppRatingFlowRatedAppKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowDeclinedToRateThisVersionKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowUserDislikesThisVersionKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowLastUsedVersionKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowLastPromptDateKey"];
+        [defaults synchronize];
+}
+
+// To reset just the counters for the ratings.
+- (void)resetApptentiveRatingsCounters {
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        [defaults removeObjectForKey:@"ATAppRatingFlowLastUsedVersionFirstUseDateKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowUseCountKey"];
+        [defaults removeObjectForKey:@"ATAppRatingFlowSignificantEventsCountKey"];
+        [defaults synchronize];
+}
+```
 
 <dl>
   <dt>
@@ -154,14 +194,6 @@
   <dd>
   </dd>
 </dl>
-
-<dl>
-  <dt>
-  </dt>
-  <dd>
-  </dd>
-</dl>
-
 <dl>
   <dt>
   </dt>
