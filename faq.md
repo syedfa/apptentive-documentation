@@ -364,10 +364,53 @@
   </dd>
 </dl>
 
-----
+
+## Best Practices
+
 <dl>
   <dt>
+    How do I get people that love the app to proceed to the next step of rating/reviewing me?
   </dt>
   <dd>
+    We recommend experimenting with some of the settings around the prompts. Sometimes prompts are being used too early for the customer, or maybe too late - Changing the timing of the prompts can result in higher conversion - it is dependent on where they are in adoption of the app as well as usage in order to get going. We find that having prompts after significant events -- after making a purchase, or after completing an achievement -- can result with a higher % people going through the entire ratings process.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    Can we take a screen shot of the last screen the user viewed just before giving feedback?
+  </dt>
+  <dd>
+    How do others best use the attached screenshot feature? If the feedback button is implemented on multiple screens of the app, you can set the screenshot feature to capture the screen where the consumer hits the button. If it's only on one or 2 screens, attaching the "last screen" gets much tougher and would require you to pass along some historical data and snap screenshots along the way. We haven't seen anyone implement it this way as of yet, but if this is something you are interested in we could probably schedule a call to chat about it a bit more.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    Best practice for Apptentive.
+  </dt>
+  <dd>
+    Other best practices: you'll want to start the ratings prompt settings off conservatively, watch the data for at least a week and then make modifications from there. Also, if you have registration and have email addresses, you can pre-populate the email address from your database, making it easier for the consumer. You can also pass along custom data, if you have information that is helpful to you, like User ID.
+  </dd>
+</dl>
+
+
+## Upgrade Your Account
+
+<dl>
+  <dt>
+    If I find myself exceeding my current plans limits (for more information on plans, check out http://apptentive.com/plans), how do I upgrade my account?
+  </dt>
+  <dd>
+    Log into your Apptentive account and click “Your Plan & Billing” in the top right. Follow the instructions to add your credit card (if not added already). Once added, click on "Change Plan" and select the plan that is right for you.
+  </dd>
+</dl>
+
+<dl>
+  <dt>
+    If I exceed my current plan
+  </dt>
+  <dd>
+    ?
   </dd>
 </dl>
