@@ -16,6 +16,7 @@
     What happens if I choose the wrong plan or exceed my current plan too quickly?
   </dt>
   <dd>
+    ?
   </dd>
 </dl>
 
@@ -28,16 +29,6 @@
   </dd>
 </dl>
 
-<dl>
-  <dt>
-  </dt>
-  <dd>
-    <ul>
-      <li></li>
-      <li></li>
-    </ul>
-  </dd>
-</dl>
 
 <dl>
   <dt>What should I set for "App Store ID" when adding a new app on?</dt>
