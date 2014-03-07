@@ -19,4 +19,8 @@ Any contributions to our projects must sign the [Individual Contributor License 
 When you want to submit a change, send us a pull request. Before we merge, we'll check to make sure you're on the list of people who've signed our CLA.
 
 ## Contact Us
-Your questions and feedback are very important to us so please reach out to us if there is anyway we can help.  Contact us through [GitHub](https://github.com/apptentive) or email at [support@apptentive.com](mailto:support@apptentive.com)
+Your questions and feedback are very important to us so please reach out to us if there is any way we can help.
+
+* [Stack Overflow](http://stackoverflow.com/) may already have an answer for you.  We track Apptentive related questions, and regularly answer them.
+* Contact us through [GitHub](https://github.com/apptentive)
+* Email us directly at [support@apptentive.com](mailto:support@apptentive.com)
