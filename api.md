@@ -10,7 +10,7 @@ The Apptentive API provides programmatic access to the various data set by the A
 
 Authentication is required for accessing all API endpoints. The Apptentive API uses your API key as an OAuth token, and to authentication you must provide this token in the Authorization header. For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations
 ```
 
@@ -38,7 +38,7 @@ The central object for an App is a Conversation. Each Conversation has an associ
 
 A list of all Conversations for the App may be retrieved with a `GET` request to `https://api.apptentive.com/conversations`. For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations
 ```
 
@@ -70,7 +70,7 @@ You may provide two optional arguments to page through the results:
 
 A specific Conversation for the App may be retrieved with a `GET` request to  `https://api.apptentive.com/conversations/:id`, replacing `:id` with the appropriate id (e.g. as returned in the API above). For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations/5234f08cbca21f834800004d
 ```
 
@@ -88,7 +88,7 @@ The response will include the `id` for the Conversation, the `person_id` for the
 
 All of the Messages associated with a given conversation may be retrieved with a  `GET` request to `https://api.apptentive.com/conversations/:id/messages`, replacing `:id` with the appropriate id (e.g. as returned in the API above). For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations/5234f08cbca21f834800004d/messages
 ```
 
@@ -143,7 +143,7 @@ As with retrieving Conversations, the following parameters are supported to page
 
 All of the known People may be retrieved via a `GET` request to `https://api.apptentive.com/people`.  For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/people
 ```
 
@@ -183,7 +183,7 @@ The following parameters are supported to page through People:
 
 A specific Person may be retrieved via `GET` request to `https://api.apptentive.com/people/:id`, replacing `:id` with the requested Person's id. For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/people/5224f08cbca21f834800004e
 ```
 The response will include the fields (detailed above) for the specific Person:
@@ -207,7 +207,7 @@ The response will include the fields (detailed above) for the specific Person:
 
 All of the Devices may be retrieved via a `GET` request to `https://api.apptentive.com/devices`.  For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/devices
 ```
 
@@ -288,7 +288,7 @@ The following parameters are supported to page through Devices:
 
 A specific Device may be retrieved via `GET` request to `https://api.apptentive.com/device/:id`, replacing `:id` with the requested Device's id.  For example:
 
-```shell
+```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/device/5224f08cbca21f834800004f
 ```
 
