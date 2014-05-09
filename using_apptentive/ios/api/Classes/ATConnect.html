@@ -1,0 +1,2270 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>ATConnect Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.2 (build 963)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">ApptentiveConnect </a></h1>
+				<a id="developerHome" href="../index.html">Apptentive, Inc.</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">ATConnect Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/apiKey">&nbsp;&nbsp;&nbsp;&nbsp;apiKey</option>
+	
+	<option value="//api/name/appID">&nbsp;&nbsp;&nbsp;&nbsp;appID</option>
+	
+	<option value="//api/name/customPlaceholderText">&nbsp;&nbsp;&nbsp;&nbsp;customPlaceholderText</option>
+	
+	<option value="//api/name/initialUserEmailAddress">&nbsp;&nbsp;&nbsp;&nbsp;initialUserEmailAddress</option>
+	
+	<option value="//api/name/initialUserName">&nbsp;&nbsp;&nbsp;&nbsp;initialUserName</option>
+	
+	<option value="//api/name/initiallyUseMessageCenter">&nbsp;&nbsp;&nbsp;&nbsp;initiallyUseMessageCenter</option>
+	
+	<option value="//api/name/showEmailField">&nbsp;&nbsp;&nbsp;&nbsp;showEmailField</option>
+	
+	<option value="//api/name/showTagline">&nbsp;&nbsp;&nbsp;&nbsp;showTagline</option>
+	
+	<option value="//api/name/tintColor">&nbsp;&nbsp;&nbsp;&nbsp;tintColor</option>
+	
+	<option value="//api/name/useMessageCenter">&nbsp;&nbsp;&nbsp;&nbsp;useMessageCenter</option>
+	
+	
+	
+	
+	<option value="class_methods">Class Methods</option>
+	
+	<option value="//api/name/sharedConnection">&nbsp;&nbsp;&nbsp;&nbsp;+ sharedConnection</option>
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/addAmazonSNSIntegrationWithDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- addAmazonSNSIntegrationWithDeviceToken:</option>
+	
+	<option value="//api/name/addCustomData:withKey:">&nbsp;&nbsp;&nbsp;&nbsp;- addCustomData:withKey:</option>
+	
+	<option value="//api/name/addCustomDeviceData:withKey:">&nbsp;&nbsp;&nbsp;&nbsp;- addCustomDeviceData:withKey:</option>
+	
+	<option value="//api/name/addCustomPersonData:withKey:">&nbsp;&nbsp;&nbsp;&nbsp;- addCustomPersonData:withKey:</option>
+	
+	<option value="//api/name/addIntegration:withConfiguration:">&nbsp;&nbsp;&nbsp;&nbsp;- addIntegration:withConfiguration:</option>
+	
+	<option value="//api/name/addIntegration:withDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- addIntegration:withDeviceToken:</option>
+	
+	<option value="//api/name/addUrbanAirshipIntegrationWithDeviceToken:">&nbsp;&nbsp;&nbsp;&nbsp;- addUrbanAirshipIntegrationWithDeviceToken:</option>
+	
+	<option value="//api/name/didReceiveRemoteNotification:fromViewController:">&nbsp;&nbsp;&nbsp;&nbsp;- didReceiveRemoteNotification:fromViewController:</option>
+	
+	<option value="//api/name/dismissMessageCenterAnimated:completion:">&nbsp;&nbsp;&nbsp;&nbsp;- dismissMessageCenterAnimated:completion:</option>
+	
+	<option value="//api/name/engage:fromViewController:">&nbsp;&nbsp;&nbsp;&nbsp;- engage:fromViewController:</option>
+	
+	<option value="//api/name/openAppStore">&nbsp;&nbsp;&nbsp;&nbsp;- openAppStore</option>
+	
+	<option value="//api/name/presentMessageCenterFromViewController:">&nbsp;&nbsp;&nbsp;&nbsp;- presentMessageCenterFromViewController:</option>
+	
+	<option value="//api/name/presentMessageCenterFromViewController:withCustomData:">&nbsp;&nbsp;&nbsp;&nbsp;- presentMessageCenterFromViewController:withCustomData:</option>
+	
+	<option value="//api/name/removeCustomDataWithKey:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCustomDataWithKey:</option>
+	
+	<option value="//api/name/removeCustomDeviceDataWithKey:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCustomDeviceDataWithKey:</option>
+	
+	<option value="//api/name/removeCustomPersonDataWithKey:">&nbsp;&nbsp;&nbsp;&nbsp;- removeCustomPersonDataWithKey:</option>
+	
+	<option value="//api/name/removeIntegration:">&nbsp;&nbsp;&nbsp;&nbsp;- removeIntegration:</option>
+	
+	<option value="//api/name/sendAttachmentFile:withMimeType:">&nbsp;&nbsp;&nbsp;&nbsp;- sendAttachmentFile:withMimeType:</option>
+	
+	<option value="//api/name/sendAttachmentImage:">&nbsp;&nbsp;&nbsp;&nbsp;- sendAttachmentImage:</option>
+	
+	<option value="//api/name/sendAttachmentText:">&nbsp;&nbsp;&nbsp;&nbsp;- sendAttachmentText:</option>
+	
+	<option value="//api/name/showFeedbackWindow:">&nbsp;&nbsp;&nbsp;&nbsp;- showFeedbackWindow:</option>
+	
+	<option value="//api/name/unreadMessageCount">&nbsp;&nbsp;&nbsp;&nbsp;- unreadMessageCount</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Basic Usage">Basic Usage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Interface Customization">Interface Customization</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Presenting UI">Presenting UI</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Presenting UI (OS X)">Presenting UI (OS X)</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Attach Text, Images, and Files">Attach Text, Images, and Files</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Add Custom Device or Person Data">Add Custom Device or Person Data</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Open App Store">Open App Store</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#task_Integrate With Other Services">Integrate With Other Services</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/apiKey">apiKey</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/appID">appID</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/customPlaceholderText">customPlaceholderText</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initialUserEmailAddress">initialUserEmailAddress</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initialUserName">initialUserName</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initiallyUseMessageCenter">initiallyUseMessageCenter</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showEmailField">showEmailField</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showTagline">showTagline</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tintColor">tintColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/useMessageCenter">useMessageCenter</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#class_methods">Class Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sharedConnection">sharedConnection</a></span></li>
+	
+</ul></li>
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addAmazonSNSIntegrationWithDeviceToken:">addAmazonSNSIntegrationWithDeviceToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCustomData:withKey:">addCustomData:withKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCustomDeviceData:withKey:">addCustomDeviceData:withKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addCustomPersonData:withKey:">addCustomPersonData:withKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addIntegration:withConfiguration:">addIntegration:withConfiguration:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addIntegration:withDeviceToken:">addIntegration:withDeviceToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/addUrbanAirshipIntegrationWithDeviceToken:">addUrbanAirshipIntegrationWithDeviceToken:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/didReceiveRemoteNotification:fromViewController:">didReceiveRemoteNotification:fromViewController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dismissMessageCenterAnimated:completion:">dismissMessageCenterAnimated:completion:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/engage:fromViewController:">engage:fromViewController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/openAppStore">openAppStore</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentMessageCenterFromViewController:">presentMessageCenterFromViewController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/presentMessageCenterFromViewController:withCustomData:">presentMessageCenterFromViewController:withCustomData:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCustomDataWithKey:">removeCustomDataWithKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCustomDeviceDataWithKey:">removeCustomDeviceDataWithKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeCustomPersonDataWithKey:">removeCustomPersonDataWithKey:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeIntegration:">removeIntegration:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendAttachmentFile:withMimeType:">sendAttachmentFile:withMimeType:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendAttachmentImage:">sendAttachmentImage:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sendAttachmentText:">sendAttachmentText:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/showFeedbackWindow:">showFeedbackWindow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/unreadMessageCount">unreadMessageCount</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="ATConnect Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">ATConnect Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">ATConnect.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p><code>ATConnect</code> is a singleton which is used as the main point of entry for the Apptentive service.</p>
+
+<h2>Configuration</h2>
+
+<p>On first use, you&rsquo;ll want to set the API key, you&rsquo;d do that like so:</p>
+
+<pre><code> [[ATConnect sharedConnection].apiKey = @"your API key here";
+</code></pre>
+
+<h2>Engagement Events</h2>
+
+<p>The rating prompt and other Apptentive interactions are targeted to certain Apptentive events. For example,
+you could decide to show the rating prompt at the event user_completed_level. You can then, later,
+reconfigure the rating prompt interaction to show at user_logged_in.</p>
+
+<p>You would add calls at these points to optionally engage with the user:</p>
+
+<pre><code> [[ATConnect sharedConnection] engage:@"completed_level" fromViewController:viewController];
+</code></pre>
+
+<p>See the readme for more information.</p>
+
+<h2>Notifications</h2>
+
+<p><code>ATMessageCenterUnreadCountChangedNotification</code></p>
+
+<p>Sent when the number of unread messages changes.
+The notification object is undefined. The <code>userInfo</code> dictionary contains a <code>count</code> key, the value of which
+is the number of unread messages.</p>
+
+<p><code>ATAppRatingFlowUserAgreedToRateAppNotification</code></p>
+
+<p>Sent when the user has agreed to rate the application.</p>
+
+<p><code>ATSurveySentNotification</code></p>
+
+<p>Sent when a survey is submitted by the user. The userInfo dictionary will have a key named <code>ATSurveyIDKey</code>,
+with a value of the id of the survey that was sent.</p>
+
+<h2>3rd Party Integration</h2>
+
+<p>There are two constant keys for currently supported third party integrations:</p>
+
+<ul>
+<li><code>ATIntegrationKeyUrbanAirship</code> - For Urban Airship</li>
+<li><code>ATIntegrationKeyAmazonSNS</code> - For Amazon SNS</li>
+<li><code>ATIntegrationKeyKahuna</code> - For Kahuna</li>
+</ul>
+
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						<a title="Basic Usage" name="task_Basic Usage"></a>
+						<h3 class="subsubtitle task-title">Basic Usage</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/apiKey">&nbsp;&nbsp;apiKey</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/appID">&nbsp;&nbsp;appID</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sharedConnection">+&nbsp;sharedConnection</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Interface Customization" name="task_Interface Customization"></a>
+						<h3 class="subsubtitle task-title">Interface Customization</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showTagline">&nbsp;&nbsp;showTagline</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showEmailField">&nbsp;&nbsp;showEmailField</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/customPlaceholderText">&nbsp;&nbsp;customPlaceholderText</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/useMessageCenter">&nbsp;&nbsp;useMessageCenter</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initiallyUseMessageCenter">&nbsp;&nbsp;initiallyUseMessageCenter</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tintColor">&nbsp;&nbsp;tintColor</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li>
+						</ul>
+						
+						
+						<a title="Presenting UI" name="task_Presenting UI"></a>
+						<h3 class="subsubtitle task-title">Presenting UI</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/presentMessageCenterFromViewController:">&ndash;&nbsp;presentMessageCenterFromViewController:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/presentMessageCenterFromViewController:withCustomData:">&ndash;&nbsp;presentMessageCenterFromViewController:withCustomData:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/unreadMessageCount">&ndash;&nbsp;unreadMessageCount</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/didReceiveRemoteNotification:fromViewController:">&ndash;&nbsp;didReceiveRemoteNotification:fromViewController:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/engage:fromViewController:">&ndash;&nbsp;engage:fromViewController:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dismissMessageCenterAnimated:completion:">&ndash;&nbsp;dismissMessageCenterAnimated:completion:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Presenting UI (OS X)" name="task_Presenting UI (OS X)"></a>
+						<h3 class="subsubtitle task-title">Presenting UI (OS X)</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/showFeedbackWindow:">&ndash;&nbsp;showFeedbackWindow:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Attach Text, Images, and Files" name="task_Attach Text, Images, and Files"></a>
+						<h3 class="subsubtitle task-title">Attach Text, Images, and Files</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendAttachmentText:">&ndash;&nbsp;sendAttachmentText:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendAttachmentImage:">&ndash;&nbsp;sendAttachmentImage:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sendAttachmentFile:withMimeType:">&ndash;&nbsp;sendAttachmentFile:withMimeType:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Add Custom Device or Person Data" name="task_Add Custom Device or Person Data"></a>
+						<h3 class="subsubtitle task-title">Add Custom Device or Person Data</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initialUserName">&nbsp;&nbsp;initialUserName</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initialUserEmailAddress">&nbsp;&nbsp;initialUserEmailAddress</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCustomPersonData:withKey:">&ndash;&nbsp;addCustomPersonData:withKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCustomDeviceData:withKey:">&ndash;&nbsp;addCustomDeviceData:withKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeCustomPersonDataWithKey:">&ndash;&nbsp;removeCustomPersonDataWithKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeCustomDeviceDataWithKey:">&ndash;&nbsp;removeCustomDeviceDataWithKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addCustomData:withKey:">&ndash;&nbsp;addCustomData:withKey:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeCustomDataWithKey:">&ndash;&nbsp;removeCustomDataWithKey:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Open App Store" name="task_Open App Store"></a>
+						<h3 class="subsubtitle task-title">Open App Store</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/openAppStore">&ndash;&nbsp;openAppStore</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+						
+						<a title="Integrate With Other Services" name="task_Integrate With Other Services"></a>
+						<h3 class="subsubtitle task-title">Integrate With Other Services</h3>
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addIntegration:withConfiguration:">&ndash;&nbsp;addIntegration:withConfiguration:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addIntegration:withDeviceToken:">&ndash;&nbsp;addIntegration:withDeviceToken:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeIntegration:">&ndash;&nbsp;removeIntegration:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addUrbanAirshipIntegrationWithDeviceToken:">&ndash;&nbsp;addUrbanAirshipIntegrationWithDeviceToken:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/addAmazonSNSIntegrationWithDeviceToken:">&ndash;&nbsp;addAmazonSNSIntegrationWithDeviceToken:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/apiKey" title="apiKey"></a>
+	<h3 class="subsubtitle method-title">apiKey</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The API key for Apptentive.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *apiKey</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This key is found on the Apptentive website under Settings, API &amp; Development.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/appID" title="appID"></a>
+	<h3 class="subsubtitle method-title">appID</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The app&rsquo;s iTunes App ID.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *appID</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>You can find this in iTunes Connect, and is the numeric &ldquo;Apple ID&rdquo; shown on your app details page.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/customPlaceholderText" title="customPlaceholderText"></a>
+	<h3 class="subsubtitle method-title">customPlaceholderText</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set this if you want some custom text to appear as a placeholder in the feedback text box.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *customPlaceholderText</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initialUserEmailAddress" title="initialUserEmailAddress"></a>
+	<h3 class="subsubtitle method-title">initialUserEmailAddress</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The initial email address of the app user in form fields and communicating with Apptentive.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *initialUserEmailAddress</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initialUserName" title="initialUserName"></a>
+	<h3 class="subsubtitle method-title">initialUserName</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The initial name of the app user when communicating with Apptentive.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, copy) NSString *initialUserName</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initiallyUseMessageCenter" title="initiallyUseMessageCenter"></a>
+	<h3 class="subsubtitle method-title">initiallyUseMessageCenter</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set this to NO to disable Message Center locally on the first launch of your app.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL initiallyUseMessageCenter</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="note"><p><strong>Note:</strong> This setting will be overridden by server-based configuration when it is downloaded.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showEmailField" title="showEmailField"></a>
+	<h3 class="subsubtitle method-title">showEmailField</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Toggles the display of an email field in the message panel. <code>YES</code> by default.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showEmailField</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showTagline" title="showTagline"></a>
+	<h3 class="subsubtitle method-title">showTagline</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Toggles much of the Apptentive branding on and off. <code>YES</code> by default.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL showTagline</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tintColor" title="tintColor"></a>
+	<h3 class="subsubtitle method-title">tintColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>A tint color to use in Apptentive-specific UI.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, retain) UIColor *tintColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Overrides the default tintColor acquired from your app, in case you&rsquo;re using one that doesn&rsquo;t look great
+with Apptentive-specific UI.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/useMessageCenter" title="useMessageCenter"></a>
+	<h3 class="subsubtitle method-title">useMessageCenter</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Set this to NO if you don&rsquo;t want to use Message Center, and instead just want unidirectional in-app feedback.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL useMessageCenter</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Deprecated in 1.1.1 in favor of server-based configuration of Message Center.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Class Methods" name="class_methods"></a>
+						<h2 class="subtitle subtitle-methods">Class Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/sharedConnection" title="sharedConnection"></a>
+	<h3 class="subsubtitle method-title">sharedConnection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>The shared singleton of <code>ATConnect</code>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>+ (ATConnect *)sharedConnection</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/addAmazonSNSIntegrationWithDeviceToken:" title="addAmazonSNSIntegrationWithDeviceToken:"></a>
+	<h3 class="subsubtitle method-title">addAmazonSNSIntegrationWithDeviceToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds Amazon Web Services (AWS) Simple Notification Service (SNS) integration with the given device token.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addAmazonSNSIntegrationWithDeviceToken:(NSData *)<em>deviceToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceToken</em></dt>
+			<dd><p>The device token expected by AWS SNS.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addCustomData:withKey:" title="addCustomData:withKey:"></a>
+	<h3 class="subsubtitle method-title">addCustomData:withKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deprecated. Use <a href="#//api/name/addCustomDeviceData:withKey:"><code>addCustomDeviceData:withKey:</code></a> instead.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addCustomData:(NSObject&lt;NSCoding&gt; *)<em>object</em> withKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>The custom data.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key of the data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Deprecated!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addCustomDeviceData:withKey:" title="addCustomDeviceData:withKey:"></a>
+	<h3 class="subsubtitle method-title">addCustomDeviceData:withKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds custom data associated with the current device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addCustomDeviceData:(NSObject&lt;NSCoding&gt; *)<em>object</em> withKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>Custom data of type <code>NSDate</code>, <code>NSNumber</code>, or <code>NSString</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>A key to associate the data with.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds an additional data field to any feedback sent. This will show up in the device data in the
+conversation on your Apptentive dashboard.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addCustomPersonData:withKey:" title="addCustomPersonData:withKey:"></a>
+	<h3 class="subsubtitle method-title">addCustomPersonData:withKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds custom data associated with the current person.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addCustomPersonData:(NSObject&lt;NSCoding&gt; *)<em>object</em> withKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>object</em></dt>
+			<dd><p>Custom data of type <code>NSDate</code>, <code>NSNumber</code>, or <code>NSString</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>A key to associate the data with.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Adds an additional data field to any feedback sent. This will show up in the person data in the
+conversation on your Apptentive dashboard.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addIntegration:withConfiguration:" title="addIntegration:withConfiguration:"></a>
+	<h3 class="subsubtitle method-title">addIntegration:withConfiguration:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a custom configuration for a 3rd-party integration service.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addIntegration:(NSString *)<em>integration</em> withConfiguration:(NSDictionary *)<em>configuration</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>integration</em></dt>
+			<dd><p>The name of the integration.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>configuration</em></dt>
+			<dd><p>The service-specific configuration keys and values.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addIntegration:withDeviceToken:" title="addIntegration:withDeviceToken:"></a>
+	<h3 class="subsubtitle method-title">addIntegration:withDeviceToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds a device token for a 3rd-party integration service.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addIntegration:(NSString *)<em>integration</em> withDeviceToken:(NSData *)<em>deviceToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>integration</em></dt>
+			<dd><p>The name of the integration.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceToken</em></dt>
+			<dd><p>The device token expected by the integration.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/addUrbanAirshipIntegrationWithDeviceToken:" title="addUrbanAirshipIntegrationWithDeviceToken:"></a>
+	<h3 class="subsubtitle method-title">addUrbanAirshipIntegrationWithDeviceToken:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Adds Urban Airship integration with the given device token.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)addUrbanAirshipIntegrationWithDeviceToken:(NSData *)<em>deviceToken</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>deviceToken</em></dt>
+			<dd><p>The device token expected by Urban Airship.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/didReceiveRemoteNotification:fromViewController:" title="didReceiveRemoteNotification:fromViewController:"></a>
+	<h3 class="subsubtitle method-title">didReceiveRemoteNotification:fromViewController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Forwards a push notification from your application delegate to Apptentive Connect.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)didReceiveRemoteNotification:(NSDictionary *)<em>userInfo</em> fromViewController:(UIViewController *)<em>viewController</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>userInfo</em></dt>
+			<dd><p>The <code>userInfo</code> dictionary of the notification.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller Message Center may be presented from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>If the push notification originated from Apptentive, Message Center will be presented from the view controller.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dismissMessageCenterAnimated:completion:" title="dismissMessageCenterAnimated:completion:"></a>
+	<h3 class="subsubtitle method-title">dismissMessageCenterAnimated:completion:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Dismisses the message center. You normally won&rsquo;t need to call this.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)dismissMessageCenterAnimated:(BOOL)<em>animated</em> completion:(void ( ^ ) ( void ))<em>completion</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p><code>YES</code> to animate the dismissal, otherwise <code>NO</code>.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>completion</em></dt>
+			<dd><p>A block called at the conclusion of the message center being dismissed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/engage:fromViewController:" title="engage:fromViewController:"></a>
+	<h3 class="subsubtitle method-title">engage:fromViewController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Shows interaction UI, if applicable, related to a given event.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)engage:(NSString *)<em>eventLabel</em> fromViewController:(UIViewController *)<em>viewController</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>eventLabel</em></dt>
+			<dd><p>A string representing the name of the event.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>A view controller Apptentive UI may be presented from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>For example, if you have an upgrade message to display on app launch, you might call with event label set to
+<code>@"app.launch"</code> here, along with the view controller an upgrade message might be displayed from.</p>
+
+<p>Returns whether or not an interaction was successfully found and run.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/openAppStore" title="openAppStore"></a>
+	<h3 class="subsubtitle method-title">openAppStore</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Open your app&rsquo;s page on the App Store or Mac App Store.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)openAppStore</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This method can be used to power, for example, a &ldquo;Rate this app&rdquo; button in your settings screen.
+It opens the app store directly, without the normal Apptentive Ratings Flow.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/presentMessageCenterFromViewController:" title="presentMessageCenterFromViewController:"></a>
+	<h3 class="subsubtitle method-title">presentMessageCenterFromViewController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents Message Center from a given view controller.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)presentMessageCenterFromViewController:(UIViewController *)<em>viewController</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller to present the Message Center from.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/presentMessageCenterFromViewController:withCustomData:" title="presentMessageCenterFromViewController:withCustomData:"></a>
+	<h3 class="subsubtitle method-title">presentMessageCenterFromViewController:withCustomData:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents Message Center from a given view controller with custom data.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)presentMessageCenterFromViewController:(UIViewController *)<em>viewController</em> withCustomData:(NSDictionary *)<em>customData</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>viewController</em></dt>
+			<dd><p>The view controller to present the Message Center from.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>customData</em></dt>
+			<dd><p>A dictionary of key/value pairs to be associated with any messages sent via Message Center.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeCustomDataWithKey:" title="removeCustomDataWithKey:"></a>
+	<h3 class="subsubtitle method-title">removeCustomDataWithKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Deprecated. Use <a href="#//api/name/removeCustomDeviceDataWithKey:"><code>removeCustomDeviceDataWithKey:</code></a> instead.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeCustomDataWithKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key of the data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> Deprecated!</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeCustomDeviceDataWithKey:" title="removeCustomDeviceDataWithKey:"></a>
+	<h3 class="subsubtitle method-title">removeCustomDeviceDataWithKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes custom data associated with the current device.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeCustomDeviceDataWithKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key of the data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Will remove data, if any, associated with the current device with the key <code>key</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeCustomPersonDataWithKey:" title="removeCustomPersonDataWithKey:"></a>
+	<h3 class="subsubtitle method-title">removeCustomPersonDataWithKey:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes custom data associated with the current person.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeCustomPersonDataWithKey:(NSString *)<em>key</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>key</em></dt>
+			<dd><p>The key of the data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>Will remove data, if any, associated with the current person with the key <code>key</code>.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeIntegration:" title="removeIntegration:"></a>
+	<h3 class="subsubtitle method-title">removeIntegration:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Removes a 3rd-party integration with the given name.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeIntegration:(NSString *)<em>integration</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>integration</em></dt>
+			<dd><p>The name of the integration.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendAttachmentFile:withMimeType:" title="sendAttachmentFile:withMimeType:"></a>
+	<h3 class="subsubtitle method-title">sendAttachmentFile:withMimeType:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attaches an arbitrary file to the user&rsquo;s feedback.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendAttachmentFile:(NSData *)<em>fileData</em> withMimeType:(NSString *)<em>mimeType</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fileData</em></dt>
+			<dd><p>The contents of the file as data.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>mimeType</em></dt>
+			<dd><p>The MIME type of the file data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This will appear in your online Apptentive dashboard, but will <em>not</em> appear in Message Center on the device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendAttachmentImage:" title="sendAttachmentImage:"></a>
+	<h3 class="subsubtitle method-title">sendAttachmentImage:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attaches an image the user&rsquo;s feedback.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendAttachmentImage:(UIImage *)<em>image</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>image</em></dt>
+			<dd><p>The image to attach to the user&rsquo;s feedback as a file.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This will appear in your online Apptentive dashboard, but will <em>not</em> appear in Message Center on the device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sendAttachmentText:" title="sendAttachmentText:"></a>
+	<h3 class="subsubtitle method-title">sendAttachmentText:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Attaches text to the user&rsquo;s feedback.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)sendAttachmentText:(NSString *)<em>text</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>text</em></dt>
+			<dd><p>The text to attach to the user&rsquo;s feedback as a file.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>This will appear in your online Apptentive dashboard, but will <em>not</em> appear in Message Center on the device.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/showFeedbackWindow:" title="showFeedbackWindow:"></a>
+	<h3 class="subsubtitle method-title">showFeedbackWindow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Presents a feedback window (OS X framework only).</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (IBAction)showFeedbackWindow:(id)<em>sender</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sender</em></dt>
+			<dd><p>The originator of the action.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/unreadMessageCount" title="unreadMessageCount"></a>
+	<h3 class="subsubtitle method-title">unreadMessageCount</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Returns the current number of unread messages in Message Center.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSUInteger)unreadMessageCount</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<p>These are the messages sent via the Apptentive website to this user.</p>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">ATConnect.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2014 Apptentive, Inc.. All rights reserved. (Last updated: 2014-05-09)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.2 (build 963)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>
