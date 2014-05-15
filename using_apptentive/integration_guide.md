@@ -60,6 +60,16 @@ People who select "Yes" will be asked to rate the app on the iOS app store.
 
 Those who indicate they do not like the app will be prompted to send feedback directly to the developer via the Apptentive feedback form.
 
+###Surveys
+
+Apptentive surveys are used to collect information from the people using your app.
+
+Like the rating prompt, surveys are created online and targeted at events in your app. 
+
+	[[ATConnect sharedConnection] engage:@"test_survey" fromViewController:viewController];
+
+These surveys can be released completely remotely, between App Store updates, as long as you have engaged an event to trigger the survey. Seed your app with events now, and you will be able to display surveys at any given event in the future. 
+
 ###Feedback from Users (Apptentive Message Center)
 
 The Apptentive rating flow will prompt some users to send you direct feedback. You can respond to this feedback from your online Apptentive dashboard.
