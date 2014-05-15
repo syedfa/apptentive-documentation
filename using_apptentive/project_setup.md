@@ -6,30 +6,6 @@ All of our client code is open source and available on GitHub](https://github.co
 
 You can clone our iOS SDK using git: `git clone https://github.com/apptentive/apptentive-ios.git`.
 
-#### Using CocoaPods
-
-Please note that if you use CocoaPods to integrate Apptentive, you can skip the "Setup Xcode Project" section and proceed directly to the ["Implement Apptentive in Project"](https://github.com/apptentive/apptentive-ios#implement-apptentive-in-project) directions below.
-
-##### Create Podfile
-
-1. Find [Apptentive's pod information](http://cocoapods.org/?q=apptentive-ios) on [CocoaPods](http://cocoapods.org).
-2. List and save the dependencies in a text file named "Podfile" in your Xcode project directory. It should look something like this:
-
-```
-platform :ios, '6.0'
-pod 'apptentive-ios'
-```
-
-##### Install Pods
-
-Now you can install the dependencies in your project. Run this command in your Xcode project directory in Terminal:
-
-```
-$ pod install
-```
-
--
-
 ### Setup Xcode Project
 
 First, drag the `ApptentiveConnect.xcodeproj` project file (located in the `ApptentiveConnect` folder of our source code) to your project in Xcode 5 and add it as a subproject.
