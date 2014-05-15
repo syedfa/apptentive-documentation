@@ -6,16 +6,19 @@ All of our client code is open source and available on GitHub](https://github.co
 
 You can clone our iOS SDK using git: `git clone https://github.com/apptentive/apptentive-ios.git`.
 
-### Setup Xcode Project
+### Add Apptentive as Xcode Subproject
 
-First, drag the `ApptentiveConnect.xcodeproj` project file (located in the `ApptentiveConnect` folder of our source code) to your project in Xcode 5 and add it as a subproject.
+When the Apptentive submodule has finished cloning, it should be added to your Xcode project or workspace as a subproject.
+
+Drag the `ApptentiveConnect.xcodeproj` project file (located in the `ApptentiveConnect` folder of our source code) into your Xcode project.
 
 ![ApptentiveConnect drag](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-apptentive-connect.png)
 
 ------------------------------------------------------------------------------------
 
-Next, in order to use `ApptentiveConnect`, your project must link against the
-following frameworks:
+### Required Frameworks
+
+To use `ApptentiveConnect`, your project must link against the following frameworks:
 
 * Accelerate
 * AssetsLibrary
@@ -32,24 +35,22 @@ following frameworks:
 *Note:* If your app uses Core Data and you listen for Core Data related notifications, you will
 want to filter them based upon your managed object context. Learn more from [Apple's documentation](https://developer.apple.com/library/mac/#documentation/Cocoa/Reference/CoreDataFramework/Classes/NSManagedObjectContext_Class/NSManagedObjectContext.html).
 
-##### How To
+##### Add required Frameworks
 
-1. Click on your Xcode project in the file browser sidebar.
-2. Go to your Xcode project's `Build Phases` tab.
-3. Expand "Link Binary With Libraries".
-4. Click on the `+` button and add the frameworks listed above.
+1. Select your Xcode project in the file navigator sidebar.
+2. Select your Target, then its "Build Phases" tab.
+3. Expand the "Link Binary With Libraries" build phase.
+4. Add the frameworks listed above by clicking the `+` button.
 
 ![iOS Frameworks](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-frameworks.png)
 
-#### Configure Apptentive
+### Add Linker Flags
 
-##### Setup Linker Flags
-
-1. Click on your Xcode project in the file navigator sidebar.
-2. Go to your Xcode project's `Build Settings` tab.
-3. Search for `Other Linker Flags`
-4. Double click in the blank area to the right of `Other Linker Flags` but under the "Yes" of `Link With Standard Libraries`
-5. Click on the `+` button and add the following:
+1. Select your Xcode project in the file navigator sidebar.
+2. Select your Project, then its "Build Settings" tab.
+3. Search for the "Other Linker Flags" setting.
+4. Double click the `Other Linker Flags` row's value area, on the right side. A pop-up should appear.
+5. Add the following linker flags by pressing the "+" button:
 
 ```
     -ObjC -all_load
@@ -60,45 +61,49 @@ want to filter them based upon your managed object context. Learn more from [App
 **Note:** If you can't use the `-all_load` flag in your project, you can use the `-force_load` flag instead:
 
 ```
--force_load $(BUILT_PRODUCTS_DIR)/libApptentiveConnect.a
+    -force_load $(BUILT_PRODUCTS_DIR)/libApptentiveConnect.a
 ```
 
-##### Add Apptentive Connect and Resources
+### Add Apptentive Library and Resources
 
-1. Go back to your Xcode project's `Build Phases` tab.
-2. Add the `ApptentiveConnect` and `ApptentiveResources` as targets in your project's `Target Dependencies`.
+##### Add Target Dependencies
+
+1. Return to your Target's "Build Phases" tab.
+2. Expand the "Target Dependencies" build phase.
+3. Add `ApptentiveConnect` and `ApptentiveResources` as target dependencies.
 
 ![iOS Target Dependencies](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-target-dependencies.png)
 
 ##### Link Apptentive Library
 
-Under `Link Binary With Libraries`, add `libApptentiveConnect.a`.
+1. Expand the "Link Binary With Libraries" build phase.
+2. Click the "+" button and add `libApptentiveConnect.a`
 
 ![Apptentive Library](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-apptentive-library.png)
 
-##### Build Apptentive Resources for iOS Devices
+##### Build Apptentive Resources bundle
 
-Building for iOS devices first works around a bug in Xcode 5.
+You should now build `ApptentiveResources.bundle`, the Apptentive assets bundle that will be added to your app.
 
-1. In the upper left corner of your Xcode window, click on your project name in the scheme picker.
-2. Select `Apptentive Resources`.
-3. Click to the right of the arrow next to `Apptentive Resources`.
-4. Select `iOS Devices`.
-5. Under `Product` in your Mac's menu bar, click on `Build`.
+1. In the upper left corner of your Xcode window, select the `Apptentive Resources` target from the scheme picker.
+2. Select `iOS Device` as the build destination.
+3. Select `Product > Build` from your Mace's menu bar.
 
-##### Copy Apptentive Resources Bundle
+**Note:** Build for an iOS Device, not the iOS Simulator, to work around an Xcode bug.
 
-1. In the file navigator, expand the ApptentiveConnect project.
-2. Expand `Products`.
-3. Under your Xcode project's `Build Phases`, expand `Copy Bundle Resources`.
-4. Drag `ApptentiveResources.bundle` from the `ApptentiveConnect` products in the
-file navigator into `Copy Bundle Resources`.
+##### Copy Apptentive Resources bundle
+
+1. Expand the ApptentiveConnect project in Xcode's file navigator.
+2. Expand the `Products` directory. It should contain `ApptentiveResources.bundle`.
+3. If the bundle's label is red, it must first be built. Follow the steps in the previous section.
+3. In your Xcode Target's `Build Phases`, expand the `Copy Bundle Resources` build phase.
+4. Drag `ApptentiveResources.bundle` from the `ApptentiveConnect` directory into the `Copy Bundle Resources` area.
 
 ![iOS Bundle Resources](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-bundle-resources.png)
 
-##### Add the ApptentiveConnect Header File
+### Add Apptentive header files
 
-1. In the file navigator, expand `source` under the ApptentiveConnect project.
-2. Drag `ATConnect.h` from `ApptentiveConnect.xcodeproj` to your app's file list.
+1. In the file navigator, expand the `source` directory of the ApptentiveConnect project.
+2. Drag the file `ATConnect.h` into to your app's file list.
 
 -
