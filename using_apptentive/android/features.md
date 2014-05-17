@@ -246,10 +246,10 @@ notifications, your customer will see a notification, even if they haven't recen
 
 [Setting up Push Notifications](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#push-notifications)
 
-![Push In Notification Area](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/push_in_notification_area.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
+![Push In Notification Area](https://raw.github.com/skykelsey/apptentive-android/new_docs/etc/screenshots/push_in_notification_area.png)
+![spacer](https://raw.github.com/skykelsey/apptentive-android/new_docs/etc/screenshots/10px.png)
 ![Push In Notification Drawer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/push_in_notification_drawer.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
+![spacer](https://raw.github.com/skykelsey/apptentive-android/new_docs/etc/screenshots/10px.png)
 ![Push Notification Opened](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/push_notification_opened.png)
 
 ## Custom Data
