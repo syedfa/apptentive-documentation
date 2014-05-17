@@ -36,29 +36,37 @@ After including Apptentive in your Xcode project, the first step of integration 
 
 Apptentive's rating flow displays a "Do you love *app_name*?" dialog to the user. Your app's *Love Ratio* is determined by people's answer to this question.
 
-The dialog is shown by calling `showRatingFlowFromViewControllerIfConditionsAreMet:`. If the current rating flow conditions are satisfied, the enjoyment dialog will be shown.
+The dialog is shown by engaging a certain event in your app that you have targeted, online, to run the rating prompt. If the current rating conditions are satisfied, the enjoyment dialog will be shown.
+
+	[[ATConnect sharedConnection] engage:@"test_rating_prompt" fromViewController:viewController];
 
 These rating flow conditions can be changed at any time via the Apptentive website. This feature enables you to remotely change Apptentive rating flow settings without issuing an iOS app update.
-
-	[[ATAppRatingFlow sharedRatingFlow] showRatingFlowFromViewControllerIfConditionsAreMet:self.navigationController];
-
-You can call `showRatingFlowFromViewControllerIfConditionsAreMet:` from various places in your code. For example, it might make sense to prompt when the user has finished a task and returns back to the main menu. Apptentive will only prompt the user if the rating flow conditions have been met.
 
 ###App Store Rating Prompt
 
 Asking people who love your app to rate it in the App Store is a great way to increase your App Store star rating.
 
-The Apptentive rating prompt is shown by calling `showRatingFlowFromViewControllerIfConditionsAreMet:`. The rating flow is shown only if your set conditions are met.
+The rating prompt is triggered by engaging an event in your app, which you then target via your Apptentive dashboard settings:  
 
-For example, you might decide the rating flow should be shown after 5 days of use, 10 app launches, and 3 significant events. These settings can be modified on the Apptentive website.
+	[[ATConnect sharedConnection] engage:@"test_rating_prompt" fromViewController:viewController];
 
-	[[ATAppRatingFlow sharedRatingFlow] showRatingFlowFromViewControllerIfConditionsAreMet:viewController];
+Despite being triggered, the rating prompt is shown only if your set conditions are met. For example, you might decide the rating prompt should be shown after 5 days of use, 10 app launches, and 3 significant events. These settings can be modified on the Apptentive website.
 
 When presented with the "Do you love *app_name*?" dialog, the user can select "Yes" or "No". They will be presented with different behaviors based on their answer to the question.
 
 People who select "Yes" will be asked to rate the app on the iOS app store.
 
 Those who indicate they do not like the app will be prompted to send feedback directly to the developer via the Apptentive feedback form.
+
+###Surveys
+
+Apptentive surveys are used to collect information from the people using your app.
+
+Like the rating prompt, surveys are created online and targeted at events in your app. 
+
+	[[ATConnect sharedConnection] engage:@"test_survey" fromViewController:viewController];
+
+These surveys can be released completely remotely, between App Store updates, as long as you have engaged an event to trigger the survey. Seed your app with events now, and you will be able to display surveys at any given event in the future. 
 
 ###Feedback from Users (Apptentive Message Center)
 
