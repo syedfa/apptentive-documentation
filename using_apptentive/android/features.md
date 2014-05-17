@@ -93,6 +93,8 @@ they can give you feedback.
 ![Enjoyment Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/enjoyment_dialog.png)
 ![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
 ![Rating Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/rating_dialog.png)
+![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
+![Intro Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_default_blank.png)
 
 ![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/ratings_prompt_interaction_config.png)
 
