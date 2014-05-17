@@ -85,7 +85,7 @@ The **Ratings Prompt Interaction** is a powerful tool to help you get better rat
 customers, and start conversations with customers who have feedback, suggestions, or critiques. The **Ratings Prompt**
 is actually a series of views. The inital view is called the *Enjoyment Dialog*, and ask the customer whether they love
 your app. If the answer is yes, then they are shown the *Rating Dialog*, which offers them the oportunity to go to the
-app store to rate the app. If they don't love your app, will be taken to the [Message Center](#message-center) where
+app store to rate the app. If they don't love your app, they will be taken to the [Message Center](#message-center) where
 they can give you feedback.
 
 [Setting up the Ratings Prompt](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#ratings-prompt)
