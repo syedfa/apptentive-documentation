@@ -140,7 +140,7 @@ submits the *Intro Dialog*, they are taken to a *Thank You Dialog*, where they h
 [Setting up Message Center](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#message-center)
 
 ![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_blank.png)
-![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/screenshots/10px.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
 ![Intro Dialog Completed](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_filled.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
 ![Thank You Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/thank_you_dialog.png)
