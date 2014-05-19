@@ -90,13 +90,13 @@ they can give you feedback.
 
 [Setting up the Ratings Prompt](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#ratings-prompt)
 
-![Enjoyment Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/enjoyment_dialog.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Rating Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/rating_dialog.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Intro Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_sorry_blank.png)
+![Enjoyment Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/enjoyment_dialog.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Rating Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/rating_dialog.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_sorry_blank.png)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/ratings_prompt_interaction_config.png)
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/ratings_prompt_interaction_config.png)
 
 ## Surveys
 
@@ -104,13 +104,13 @@ they can give you feedback.
 composed of one or more questions, and since they are **Interactions**, can be targeted to any **Event** you have
 configured in your app. There are three supported question types: *Single Select*, *Multiple Select*, and *Free Form*.
 
-![Survey Incomplete](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/survey_incomplete.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Survey Complete](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/survey_complete.png)
+![Survey Incomplete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_incomplete.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_complete.png)
 
 [Setting up a Survey](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#surveys)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/survey_interaction_config.png)
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_interaction_config.png)
 
 ## Upgrade Messages
 
@@ -121,7 +121,7 @@ version of your app to one of the targeted versions, whey will see the **Upgrade
 
 [Setting up an Upgrade Message](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#upgrade-messages)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/upgrade_message_interaction_config.png)
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/upgrade_message_interaction_config.png)
 
 **Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at
 the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
@@ -139,25 +139,25 @@ submits the *Intro Dialog*, they are taken to a *Thank You Dialog*, where they h
 
 [Setting up Message Center](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#message-center)
 
-![Intro Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_default_blank.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Intro Dialog Completed](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_default_filled.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Thank You Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/thank_you_dialog.png)
+![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_blank.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/screenshots/10px.png)
+![Intro Dialog Completed](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_filled.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Thank You Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/thank_you_dialog.png)
 
 The Message Center displays all messages sent between you and your customer. Your replies will show up in the Message
 Center, and the customer will not have to leave your app to see them. Customers with devices running Android 4+ will
 also be able to send screenshots.
 
-![Message Center Sent](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_sent.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Message Center Screenshot Sent](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_screenshot_sent.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Message Center Reply Received](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_reply_received.png)
+![Message Center Sent](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_sent.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Message Center Screenshot Sent](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_screenshot_sent.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Message Center Reply Received](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_reply_received.png)
 
 Here is what the other side of the conversation looks like.
 
-![Website Conversation View](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/website_conversation_default_reply.png)
+![Website Conversation View](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/website_conversation_default_reply.png)
 
 The Apptentive Android SDK checks for new messages every **60 seconds** while your app is running. When **Message Center**
 is open, it checks every **8 seconds**, in order to provide lower latency. Messages sent from the client are sent
@@ -246,11 +246,11 @@ notifications, your customer will see a notification, even if they haven't recen
 
 [Setting up Push Notifications](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#push-notifications)
 
-![Push In Notification Area](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/push_in_notification_area.png)
-![spacer](https://raw.github.com/skykelsey/apptentive-android/new_docs/etc/screenshots/10px.png)
-![Push In Notification Drawer](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/push_in_notification_drawer.png)
-![spacer](https://raw.github.com/skykelsey/apptentive-android/new_docs/etc/screenshots/10px.png)
-![Push Notification Opened](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/push_notification_opened.png)
+![Push In Notification Area](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_in_notification_area.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Push In Notification Drawer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_in_notification_drawer.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Push Notification Opened](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_notification_opened.png)
 
 ## Custom Data
 
