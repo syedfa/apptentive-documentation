@@ -104,11 +104,11 @@ they can give you feedback.
 composed of one or more questions, and since they are **Interactions**, can be targeted to any **Event** you have
 configured in your app. There are three supported question types: *Single Select*, *Multiple Select*, and *Free Form*.
 
+[Setting up a Survey](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#surveys)
+
 ![Survey Incomplete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_incomplete.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
 ![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_complete.png)
-
-[Setting up a Survey](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#surveys)
 
 ![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_interaction_config.png)
 
