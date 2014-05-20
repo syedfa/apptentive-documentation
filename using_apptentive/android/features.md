@@ -109,6 +109,8 @@ configured in your app. There are three supported question types: *Single Select
 ![Survey Incomplete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_incomplete.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
 ![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_complete.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_thank_you.png)
 
 ![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_interaction_config.png)
 
