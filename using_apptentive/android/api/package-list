@@ -1,4 +1,5 @@
 com.apptentive.android.sdk
 com.apptentive.android.sdk.module.messagecenter
 com.apptentive.android.sdk.module.rating
+com.apptentive.android.sdk.module.rating.impl
 com.apptentive.android.sdk.module.survey
