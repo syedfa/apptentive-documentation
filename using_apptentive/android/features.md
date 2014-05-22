@@ -16,6 +16,9 @@ The Apptentive SDK works on devices with **Android SDK 2.1 (API Level 7)** and n
 against **Android SDK 3.1 (API 12)** or newer. This will not cause your app to stop working on pre-3.1 devices, but
 allows us to use newer XML syntax for forward compatibility.
 
+### SDK Size
+
+Our SDK is very small. It will add **250k - 300k** to the size of your app.
 ###Supported Languages
 
 | Locale Qualifier | Language Name |
