@@ -85,16 +85,18 @@ The **Ratings Prompt Interaction** is a powerful tool to help you get better rat
 customers, and start conversations with customers who have feedback, suggestions, or critiques. The **Ratings Prompt**
 is actually a series of views. The inital view is called the *Enjoyment Dialog*, and ask the customer whether they love
 your app. If the answer is yes, then they are shown the *Rating Dialog*, which offers them the oportunity to go to the
-app store to rate the app. If they don't love your app, will be taken to the [Message Center](#message-center) where
+app store to rate the app. If they don't love your app, they will be taken to the [Message Center](#message-center) where
 they can give you feedback.
 
 [Setting up the Ratings Prompt](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#ratings-prompt)
 
-![Enjoyment Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/enjoyment_dialog.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Rating Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/rating_dialog.png)
+![Enjoyment Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/enjoyment_dialog.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Rating Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/rating_dialog.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_sorry_blank.png)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/ratings_prompt_interaction_config.png)
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/ratings_prompt_interaction_config.png)
 
 ## Surveys
 
@@ -102,13 +104,15 @@ they can give you feedback.
 composed of one or more questions, and since they are **Interactions**, can be targeted to any **Event** you have
 configured in your app. There are three supported question types: *Single Select*, *Multiple Select*, and *Free Form*.
 
-![Survey Incomplete](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/survey_incomplete.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Survey Complete](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/survey_complete.png)
-
 [Setting up a Survey](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#surveys)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/survey_interaction_config.png)
+![Survey Incomplete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_incomplete.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_complete.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Survey Complete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_thank_you.png)
+
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_interaction_config.png)
 
 ## Upgrade Messages
 
@@ -119,7 +123,7 @@ version of your app to one of the targeted versions, whey will see the **Upgrade
 
 [Setting up an Upgrade Message](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#upgrade-messages)
 
-![Using Custom Events](https://raw.githubusercontent.com/skykelsey/apptentive-android/new_docs/etc/screenshots/upgrade_message_interaction_config.png)
+![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/upgrade_message_interaction_config.png)
 
 **Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at
 the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
@@ -137,25 +141,25 @@ submits the *Intro Dialog*, they are taken to a *Thank You Dialog*, where they h
 
 [Setting up Message Center](https://github.com/skykelsey/apptentive-android/blob/new_docs/docs/IntegrationAndTesting.md#message-center)
 
-![Intro Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_default_blank.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Intro Dialog Completed](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/intro_dialog_default_filled.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Thank You Dialog](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/thank_you_dialog.png)
+![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_blank.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Intro Dialog Completed](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_filled.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Thank You Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/thank_you_dialog.png)
 
 The Message Center displays all messages sent between you and your customer. Your replies will show up in the Message
 Center, and the customer will not have to leave your app to see them. Customers with devices running Android 4+ will
 also be able to send screenshots.
 
-![Message Center Sent](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_sent.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Message Center Screenshot Sent](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_screenshot_sent.png)
-![spacer](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/10px.png)
-![Message Center Reply Received](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/message_center_default_reply_received.png)
+![Message Center Sent](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_sent.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Message Center Screenshot Sent](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_screenshot_sent.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Message Center Reply Received](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/message_center_default_reply_received.png)
 
 Here is what the other side of the conversation looks like.
 
-![Website Conversation View](https://raw.github.com/apptentive/apptentive-android/master/etc/screenshots/website_conversation_default_reply.png)
+![Website Conversation View](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/website_conversation_default_reply.png)
 
 The Apptentive Android SDK checks for new messages every **60 seconds** while your app is running. When **Message Center**
 is open, it checks every **8 seconds**, in order to provide lower latency. Messages sent from the client are sent
@@ -242,78 +246,13 @@ notifications, your customer will see a notification, even if they haven't recen
 * Urban Airship
 * Amason Web Services SNS
 
-### Setting Up the Client
+[Setting up Push Notifications](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#push-notifications)
 
-You should make sure your app is already set up to work with your chosen push provider. You will then need to pass
-**Apptentive** the token that the push provider assigns your app.
-
-#### Urban Airship
-
-In order to use **Urban Airship**, you will first need to set it up to work within your app. Then, you
-will need to set your `App Key`, `App Secret`, and `App Master Secret` on [apptentive.com](https://be.apptentive.com) at
-**_Settings -> Integrations -> Urban Airship_**.
-
-When your app registers with **Urban Airship**, it will need to send the *Airship Push ID* (`APID`) to us so that we can
-send push notifications to the correct device. The `APID` is available only after you initialize **Urban Airship**, so
-you will have to read it from the `BroadcastReceiver` you use to receive **Urban Airship** `Intents`.
-
-[Apptentive.addUrbanAirshipPushIntegration(Activity activity, String apid)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addUrbanAirshipPushIntegration%28android.content.Context,%20java.lang.String%29)
-
-###### Example
-
-```java
-String  apid = PushManager.shared().getAPID();
-Apptentive.addUrbanAirshipPushIntegration(this, apid);
-```
-
-#### Amazon SNS
-
-In order to use **Amazon Web Services (AWS) Simple Notification Service (SNS)**, you will need to first set up
-**AWS SNS** to work within your app. Then, you will need to set your `Access Key ID`, `Secret Access Key`, and `ARN` on
-[apptentive.com](https://be.apptentive.com) at **_Settings -> Integrations -> Amazon Web Services SNS_**.
-
-##### Sending the AWS SNS Registration ID
-
-To set up push notifications, you must pass in the **Registration ID** you get from **AWS SNS**. The **Registration ID**
-is returned when you register for push notifications with
-[GoogleCloudMessaging.register(String... senderIds)](http://developer.android.com/reference/com/google/android/gms/gcm/GoogleCloudMessaging.html#register%28java.lang.String...%29).
-You can then pass the Registration ID to us using this method:
-
-[Apptentive.addAmazonSnsPushIntegration(Activity activity, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration%28android.content.Context,%20java.lang.String%29)
-
-###### Example
-
-```java
-GoogleCloudMessaging gcm = GoogleCloudMessaging.getInstance(getBaseContext());
-String  registrationId = gcm.register(getString(R.string.project_number));
-Apptentive.addAmazonSnsPushIntegration(this, registrationId);
-```
-
-### Displaying the Push Notification
-
-When the customer opens a push notification, you will receive an `Intent` in your `BroadcastReceiver`. You must always
-pass that `Intent` to Apptentive, so we can check to see if the push came from us, and save our data to use when we launch.
-
-[Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification%28android.content.Context,%20android.content.Intent%29)
-
-Next, in the `Activity` that you launched, you will need to allow Apptentive to run based on the push `Intent`. If the
-push notification came from us, this version of the SDK is compatible with the notification, and other conditions are
-met, then we will perform an action. This is generally to show a UI, such as **Message Center**. If we show a UI, this
-method will return true. Otherwise, it will return false. This method is a no-op if the push notification was not from
-**Apptentive**.
-
-[Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification%28android.app.Activity%29)
-
-###### Example
-```java
-@Override
-public void onWindowFocusChanged(boolean hasFocus) {
-    super.onWindowFocusChanged(hasFocus);
-    if (hasFocus) {
-        boolean ranApptentive = Apptentive.handleOpenedPushNotification(this);
-    }
-}
-```
+![Push In Notification Area](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_in_notification_area.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Push In Notification Drawer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_in_notification_drawer.png)
+![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
+![Push Notification Opened](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_notification_opened.png)
 
 ## Custom Data
 

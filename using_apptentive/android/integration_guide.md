@@ -344,7 +344,7 @@ String registrationId;
 Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 ```
 
-#### Displaying the Push Notification
+### Displaying the Push Notification
 
 Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
 pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification%28android.content.Context,%20android.content.Intent%29),
