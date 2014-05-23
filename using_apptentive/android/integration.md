@@ -1,4 +1,4 @@
-# Integration & Testing
+# Integrating the Apptentive Android SDK
 
 This document will show you how to integrate the Apptentive Android SDK into your app, configure it, and test to make
 sure it's working properly. Each section lists the minimum necessary configuration, as well as optional steps.
