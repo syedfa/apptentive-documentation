@@ -371,7 +371,7 @@ Apptentive.addCustomPersonData(this, "1234567890");
 
 # Attachments
 
-You can send [hidden messages and attachments](https://github.com/skykelsey/apptentive-android/blob/new_docs/doc/Features.md#sending-hidden-messages-and-attachments) to Apptentive that will show up in your customer conversation view on [apptentive.com](https://be.apptentive.com), but are not shown to your customer.
+You can send [hidden messages and attachments](http://www.apptentive.com/docs/android/features/#sending-hidden-messages-and-attachments) to Apptentive that will show up in your customer conversation view on [apptentive.com](https://be.apptentive.com), but are not shown to your customer.
 
 ###### Example
 
