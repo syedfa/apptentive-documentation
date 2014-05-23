@@ -1,4 +1,6 @@
-# Testing Your Apptentive integration
+# Testing Your Apptentive Integration
+
+This document will help you verify that **Events** and **Interactions** have been properly configured within your app.
 
 ### Dedicated Test API Token
 
