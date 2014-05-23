@@ -238,17 +238,17 @@ Once you have configured your app to use several **Events**, you can configure *
 
 #### Ratings Prompt
 
-To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have created some [Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. There, you will be able to customize the text and behavior of the dialogs that make up the **Ratings Prompt**, and configure the logic that will determine when it will be shown. You will also need to pick where the **Ratings Prompt** will be shown, by choosing an **Event** from the dropdown.
+To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have [created some Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. There, you will be able to customize the text and behavior of the dialogs that make up the **Ratings Prompt**, and configure the logic that will determine when it will be shown. You will also need to pick where the **Ratings Prompt** will be shown, by choosing an **Event** from the dropdown.
 
 #### Surveys
 
-[Surveys](http://www.apptentive.com/docs/android/features/#surveys) can also be configured from the server. First, make sure you have created some [Events](#adding-events), then go to *Interactions -> Surveys*. Create a new survey. You can give it a title and description, then add questions, and finally set targeting and limiting constraints so it's shown to the right people. After your survey is live, you will start to see results in the *Surveys* page.
+[Surveys](http://www.apptentive.com/docs/android/features/#surveys) can also be configured from the server. First, make sure you have [created some Events](#adding-events), then go to *Interactions -> Surveys*. Create a new survey. You can give it a title and description, then add questions, and finally set targeting and limiting constraints so it's shown to the right people. After your survey is live, you will start to see results in the *Surveys* page.
 
 **Note:** If you were using surveys prior to version 1.5.0 of the Apptentive Android SDK, see this [Migration Guide (MigratingTo_1.5.0.md) for instructions.
 
 #### Upgrade Messages
 
-When you release a new version of your app, you should create an [Upgrade Message](http://www.apptentive.com/docs/android/features/#upgrad-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
+When you release a new version of your app, you should create an [Upgrade Message](http://www.apptentive.com/docs/android/features/#upgrade-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
 
 **Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
 
