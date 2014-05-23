@@ -36,8 +36,6 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 | `zh`             |  Chinese (Traditional) |
 | `zh-rCN`         |  Chinese (Simplified)  |
 
----
-
 # Events and Interactions
 
 Our SDK lets you keep track of customer behavior, and initiate conversations with each customer based on their behavior.
@@ -131,8 +129,6 @@ version of your app to one of the targeted versions, whey will see the **Upgrade
 **Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at
 the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
 
----
-
 # Message Center
 
 With the **Apptentive Message Center** you and your customers talk directly without making them leave your app. Handling
@@ -212,8 +208,6 @@ of the app, so you can better support your customers.
 #### Sending Hidden Text Messages
 
 * [Apptentive.sendAttachmentText(Context context, String text)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentText%28android.content.Context,%20java.lang.String%29)
-
----
 
 # Miscellaneous
 
