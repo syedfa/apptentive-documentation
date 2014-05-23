@@ -89,7 +89,7 @@ your app. If the answer is yes, then they are shown the *Rating Dialog*, which o
 app store to rate the app. If they don't love your app, they will be taken to the [Message Center](#message-center) where
 they can give you feedback.
 
-[Setting up the Ratings Prompt](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#ratings-prompt)
+[Setting up the Ratings Prompt](http://www.apptentive.com/docs/android/integration/#ratings-prompt)
 
 ![Enjoyment Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/enjoyment_dialog.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
@@ -105,7 +105,7 @@ they can give you feedback.
 composed of one or more questions, and since they are **Interactions**, can be targeted to any **Event** you have
 configured in your app. There are three supported question types: *Single Select*, *Multiple Select*, and *Free Form*.
 
-[Setting up a Survey](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#surveys)
+[Setting up a Survey](http://www.apptentive.com/docs/android/integration/#surveys)
 
 ![Survey Incomplete](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/survey_incomplete.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
@@ -122,7 +122,7 @@ won't see announcements or release notes that you display on your app store page
 problem. You can configure an **Upgrade Message** for each release of your app. When the user upgrades from a previous
 version of your app to one of the targeted versions, whey will see the **Upgrade Message**.
 
-[Setting up an Upgrade Message](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#upgrade-messages)
+[Setting up an Upgrade Message](http://www.apptentive.com/docs/android/integration/#upgrade-messages)
 
 ![Using Custom Events](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/upgrade_message_interaction_config.png)
 
@@ -138,7 +138,7 @@ If the **Message Center** is being opened for the first time, the *Intro Dialog*
 submits the *Intro Dialog*, they are taken to a *Thank You Dialog*, where they have a chance to open the
 **Message Center**.
 
-[Setting up Message Center](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#message-center)
+[Setting up Message Center](http://www.apptentive.com/docs/android/integration/#message-center)
 
 ![Intro Dialog](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/intro_dialog_default_blank.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
@@ -243,7 +243,7 @@ notifications, your customer will see a notification, even if they haven't recen
 * Urban Airship
 * Amason Web Services SNS
 
-[Setting up Push Notifications](https://github.com/apptentive/apptentive-documentation-private/blob/master/using_apptentive/android/integration_guide.md#push-notifications)
+[Setting up Push Notifications](http://www.apptentive.com/docs/android/integration/#push-notifications)
 
 ![Push In Notification Area](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/push_in_notification_area.png)
 ![spacer](https://raw.githubusercontent.com/apptentive/apptentive-documentation/master/using_apptentive/android/screenshots/10px.png)
