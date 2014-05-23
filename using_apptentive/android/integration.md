@@ -140,7 +140,7 @@ You can mix and match, but make sure they all integrate in one of the following 
 
 # Message Center
 
-The [Message Center](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#message-center) is a self contained Activity that you can launch with [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter%28anroid.app.Activity%29).
+The [Message Center](http://www.apptentive.com/docs/android/features/#message-center) is a self contained Activity that you can launch with [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter%28anroid.app.Activity%29).
 
 You should find a place in your app where you can create a link or button that opens your **Message Center**.
 
@@ -193,7 +193,7 @@ Apptentive.setUnreadMessagesListener(
 
 # Adding Events
 
-You should add a handful of [Events](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#events) to your app when you integrate. Since **Events** are both records of an action within your app being performed, and an opportunity to show an [Interaction](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#interactions), you should choose places within your app that would be appropriate to interact with your customer, as well as places where a significant event has occured. The more **Events** you add during integration, the more you will learn about your customers, and the more fine tuned your communications with them can be. Here is a list of potential places to add **Events**.
+You should add a handful of [Events](http://www.apptentive.com/docs/android/features/#events) to your app when you integrate. Since **Events** are both records of an action within your app being performed, and an opportunity to show an [Interaction](http://www.apptentive.com/docs/android/features/#interactions), you should choose places within your app that would be appropriate to interact with your customer, as well as places where a significant event has occured. The more **Events** you add during integration, the more you will learn about your customers, and the more fine tuned your communications with them can be. Here is a list of potential places to add **Events**.
 
 Places where you might want to show an **Interaction**:
 * Main Activity gains focus
@@ -238,17 +238,17 @@ Once you have configured your app to use several **Events**, you can configure *
 
 #### Ratings Prompt
 
-To set up the [Ratings Prompt](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#ratings-prompt) **Interaction**, first make sure you have created some [Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. There, you will be able to customize the text and behavior of the dialogs that make up the **Ratings Prompt**, and configure the logic that will determine when it will be shown. You will also need to pick where the **Ratings Prompt** will be shown, by choosing an **Event** from the dropdown.
+To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have created some [Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. There, you will be able to customize the text and behavior of the dialogs that make up the **Ratings Prompt**, and configure the logic that will determine when it will be shown. You will also need to pick where the **Ratings Prompt** will be shown, by choosing an **Event** from the dropdown.
 
 #### Surveys
 
-[Surveys](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#surveys) can also be configured from the server. First, make sure you have created some [Events](#adding-events), then go to *Interactions -> Surveys*. Create a new survey. You can give it a title and description, then add questions, and finally set targeting and limiting constraints so it's shown to the right people. After your survey is live, you will start to see results in the *Surveys* page.
+[Surveys](http://www.apptentive.com/docs/android/features/#surveys) can also be configured from the server. First, make sure you have created some [Events](#adding-events), then go to *Interactions -> Surveys*. Create a new survey. You can give it a title and description, then add questions, and finally set targeting and limiting constraints so it's shown to the right people. After your survey is live, you will start to see results in the *Surveys* page.
 
 **Note:** If you were using surveys prior to version 1.5.0 of the Apptentive Android SDK, see this [Migration Guide (MigratingTo_1.5.0.md) for instructions.
 
 #### Upgrade Messages
 
-When you release a new version of your app, you should create an [Upgrade Message](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#upgrad-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
+When you release a new version of your app, you should create an [Upgrade Message](http://www.apptentive.com/docs/android/features/#upgrad-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
 
 **Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
 
@@ -256,7 +256,7 @@ When you release a new version of your app, you should create an [Upgrade Messag
 
 # Push Notifications
 
-**Apptentive** can send [push notifications](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#push-notifications) to your app when you reply to your customers. Your replies are more likely to be seen by your customer when you do this. To set up push notifications, you will need to enter your push credentials on [apptentive.com](https://be.apptentive.com), send us the id that your push provider uses to identify the device, and call into our SDK when you receive and open a push notification.
+**Apptentive** can send [push notifications](http://www.apptentive.com/docs/android/features/#push-notifications) to your app when you reply to your customers. Your replies are more likely to be seen by your customer when you do this. To set up push notifications, you will need to enter your push credentials on [apptentive.com](https://be.apptentive.com), send us the id that your push provider uses to identify the device, and call into our SDK when you receive and open a push notification.
 
 ### Supported Push Providers
 
@@ -359,7 +359,7 @@ If you already know the customer's email address, you can pass it to us during i
 
 # Custom Data
 
-You can send [Custom Data](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#custom-data) associated with either the device, or the person using the app. This is useful for sending user IDs and other information that helps you support your users better. **Custom Data** can also be used for configuring when [Interactions](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#interactions) will run. For best results, call this during `onCreate()`.
+You can send [Custom Data](http://www.apptentive.com/docs/android/features/#custom-data) associated with either the device, or the person using the app. This is useful for sending user IDs and other information that helps you support your users better. **Custom Data** can also be used for configuring when [Interactions](http://www.apptentive.com/docs/android/features/#interactions) will run. For best results, call this during `onCreate()`.
 
 ###### Example
 
@@ -386,7 +386,7 @@ Apptentive.sendAttachmentText(this, "Message to display in the conversation view
 
 # Setting Rating Provider
 
-If you host your app in an app store other than Google Play, you will need to make sure customers who want to rate your app will be able to do so. To choose which app store the **Ratings Prompt Interaction** will take you to, we've built several **Rating Providers**. A **Rating Provider** is an implementation of the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and its job is to provide a simple interface to open the app store. To use another supported [rating provider](https://github.com/apptentive/apptentive-documentation/blob/master/using_apptentive/android/features.md#setting-rating-provider), you can make a call to [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider%28com.apptentive.android.sdk.module.rating.IRatingProvider%29). If you would like to use an app store that we don't yet support, you can implement the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and pass your implementation to `setRatingProvider()`.
+If you host your app in an app store other than Google Play, you will need to make sure customers who want to rate your app will be able to do so. To choose which app store the **Ratings Prompt Interaction** will take you to, we've built several **Rating Providers**. A **Rating Provider** is an implementation of the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and its job is to provide a simple interface to open the app store. To use another supported [rating provider](http://www.apptentive.com/docs/android/features/#setting-rating-provider), you can make a call to [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider%28com.apptentive.android.sdk.module.rating.IRatingProvider%29). If you would like to use an app store that we don't yet support, you can implement the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and pass your implementation to `setRatingProvider()`.
 
 #### Supported Rating Providers
 
