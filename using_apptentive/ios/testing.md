@@ -34,7 +34,7 @@ Run your app, then engage the event by calling the above method. The best way to
 
 Once a single instance of your event has been recorded, you can target a rating prompt to that event. Select the Rating Prompt from your dashboard's Interaction's tab. In the "Who & When" section, you can now select "test_event" from the event target menu:
 
-![Target a rating prompt to an event.](https://raw.github.com/apptentive/apptentive-documentation/tree/master/using_apptentive/ios/screenshots/rating_prompt_target_event.png)
+![Target a rating prompt to an event.](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/rating_prompt_target_event.png)
 
 #### Trigger the Rating Prompt
 
@@ -57,7 +57,7 @@ Surveys are easier to test, as they do not have the same complicated logic as th
 
 Create a new survey via your Apptentive dashboard. When creating the survey you will be prompted to target the survey to a particular event:  
 
-![Target a survey to an event.](https://raw.github.com/apptentive/apptentive-documentation/tree/master/using_apptentive/ios/screenshots/survey_target_event.png)
+![Target a survey to an event.](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/survey_target_event.png)
 
 As with the rating prompt, you will engage this same event in your app to trigger the survey:  
 
