@@ -12,7 +12,7 @@ When the Apptentive submodule has finished cloning, it should be added to your X
 
 Drag the `ApptentiveConnect.xcodeproj` project file (located in the `ApptentiveConnect` folder of our source code) into your Xcode project.
 
-![ApptentiveConnect drag](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-apptentive-connect.png)
+![ApptentiveConnect drag](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-apptentive-connect.png)
 
 ------------------------------------------------------------------------------------
 
@@ -42,7 +42,7 @@ want to filter them based upon your managed object context. Learn more from [App
 3. Expand the "Link Binary With Libraries" build phase.
 4. Add the frameworks listed above by clicking the `+` button.
 
-![iOS Frameworks](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-frameworks.png)
+![iOS Frameworks](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-frameworks.png)
 
 ### Add Linker Flags
 
@@ -56,7 +56,7 @@ want to filter them based upon your managed object context. Learn more from [App
     -ObjC -all_load
 ```
 
-![iOS Linker Flags](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-linker-flags.png)
+![iOS Linker Flags](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-linker-flags.png)
 
 **Note:** If you can't use the `-all_load` flag in your project, you can use the `-force_load` flag instead:
 
@@ -72,14 +72,14 @@ want to filter them based upon your managed object context. Learn more from [App
 2. Expand the "Target Dependencies" build phase.
 3. Add `ApptentiveConnect` and `ApptentiveResources` as target dependencies.
 
-![iOS Target Dependencies](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-target-dependencies.png)
+![iOS Target Dependencies](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-target-dependencies.png)
 
 ##### Link Apptentive Library
 
 1. Expand the "Link Binary With Libraries" build phase.
 2. Click the "+" button and add `libApptentiveConnect.a`
 
-![Apptentive Library](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-apptentive-library.png)
+![Apptentive Library](https://raw.github.com/apptentive/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-apptentive-library.png)
 
 ##### Build Apptentive Resources bundle
 
@@ -99,7 +99,7 @@ You should now build `ApptentiveResources.bundle`, the Apptentive assets bundle 
 3. In your Xcode Target's `Build Phases`, expand the `Copy Bundle Resources` build phase.
 4. Drag `ApptentiveResources.bundle` from the `ApptentiveConnect` directory into the `Copy Bundle Resources` area.
 
-![iOS Bundle Resources](https://raw.github.com/apptentive/apptentive-ios/master/etc/screenshots/iOS-bundle-resources.png)
+![iOS Bundle Resources](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/iOS-bundle-resources.png)
 
 ### Add Apptentive header files
 
