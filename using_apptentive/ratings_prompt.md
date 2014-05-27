@@ -35,6 +35,8 @@ When configuring the Ratings Prompt, you'll first have an opportunity to view ea
 
 In addition to configuring the text of the Ratings Prompts, you may also indicate whether you wish to request the customer's email address, and, if so, whether an email address should be required.
 
+Starting in version 1.5.0 of the Apptentive SDK, you can also elect to show a Survey instead of the Feedback form. For more details, please see [Using Surveys](/docs/using_apptentive/surveys/).
+
 The second page of the Ratings Prompt configuration enables you to indicate to *Who* and *When* the prompt should be displayed. You can trigger this based on the time since the customer installed the app, the number of launches since they've installed the app, and/or the number of occurrences of a specific Event. Once these criteria are set, you should then set the Event that the ratings prompt will be invoked at under the **When** section.
 
 At your option, the Ratings Prompt may be shown at most once to a given customer, or you can show it multiple times and limit by version of your app and/or frequency of display.
