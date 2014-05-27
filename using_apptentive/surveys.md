@@ -10,7 +10,7 @@ Apptentive Surveys enable you to collect structured feedback, in-app, from your 
 
 Displaying Surveys in your app only requires that you've completed a standard Apptentive integration, and have added the appropriate calls to `Apptentive.engage` for the **Events** where you at some point might like to show a Survey.
 
-For more details on integrating Apptentive, please see the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/).
+For more details on integrating Apptentive, please see the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/integration/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/integration/).
 
 ## Creating a Survey
 
@@ -34,7 +34,7 @@ When the customer completes your Survey, you can optionally display a "Thank You
 
 Apptentive provides robust targeting and lifecycle management options for Surveys to ensure that your Surveys are shown to the right people at the right time.
 
-Under the Target Audience section of the Publishing page, you can use the data automatically collected by Apptentive, such as Device model, OS Version, etc., as well as Custom Data you've provided to target the Survey to a specific group of customers. More information about using Custom Data is available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/).
+Under the Target Audience section of the Publishing page, you can use the data automatically collected by Apptentive, such as Device model, OS Version, etc., as well as Custom Data you've provided to target the Survey to a specific group of customers. More information about using Custom Data is available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/integration/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/integration/).
 
 Starting with the 1.5.0 versions of the Apptentive SDKs, Surveys are displayed at a specific event that's been instrumented via the `Apptentive.engage` method. Older versions of the Apptentive SDK use a targeting mechanism based on tags.
 
