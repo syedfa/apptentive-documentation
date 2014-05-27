@@ -32,7 +32,7 @@ After including Apptentive in your Xcode project, the first step of integration 
 }
 ```
 
-###Do you Love Apptentive?
+### Do you Love Apptentive?
 
 Apptentive's rating flow displays a "Do you love *app_name*?" dialog to the user. Your app's *Love Ratio* is determined by people's answer to this question.
 
@@ -42,7 +42,7 @@ The dialog is shown by engaging a certain event in your app that you have target
 
 These rating flow conditions can be changed at any time via the Apptentive website. This feature enables you to remotely change Apptentive rating flow settings without issuing an iOS app update.
 
-###App Store Rating Prompt
+### App Store Rating Prompt
 
 Asking people who love your app to rate it in the App Store is a great way to increase your App Store star rating.
 
@@ -58,7 +58,7 @@ People who select "Yes" will be asked to rate the app on the iOS app store.
 
 Those who indicate they do not like the app will be prompted to send feedback directly to the developer via the Apptentive feedback form.
 
-###Surveys
+### Surveys
 
 Apptentive surveys are used to collect information from the people using your app.
 
@@ -68,7 +68,7 @@ Like the rating prompt, surveys are created online and targeted at events in you
 
 These surveys can be released completely remotely, between App Store updates, as long as you have engaged an event to trigger the survey. Seed your app with events now, and you will be able to display surveys at any given event in the future. 
 
-###Feedback from Users (Apptentive Message Center)
+### Feedback from Users (Apptentive Message Center)
 
 The Apptentive rating flow will prompt some users to send you direct feedback. You can respond to this feedback from your online Apptentive dashboard.
 
@@ -76,7 +76,7 @@ It is important to implement a Feedback button, so that users can open up the Ap
 
 You should also alert users that a new Apptentive message has arrived.
 
-###Feedback Button
+### Feedback Button
 
 Developers should implement a button for giving direct feedback via Apptentive's Message Center. This button is often found in the app's "Settings" menu.
 
@@ -92,7 +92,7 @@ Create an IBAction that calls `presentMessageCenterFromViewController:` and wire
 
 People using your app will use this button to send you direct feedback. They can also use it to return to Message Center at any time and reference their past conversations.
 
-###Unread Messages
+### Unread Messages
 
 You should alert the user that a new message has arrived in response to their feedback.
 
@@ -118,7 +118,7 @@ For example, if you have a Feedback button in your settings, you could decorate 
 
 The method `unreadMessageCount` can also be used to get the number of unread messages at any time.
 
-###Push Notifications
+### Push Notifications
 
 Apptentive can integrate with your existing [Urban Airship](http://urbanairship.com/) account to offer push notifications when new Apptentive messages are available.
 
