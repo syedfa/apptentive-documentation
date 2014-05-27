@@ -2,15 +2,15 @@
 
 ## Introduction
 
-Apptentive Surveys enable you to collect structured feedback, in-app, from your customers. Surveys can be targeted to specific groups of customers, and using the latest versions of our SDK, can be shown as part of the Ratings Prompt flow instead of the feedback form. Surveys are rendered natively on device to ensure a robust, performant experience for your customers whether they're offline or online.
+Apptentive Surveys enable you to collect structured feedback, in-app, from your customers. Surveys can be targeted to specific groups of customers, and using the latest versions of our SDK, can be shown as part of the Ratings Prompt flow instead of the Feedback Form. Surveys are rendered natively on a device to ensure a robust, performant experience for your customers whether they're offline or online.
 
-**NOTE: These instructions were written for version 1.5.0 or above of the Apptentive iOS and Android SDKs, which was released on May 27, 2014.**  If you're not using these SDKs, we highly recommend you upgrade so that you'll be able to take advantage of all of the latest functionality. Please [contact us](http://www.apptentive.com/contact) for more details or for assistance upgrading.
+**NOTE: These instructions were written for version 1.5.0 or above of the Apptentive iOS and Android SDKs, which were released on May 27, 2014.**  If you're not using version 1.5.0 or above, we highly recommend you upgrade so that you'll be able to take advantage of all of the latest functionality. Please [contact us](http://www.apptentive.com/contact) for more details or for assistance upgrading.
 
 ## Instrumenting for Surveys
 
 Displaying Surveys in your app only requires that you've completed a standard Apptentive integration, and have added the appropriate calls to `Apptentive.engage` for the **Events** where you at some point might like to show a Survey.
 
-For more details on integrating Apptentive, please see the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/integration/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/integration/).
+For more details on integrating Apptentive, please see the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/).
 
 ## Creating a Survey
 
@@ -34,7 +34,7 @@ When the customer completes your Survey, you can optionally display a "Thank You
 
 Apptentive provides robust targeting and lifecycle management options for Surveys to ensure that your Surveys are shown to the right people at the right time.
 
-Under the Target Audience section of the Publishing page, you can use the data automatically collected by Apptentive, such as Device model, OS Version, etc., as well as Custom Data you've provided to target the Survey to a specific group of customers. More information about using Custom Data is available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/integration/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/integration/).
+Under the Target Audience section of the Publishing page, you can use the data automatically collected by Apptentive, such as Device model, OS Version, etc., as well as Custom Data you've provided to target the Survey to a specific group of customers. More information about using Custom Data is available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/).
 
 Starting with the 1.5.0 versions of the Apptentive SDKs, Surveys are displayed at a specific event that's been instrumented via the `Apptentive.engage` method. Older versions of the Apptentive SDK use a targeting mechanism based on tags.
 
@@ -52,10 +52,10 @@ To help ensure the statistical integrity of your results, you cannot modify a Su
 
 ## Using a Survey with the Ratings Prompt
 
-Starting with version 1.5.0 of the Apptentive SDKs, you can use a Survey to collect structured feedback from your customers following the initial "Do you love..." Ratings prompt. This replaces the Feedback form that is shown by default.
+Starting with version 1.5.0 of the Apptentive SDKs, you can use a Survey to collect structured feedback from your customers following the initial "Do you love..." Ratings prompt. This replaces the Feedback Form that is shown by default.
 
 To use a Survey with the Ratings Prompt, you should first create the Survey as described above. Note that when using a Survey with the Ratings Prompt, any lifecycle or targeting options you specify will not be applied.
 
 Once the Survey has been published, you can include it in the Ratings Prompt. These settings are also available under the Interactions section of the [Apptentive dashboard](https://be.apptentive.com/). To use the Survey, under the "The Prompt" section, change the target of the "No" button on the initial prompt to "taken to a Survey...". You can then select the Survey you just created.
 
-If you have customers using a version of the Apptentive SDK prior to 1.5.0, they will continue to see the Feedback form instead of the Survey.
+If you have customers using a version of the Apptentive SDK prior to 1.5.0, they will continue to see the Feedback Form instead of the Survey.
