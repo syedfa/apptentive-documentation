@@ -4,7 +4,7 @@
 
 Apptentive's Intelligent Ratings Prompt enables you to engage with your customers, solicit constructive feedback, and drive great ratings and reviews in the app store.
 
-The Intelligent Ratings Prompt requires that you or your developer has added the Apptentive SDK to your application. Please make sure to review the [iOS](/docs/ios/) or [Android](/docs/android/) Integration Documentation as appropriate.
+The Intelligent Ratings Prompt requires that you or your developer has added the Apptentive SDK to your application. Please make sure to review the [iOS](/docs/ios/integration/) or [Android](/docs/android/integration/) Integration Documentation as appropriate.
 
 This document provides an overview of Apptentive Events & Interactions, which are the building blocks of the Intelligent Ratings Prompt, as well further details on configuring the Ratings Flow from within the Apptentive Dashboard.
 
