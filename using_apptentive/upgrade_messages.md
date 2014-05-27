@@ -8,7 +8,7 @@ Upgrade Messages help you make sure your customers know about all of the latest 
 
 **NOTE**: Use of Upgrade Messages requires version 1.2.7 or above of the Apptentive iOS SDK, or version 1.3.0 of the SDK for Android.
 
-For Upgrade Messages to function properly, you must ensure that the proper code point is included in your app's initialization. Further details are available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/).
+For Upgrade Messages to function properly, you must ensure that the proper code point is included in your app's initialization. Further details are available in the [iOS Integration Documentation](http://www.apptentive.com/docs/ios/integration/) and the [Android Integration Documentation](http://www.apptentive.com/docs/android/integration/).
 
 ## Creating Upgrade Messages
 

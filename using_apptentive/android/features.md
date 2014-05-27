@@ -36,6 +36,7 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 | `zh`             |  Chinese (Traditional) |
 | `zh-rCN`         |  Chinese (Simplified)  |
 
+
 # Events and Interactions
 
 Our SDK lets you keep track of customer behavior, and initiate conversations with each customer based on their behavior.
@@ -52,7 +53,7 @@ be.
 
 **Events** are invoked using the
 [Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29) method.
-When your app invokes an **Event**, it will be sent to our server. It wiill show up on [apptentive.com](https://be.apptentive.com)
+When your app invokes an **Event**, it will be sent to our server. It will show up on [apptentive.com](https://be.apptentive.com)
 under **_Interactions -> Events_**, so you can verify that **Events** are making it to our server. If you would like to
 predefine an **Event** name so that you can use it in an **Interaction** before you make any changes on the client, you
 can do so by entering it manually on that page as well.
