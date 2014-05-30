@@ -303,7 +303,7 @@ If the push notification was sent by Apptentive, we will then present Message Ce
 
 #### Customization
 
-For information on customizing the UI and text of `apptentive-ios`, please see [Customization](https://github.com/apptentive/apptentive-ios/blob/master/docs/Customization.md).
+For information on customizing the UI and text of `apptentive-ios`, please see the Apptentive iOS SDK's [customization guide](http://www.apptentive.com/docs/ios/customization/).
 
 ## Testing Apptentive Features
 
@@ -311,5 +311,5 @@ Apptentive interactions are only shown if the conditions set on your Apptentive 
 
 This can make some Apptentive features somewhat hard to invoke and test. An interaction may or may not be shown whenever you engage and event in your app.
 
-Please see the [Apptentive testing guide](docs/testing_guide.md) for directions on how to test that the Rating Prompt, Surveys, and other Apptentive features have been configured correctly.
+Please see the [Apptentive testing guide](http://www.apptentive.com/docs/ios/testing/) for directions on how to test that the Rating Prompt, Surveys, and other Apptentive features have been configured correctly.
 
