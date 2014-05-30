@@ -12,7 +12,7 @@ You can now customize the text in the ratings prompt from your Apptentive dashbo
 
 For example:
 
-![](images/customization-ratings.png)
+![Customized Ratings Prompt text](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-ratings.png)
 
 There are some caveats:
 
