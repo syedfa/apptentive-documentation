@@ -29,7 +29,7 @@ If you change the `tintColor` of your app, we will automatically pick it up.
 [[UIView appearance] setTintColor:[UIColor redColor]];
 ```
 
-<img src="images/customization-tintColor.png" data-src2x="images/customization-tintColor@2x.png">
+<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-tintColor.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-tintColor@2x.png">
 
 Similarly, you can change the attributes of the text of the navigation bar, and we should take those attributes:
 
@@ -39,7 +39,7 @@ NSDictionary *attributes = @{UITextAttributeTextColor: [UIColor orangeColor],
 [[UINavigationBar appearance] setTitleTextAttributes:attributes];
 ```
 
-<img src="images/customization-navTextAttributes.png" data-src2x="images/customization-navTextAttributes@2x.png">
+<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTextAttributes.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTextAttributes@2x.png">
 
 Unfortunately, you'll currently need to set some appearance attributes on our custom subclass of `UINavigationController`, as below:
 
@@ -57,7 +57,7 @@ NSDictionary *attributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
 
 which yields:
 
-<img src="images/customization-navTintColors.png" data-src2x="images/customization-navTintColors@2x.png">
+<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTintColors.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTintColors@2x.png">
 
 That is, unless you disable our branding with the `-setShowTagline:` method:
 
@@ -69,7 +69,7 @@ NSDictionary *attributes = @{UITextAttributeTextColor: [UIColor purpleColor]};
 
 In which case you'll get:
 
-<img src="images/customization-noTagline.png" data-src2x="images/customization-noTagline@2x.png">
+<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-noTagline.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-noTagline@2x.png">
 
 *Note:* We will likely change this moving forward to be more consistent, API-wise.
 
@@ -85,7 +85,7 @@ Can be used to disable showing the Apptentive logo at the top of the Message Cen
 
 The Apptentive logo will still be displayed on the About Apptentive screen, which can be reached by tapping the white bar at the bottom of the Contact Settings screen. The About Apptentive screen looks like this:
 
-<img src="images/customization-aboutApptentive.png" data-src2x="images/customization-aboutApptentive@2x.png">
+<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-aboutApptentive.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-aboutApptentive@2x.png">
 
 ## Customization as Submodule
 
