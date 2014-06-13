@@ -108,7 +108,7 @@ You should now build `ApptentiveResources.bundle`, the Apptentive assets bundle 
 
 ### Begin using Apptentive
 
-You can now begin [using Apptentive in your project](../README.md). For example, set your API key:  
+You can now begin [using Apptentive in your project](http://www.apptentive.com/docs/ios/features/). For example, set your API key:  
 
 ```
 #import "ATConnect.h"
