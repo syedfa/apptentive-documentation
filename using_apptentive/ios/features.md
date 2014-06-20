@@ -17,7 +17,6 @@ After including Apptentive in your Xcode project, the first step of integration 
 
 ``` objective-c
 #import "ATConnect.h"
-#import "ATAppRatingFlow.h"
 
 //...
 
@@ -26,7 +25,7 @@ After including Apptentive in your Xcode project, the first step of integration 
 	[ATConnect sharedConnection].apiKey = @"YOUR_APPTENTIVE_API_KEY";
 	
 	// App Store ID
-	[ATAppRatingFlow sharedRatingFlow].appID = @"YOUR_APP_ID_FROM_THE_APP_STORE";
+	[ATConnect sharedConnection].appID = @"YOUR_APP_ID_FROM_THE_APP_STORE";
 	
 	/* ... */
 }
