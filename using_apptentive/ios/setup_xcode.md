@@ -8,8 +8,6 @@ We recommend integrating Apptentive as an Xcode subproject (see below) or by [us
 
 However, the Apptentive iOS SDK's static library, header files, and resources bundle can be [downloaded from the project's GitHub Releases page](https://github.com/apptentive/apptentive-ios/releases).
 
-https://github.com/apptentive/apptentive-ios/releases
-
 These files can be used in the steps below to integrate Apptentive. You can ignore any directions to build the Apptentive files; they have already been built and provided for you.
 
 New files are added for each official release of the iOS SDK. Please be sure to [watch our GitHub project](https://github.com/apptentive/apptentive-ios) and update your Apptentive library and resources in order to get the latest features and fixes.
