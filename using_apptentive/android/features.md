@@ -28,6 +28,7 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 | `de`             |  German       |
 | `es`             |  Spanish      |
 | `fr`             |  French       |
+| `fr-rCA`         |  French Canadian |
 | `it`             |  Italian      |
 | `ja`             |  Japanese     |
 | `nl`             |  Dutch        |
