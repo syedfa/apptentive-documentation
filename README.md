@@ -5,8 +5,8 @@ Here you can find a collection of resources on how to best implement and use App
 ## Getting Started
 In most cases our SDK can be either downloaded or cloned from our git repositories.  We regularly update our SDKs with new features and bug fixes - Star or Watch to keep up to date!
 
-* **[iOS](https://github.com/apptentive/apptentive-ios)**
-* **[Android](https://github.com/apptentive/apptentive-android)**
+* **[iOS](http://www.apptentive.com/docs/ios/integration/)**
+* **[Android](http://www.apptentive.com/docs/android/integration/)**
 * [OS X](https://github.com/apptentive/apptentive-osx)
 * [Titanium](https://github.com/apptentive/apptentive-titanium)
 * [Trigger.io](https://github.com/apptentive/apptentive-trigger-io)
