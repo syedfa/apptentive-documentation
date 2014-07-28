@@ -1,15 +1,14 @@
-##Apptentive Integration guide
-
-Welcome to Apptentive!
+##Apptentive Features
 
 We recommend adding several features to get the most out of Apptentive. These include:
+
  - Setting your API Key and App Store ID
  - Configuring the Enjoyment Dialog ("Do you Love *app_name*?")
  - Adding a Feedback button to your settings menu
  - Notifying the user that new unread messages have arrived
- - Integration with your Push Notification service
-
-This integration guide for the Apptentive iOS SDK will serve as a guide to adding these common and useful features to your app.
+ - Integrating your Push Notification service
+ 
+This Feature guide for the Apptentive iOS SDK will walk you through adding these common and useful features to your app.
 
 ###Set your Apptentive API Key
 
