@@ -152,3 +152,16 @@ When push notifications arrive, pass them to Apptentive:
 If the push notification was sent by Apptentive, we will then present Message Center from the `viewController` parameter.
 
 If you are interested in using a Push Notification service other than Urban Airship, please contact us!
+
+### Debug Logging
+
+Apptentive logs a variety of information to the Xcode console when it is running. These logs can help you determine, for example, when an event is engaged and if an interaction will be shown for the event.
+
+Logging can be customized using the `debuggingOptions` property of ATConnect. To use the property, include the additional `ATConnect_Debugging.h` header file in your project.
+
+    #import "ATConnect_Debugging.h"
+    ...
+    / Log all HTTP requests made by Apptentive
+    [ATConnect sharedConnection].debuggingOptions = ATConnectDebuggingOptionsLogAllHTTPRequests;
+
+The various `ATConnectDebuggingOptions` members are used to specify the types of information Apptentive should log. One common use case of `debuggingOptions` is to log and examine all Apptentive HTTP requests.
