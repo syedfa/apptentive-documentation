@@ -36,16 +36,19 @@ These instructions were tested with IntelliJ IDEA 13.1.2
 
 ### Using Eclipse
 
-These instructions were tested for the Juno Eclipse release.
+These instructions were tested for the Eclipse Luna 4.4.0 release.
 
 1. From the menu bar, click `File` -> `Import`
 2. Under `General`, select `Existing Projects into Workspace`
 3. Click `Next`
-4. In the Package Explorer, select your project
-5. From the menu bar, click `Project` -> `Properties`
+4. Under `Select root directory`, click `Browse…`
+5. Select the folder `apptentive` that is contained in the `apptentive-android` repo
+5. Click `Finish`
+6. In the `Package Explorer`, select your android app's project
+7. From the menu bar, click `Project` -> `Properties`
 6. On the left side, click `Android`
 7. Under the `Library` section, click `Add`
-8. Select `apptentive-android-sdk`
+8. Select `apptentive`
 9. Click `OK`
 
 # Modifying your Manifest
