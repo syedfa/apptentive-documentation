@@ -89,7 +89,7 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
         </activity>
 
         <!-- The following is required -->
-        <!-- Include your App's Apptentive API key from your app's "settings" page on www.apptentive.com -->
+        <!-- Include your App's API key from Apptentive at "Settings -> API & Development" -->
         <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
         <activity android:name="com.apptentive.android.sdk.ViewActivity"
                   android:theme="@style/Apptentive.Theme.Transparent"/>
