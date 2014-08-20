@@ -61,13 +61,13 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
           package="com.apptentive.android.example"
           android:versionCode="1"
           android:versionName="1.0">
-    <!-- Required permissions. -->
+    <!-- Required -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- Optional permissions. GET_ACCOUNTS is used to pre-populate customer's email in form fields. -->
+    <!-- Optional - GET_ACCOUNTS is used to pre-populate customer's email in forms. -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
-    <!-- Make sure you are supporting high resolution screens so Apptentive UI elements look great! -->
+    <!-- Make sure you are supporting high resolution screens so Apptentive looks great. -->
     <supports-screens android:largeScreens="true"
                       android:normalScreens="true"
                       android:smallScreens="true"
