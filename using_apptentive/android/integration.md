@@ -67,7 +67,7 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
     <!-- Optional - GET_ACCOUNTS is used to pre-populate customer's email in forms. -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
-    <!-- Make sure you are supporting high resolution screens so Apptentive looks great. -->
+    <!-- Make sure to support high resolution screens so Apptentive's UI looks great. -->
     <supports-screens android:largeScreens="true"
                       android:normalScreens="true"
                       android:smallScreens="true"
