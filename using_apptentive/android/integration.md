@@ -24,12 +24,11 @@ We strive to fix bugs and add new features as quickly as possible. **Please watc
 These instructions were tested with IntelliJ IDEA 14
 
 1. From the menu bar, click `File` -> `Import Module`
-2. Select the `apptentive` directory that is contained in the `apptentive-android` repo
-3. Click the `Create module from existing sources` radio button, and click `Next`
-4. Click `Next` until finished
-5. From the menu bar, click `File` -> `Project Structure...`
-6. Under `Project Settings` click `Modules`
-7. Select the module for your Android app
+2. Navigate to the `apptentive` directory that is contained in the `apptentive-android` repo
+3. If your project uses Gradle, select `apptentive.iml`, otherwise choose `apptentive-without-gradle.iml`
+4. From the menu bar, click `File` -> `Project Structure...`
+5. Under `Project Settings` click `Modules`
+6. Select the module for your Android app
 7. Click the `Dependencies` tab, and then click the small `+` button in the lower left corner of that pane
 8. Choose `Module Dependency...`, select `apptentive` module, and click `OK`
 9. Click `OK` to save and close the settings
