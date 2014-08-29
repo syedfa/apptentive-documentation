@@ -324,7 +324,7 @@ Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 
 #### Setting the Parse deviceToken
 
-Parse integration requires you to implement your own Application object. In the `onCreate()` method of your Application object, you will need to add the following code after your call to Parse.initialize(). This code will make sure that the deviceToken is sent to Apptentive as soon as it is registered with Parse.
+Parse integration requires you to implement your own Application object. In the `onCreate()` method of your Application object, you will need to add the following code after your call to Parse.initialize(). This code will make sure that the deviceToken is sent to **Apptentive** as soon as it is registered with Parse.
 
 ```java
 ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
@@ -342,9 +342,9 @@ if (parseInstallation == null || parseInstallation.get("deviceToken") == null) {
 }
 ```
 
-### Displaying the Push Notification from Parse
+### Displaying a Push Notification from Parse
 
-Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. Apptentive needs to know this same information so that it can work seemlessly with your app. When you call `Apptentive.setParsePushCallback()`, you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register our `ViewActivity` with Parse so that push notifications that came from Apptentive get handled by our code. All Apptentive push notifications will be sent to the Parse channel called `apptentive`.
+Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. **Apptentive** needs to know this same information so that it can work seemlessly with your app. When you call `Apptentive.setParsePushCallback()`, you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register our `ViewActivity` with Parse so that push notifications that came from **Apptentive** get handled by our code. All **Apptentive** push notifications will be sent to the Parse channel called `apptentive`.
 
 In your `Application.onCreate()` method, add the following after your call to `PushService.setDefaultPushCallback()`:
 
@@ -353,7 +353,7 @@ Apptentive.setParsePushCallback(YourActivity.class);
 PushService.subscribe(this, "apptentive", ViewActivity.class);
 ```
 
-### Displaying the Push Notification from all other providers
+### Displaying a Push Notification from all other providers
 
 Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
 pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification%28android.content.Context,%20android.content.Intent%29),
