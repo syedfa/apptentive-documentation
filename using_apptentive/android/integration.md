@@ -305,7 +305,7 @@ actual APID.
     ```java
     String apid = PushManager.getAPID();
     if (apid != null) {
-    Apptentive.addUrbanAirshipPushIntegration(context, apid);
+      Apptentive.addUrbanAirshipPushIntegration(context, apid);
     }
     ```
 
