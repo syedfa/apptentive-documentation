@@ -264,7 +264,7 @@ When you release a new version of your app, you should create an [Upgrade Messag
 ### Supported Push Providers
 
 * Urban Airship
-* Amazom Web Services SNS
+* Amazon Web Services SNS
 * Parse
 
 ### Configuring Your Push Credentials
