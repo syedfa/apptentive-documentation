@@ -262,11 +262,12 @@ When you release a new version of your app, you should create an [Upgrade Messag
 
 * Urban Airship
 * Amazom Web Services SNS
+* Parse
 
 ### Configuring Your Push Credentials
 
 To enter your push credentials, go to [apptentive.com](https://be.apptentive.com), select *Settings -> Integrations*,
-choose either *Urban Airship* or *Amazon Web Services SNS*, and follow the instructions on that page.
+choose *Urban Airship*, *Amazon Web Services SNS*, or *Parse*, and follow the instructions on that page.
 
 ### Setting the Device Token
 
@@ -318,6 +319,26 @@ String registrationId;
 Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 ```
 
+#### Setting up the Parse Device Token
+
+Parse involves overriding your app's Application object. There, you will call `Parse.initialize()`. Right after you initialize Parse, you should initialize Apptentive, by passing us your app's `deviceToken`. Copy the code below directly after your call to `Parse.initialize()`.
+
+```java
+ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
+if (parseInstallation == null || parseInstallation.get("deviceToken") == null) {
+  ParseInstallation.getCurrentInstallation().saveInBackground(new SaveCallback() {
+    @Override
+    public void done(ParseException e) {
+      String deviceToken = (String) ParseInstallation.getCurrentInstallation().get("deviceToken");
+      Apptentive.addParsePushIntegration(getApplicationContext(), deviceToken);
+    }
+  });
+} else {
+  String deviceToken = (String) parseInstallation.get("deviceToken");
+  Apptentive.addParsePushIntegration(this, deviceToken);
+}
+```
+
 ### Displaying the Push Notification
 
 Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
@@ -325,6 +346,7 @@ pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent
 launch your main Activity, and display the push notification with [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification%28android.app.Activity%29).
 This two pass approach is necessary to avoid double displaying the push notification. Both of these methods do nothing
 if the push notification didn't come from Apptentive.
+
 
 ###### Example
 
@@ -352,6 +374,45 @@ public void onWindowFocusChanged(boolean hasFocus) {
   }
 }
 ```
+
+##### Parse is a little Different
+
+Parse integration is very simple. Because of this, you will need to create a `BroadcastReceiver` to intercept incoming notifications and pass them to Apptentive. Simple follow the steps below to do this.
+
+1. Create a new class called ParsePushReceiver. Copy in and modify the code below to fit your package.
+
+    ```java
+    public class ParsePushReceiver extends BroadcastReceiver {
+      @Override
+      public void onReceive(Context context, Intent intent) {
+        Apptentive.setPendingPushNotification(context, intent);
+      }
+    }
+    ```
+
+2. In your manifest, add the following right before the closing `</application>` element. Replace *com.apptentive.parse.example* with your package name.
+
+    ```xml
+    <receiver android:name="com.apptentive.parse.example.ParsePushReceiver" android:exported="false">
+      <intent-filter>
+        <action android:name="com.apptentive.PUSH"/>
+      </intent-filter>
+    </receiver>
+    ```
+
+3. Let Apptentive handle the push notification when it is opened. When you set up Parse, you most likely configured it to open an Activity when the push notification is opened by calling `PushService.setDefaultCallback(). In this Activity, you will want to allow Apptentive to handle the opened push notification. To do so, you will need to call `Apptentive.handleOpenedPushNotification()`. Here is the recommended implementation:
+
+    ```java
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+      super.onWindowFocusChanged(hasFocus);
+      if (hasFocus) {
+        Apptentive.handleOpenedPushNotification(this);
+      }
+    }
+    ```
+
+    Note that this method will return immediately if the push notification that was previously saved using `Apptentive.setPendingPushNotification()` did not come from Apptentive.
 
 # Set Customer Email address
 
