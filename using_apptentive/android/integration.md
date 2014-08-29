@@ -21,31 +21,33 @@ We strive to fix bugs and add new features as quickly as possible. **Please watc
 
 ### Using IntelliJ IDEA
 
-These instructions were tested with IntelliJ IDEA 13.1.2
+These instructions were tested with IntelliJ IDEA 14
 
 1. From the menu bar, click `File` -> `Import Module`
-2. Select the `apptentive-android-sdk` directory
-3. Click the `Create module from existing sources` radio button
-4. Click `Next` until finished
-5. From the menu bar, click `File` -> `Project Structure...`
-6. Under `Project Settings` click `Modules`
-7. Select your Android app's module
+2. Navigate to the `apptentive` directory that is contained in the `apptentive-android` repo
+3. If your project uses Gradle, select `apptentive.iml`, otherwise choose `apptentive-without-gradle.iml`
+4. From the menu bar, click `File` -> `Project Structure...`
+5. Under `Project Settings` click `Modules`
+6. Select the module for your Android app
 7. Click the `Dependencies` tab, and then click the small `+` button in the lower left corner of that pane
-8. Choose `Module Dependency...`, select `apptentive-android-sdk` module, and click `OK`
+8. Choose `Module Dependency...`, select `apptentive` module, and click `OK`
 9. Click `OK` to save and close the settings
 
 ### Using Eclipse
 
-These instructions were tested for the Juno Eclipse release.
+These instructions were tested for the Eclipse Luna 4.4.0 release.
 
 1. From the menu bar, click `File` -> `Import`
 2. Under `General`, select `Existing Projects into Workspace`
 3. Click `Next`
-4. In the Package Explorer, select your project
-5. From the menu bar, click `Project` -> `Properties`
+4. Under `Select root directory`, click `Browse…`
+5. Select the folder `apptentive` that is contained in the `apptentive-android` repo
+5. Click `Finish`
+6. In the `Package Explorer`, select your android app's project
+7. From the menu bar, click `Project` -> `Properties`
 6. On the left side, click `Android`
 7. Under the `Library` section, click `Add`
-8. Select `apptentive-android-sdk`
+8. Select `apptentive`
 9. Click `OK`
 
 # Modifying your Manifest
@@ -58,13 +60,13 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
           package="com.apptentive.android.example"
           android:versionCode="1"
           android:versionName="1.0">
-    <!-- Required permissions. -->
+    <!-- Required -->
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- Optional permissions. GET_ACCOUNTS is used to pre-populate customer's email in form fields. -->
+    <!-- Optional - GET_ACCOUNTS is used to pre-populate customer's email in forms. -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
-    <!-- Make sure you are supporting high resolution screens so Apptentive UI elements look great! -->
+    <!-- Make sure to support high resolution screens so Apptentive's UI looks great. -->
     <supports-screens android:largeScreens="true"
                       android:normalScreens="true"
                       android:smallScreens="true"
@@ -86,7 +88,7 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
         </activity>
 
         <!-- The following is required -->
-        <!-- Include your App's Apptentive API key from your app's "settings" page on www.apptentive.com -->
+        <!-- Include your App's API key from Apptentive at "Settings -> API & Development" -->
         <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
         <activity android:name="com.apptentive.android.sdk.ViewActivity"
                   android:theme="@style/Apptentive.Theme.Transparent"/>
@@ -261,7 +263,7 @@ When you release a new version of your app, you should create an [Upgrade Messag
 ### Supported Push Providers
 
 * Urban Airship
-* Amazom Web Services SNS
+* Amazon Web Services SNS
 * Parse
 
 ### Configuring Your Push Credentials
@@ -302,7 +304,7 @@ actual APID.
     ```java
     String apid = PushManager.getAPID();
     if (apid != null) {
-    Apptentive.addUrbanAirshipPushIntegration(context, apid);
+      Apptentive.addUrbanAirshipPushIntegration(context, apid);
     }
     ```
 
@@ -321,7 +323,7 @@ Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 
 #### Setting up the Parse Device Token
 
-Parse involves overriding your app's Application object. There, you will call `Parse.initialize()`. Right after you initialize Parse, you should initialize Apptentive, by passing us your app's `deviceToken`. Copy the code below directly after your call to `Parse.initialize()`.
+Parse integration requires you to implement your own Application object. In the `onCreate()` method of your Application object, you will need to add the following code after your call to Parse.initialize(). This code will make sure that the deviceToken is sent to **Apptentive** as soon as it is registered with Parse.
 
 ```java
 ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
@@ -339,7 +341,18 @@ if (parseInstallation == null || parseInstallation.get("deviceToken") == null) {
 }
 ```
 
-### Displaying the Push Notification
+### Displaying a Push Notification from Parse
+
+Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. **Apptentive** needs to know this same information so that it can work seemlessly with your app. When you call `Apptentive.setParsePushCallback()`, you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register our `ViewActivity` with Parse so that push notifications that came from **Apptentive** get handled by our code. All **Apptentive** push notifications will be sent to the Parse channel called `apptentive`.
+
+In your `Application.onCreate()` method, add the following after your call to `PushService.setDefaultPushCallback()`:
+
+```java
+Apptentive.setParsePushCallback(YourActivity.class);
+PushService.subscribe(this, "apptentive", ViewActivity.class);
+```
+
+### Displaying a Push Notification from all other providers
 
 Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
 pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification%28android.content.Context,%20android.content.Intent%29),
