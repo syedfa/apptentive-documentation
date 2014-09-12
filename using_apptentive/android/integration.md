@@ -19,9 +19,26 @@ We strive to fix bugs and add new features as quickly as possible. **Please watc
 
 # Setting up the Project
 
-### Using IntelliJ IDEA
+### Using Gradle
 
-These instructions were tested with IntelliJ IDEA 14
+1. Modify your project's top-level settings.gradle to include a reference to the `apptentive-android/apptentive` directory.
+    
+    ```
+    include 'apptentive'
+    project(':apptentive').projectDir = new File('path-to-apptentive-repo/apptentive')
+    ```
+2. In your app's `build.gradle`, add a reference to this project.
+
+    ```
+    dependencies {
+        compile project(':apptentive')
+    }
+    ```
+3. If you are using IntelliJ IDEA or Android Studio, your IDE project settings should rebuild once you have made these modifications.
+
+### Using IntelliJ IDEA without Gradle
+
+These instructions were tested with IntelliJ IDEA 14 EAP
 
 1. From the menu bar, click `File` -> `Import Module`
 2. Navigate to the `apptentive` directory that is contained in the `apptentive-android` repo
