@@ -244,6 +244,7 @@ notifications, your customer will see a notification, even if they haven't recen
 
 * Urban Airship
 * Amason Web Services SNS
+* Parse
 
 [Setting up Push Notifications](http://www.apptentive.com/docs/android/integration/#push-notifications)
 
