@@ -59,31 +59,19 @@ which yields:
 
 <img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTintColors.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-navTintColors@2x.png">
 
-That is, unless you disable our branding with the `-setShowTagline:` method:
+## Hiding Apptentive Branding
+
+Apptentive branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
+
+You should also use the `-initiallyHideBranding:` method to hide branding prior to your account's initial configuration download on the device.
 
 ```objective-c
-[[ATConnect sharedConnection] setShowTagline:NO];
-NSDictionary *attributes = @{UITextAttributeTextColor: [UIColor purpleColor]};
-[[UINavigationBar appearance] setTitleTextAttributes:attributes];
+[[ATConnect sharedConnection] initiallyHideBranding:YES];
 ```
 
-In which case you'll get:
+"Hide Branding" hides the Apptentive logos at the top of the Message Center and on the Contact Settings screen.
 
-<img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-noTagline.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-noTagline@2x.png">
-
-*Note:* We will likely change this moving forward to be more consistent, API-wise.
-
-## Removing Apptentive Branding
-
-The `-setShowTagline:` method:
-
-```objective-c
-[[ATConnect sharedConnection] setShowTagline:NO];
-```
-
-Can be used to disable showing the Apptentive logo at the top of the Message Center and on the Contact Settings screen.
-
-The Apptentive logo will still be displayed on the About Apptentive screen, which can be reached by tapping the white bar at the bottom of the Contact Settings screen. The About Apptentive screen looks like this:
+The Apptentive logo will still be displayed on the About Apptentive screen, which can be reached by tapping the white bar at the bottom of the Contact Settings screen:
 
 <img src="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-aboutApptentive.png" data-src2x="https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/images/customization-aboutApptentive@2x.png">
 
