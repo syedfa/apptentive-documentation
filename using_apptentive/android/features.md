@@ -23,7 +23,9 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 
 | Locale Qualifier | Language Name |
 | ---------------- | ------------- |
-| `en`             |  English      |
+| None             |  English      |
+| `ar`             |  Arabic       |
+| `el`             |  Greek        |
 | `da`             |  Danish       |
 | `de`             |  German       |
 | `es`             |  Spanish      |
@@ -31,9 +33,12 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 | `fr-rCA`         |  French Canadian |
 | `it`             |  Italian      |
 | `ja`             |  Japanese     |
+| `ko`             |  Korean       |
 | `nl`             |  Dutch        |
+| `pt`             |  Brazilian Portuguese |
 | `ru`             |  Russian      |
 | `sv`             |  Swedish      |
+| `tr`             |  Turkish      |
 | `zh`             |  Chinese (Traditional) |
 | `zh-rCN`         |  Chinese (Simplified)  |
 
