@@ -109,11 +109,6 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
         <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
         <activity android:name="com.apptentive.android.sdk.ViewActivity"
                   android:theme="@style/Apptentive.Theme.Transparent"/>
-        <receiver android:name="com.apptentive.android.sdk.comm.NetworkStateReceiver">
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
-            </intent-filter>
-        </receiver>
     </application>
 </manifest>
 ```
