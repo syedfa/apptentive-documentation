@@ -22,7 +22,7 @@ These safe rating ratings prompts work well in the App Store, but they're very h
 
 Instead, on you Test account, select criteria that are easier to trigger.  
 
-Setting the "days after install" and "app launches" to 1 will ensure that the rating prompt is shown the first time its event is engaged.
+Setting "app launches" to 1 will ensure that the rating prompt is shown the first time its event is engaged.
 
 #### Target the Rating Prompt to an Event
 
