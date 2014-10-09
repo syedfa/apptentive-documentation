@@ -3,38 +3,44 @@
 This document will show you how to integrate the Apptentive Android SDK into your app, configure it, and test to make
 sure it's working properly. Each section lists the minimum necessary configuration, as well as optional steps.
 
-# Download
+# Setting up the Project
+
+### Integration From Maven Repository
+
+Our SDK is avilable from the central Maven repo.
+
+#### Using Gradle
+
+In your app's `build.gradle`, add the following to your `dependencies` section:
+
+```code
+compile 'com.apptentive:apptentive-android:1.6.+@aar'
+```
+
+If you are using IntelliJ IDEA or Android Studio, your IDE project settings should rebuild once you have made these modifications.
+
+#### Using Maven
+
+Add the following to your app's pom.xml in the `dependencies` element:
+```code
+<dependency>
+    <groupId>com.apptentive</groupId>
+    <artifactId>apptentive-android</artifactId>
+    <version>1.6.+</version>
+</dependency>
+```
+
+## Integration From Source
 
 The Apptentive Android SDK is open source. The project is located [here](https://github.com/apptentive/apptentive-android).
+
+We strive to fix bugs and add new features as quickly as possible. **Please watch our Github repo to stay up to date.**
 
 To download the SDK, either clone the SDK
 
 `git clone https://github.com/apptentive/apptentive-android.git`
 
 Or download the [latest release](https://github.com/apptentive/apptentive-android/releases).
-
-### Keep Up To Date
-
-We strive to fix bugs and add new features as quickly as possible. **Please watch our Github repo to stay up to date.**
-
-# Setting up the Project
-
-### Using Gradle
-
-1. Modify your project's top-level settings.gradle to include a reference to the `apptentive-android/apptentive` directory.
-    
-    ```
-    include 'apptentive'
-    project(':apptentive').projectDir = new File('path-to-apptentive-repo/apptentive')
-    ```
-2. In your app's `build.gradle`, add a reference to this project.
-
-    ```
-    dependencies {
-        compile project(':apptentive')
-    }
-    ```
-3. If you are using IntelliJ IDEA or Android Studio, your IDE project settings should rebuild once you have made these modifications.
 
 ### Using IntelliJ IDEA without Gradle
 
