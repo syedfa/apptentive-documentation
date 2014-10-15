@@ -23,7 +23,9 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 
 | Locale Qualifier | Language Name |
 | ---------------- | ------------- |
-| `en`             |  English      |
+| None             |  English      |
+| `ar`             |  Arabic       |
+| `el`             |  Greek        |
 | `da`             |  Danish       |
 | `de`             |  German       |
 | `es`             |  Spanish      |
@@ -31,9 +33,12 @@ Our SDK is very small. It will add **250k - 300k** to the size of your app.
 | `fr-rCA`         |  French Canadian |
 | `it`             |  Italian      |
 | `ja`             |  Japanese     |
+| `ko`             |  Korean       |
 | `nl`             |  Dutch        |
+| `pt`             |  Brazilian Portuguese |
 | `ru`             |  Russian      |
 | `sv`             |  Swedish      |
+| `tr`             |  Turkish      |
 | `zh`             |  Chinese (Traditional) |
 | `zh-rCN`         |  Chinese (Simplified)  |
 
@@ -274,63 +279,6 @@ event the customer does not open the app to view your reply, your message can st
 ths customer updates their email through an Apptentive UI, we will use that email instead.
 
 [Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail%28android.content.Context,%20java.lang.String%29)
-
-## Gradle Integration
-
-The following documents preliminary gradle support for the Apptentive SDK. Since the Android Gradle plugin is constantly
-changing, this information may be incompatible with the version of Gradle that you are using. We will attempt to keep
-this up to date and working, but there may be a lag between new releases of the Gradle plugin, and updates to this doc.
-
-1. Import the existing Apptentive Android SDK module into your project.
-2. Add the android-Gradle facet to the apptentive-android-sdk module (in the module settings).
-3. Add a build.gradle file with this content to apptentive-android-sdk:
-    ```
-    buildscript {
-        repositories {
-            mavenCentral()
-        }
-        dependencies {
-            classpath 'com.android.tools.build:gradle:0.5.+'
-        }
-    }
-    apply plugin: 'android-library'
-
-    repositories {
-        mavenCentral()
-    }
-
-    android {
-        compileSdkVersion 17
-        buildToolsVersion "17.0.0"
-
-        defaultConfig {
-            minSdkVersion 7
-            targetSdkVersion 16
-        }
-
-        sourceSets {
-            main {
-                manifest.srcFile 'AndroidManifest.xml'
-                java.srcDirs = ['src']
-                resources.srcDirs = ['src']
-                res.srcDirs = ['res']
-            }
-        }
-    }
-    ```
-4. In your main module's build.gradle file, add a reference to the Apptentive Android SDK:
-    ```
-    dependencies {
-        compile project(":apptentive-android-sdk")
-    }
-    ```
-
-5. In your settings.gradle file, add an include for apptentive-android-sdk:
-    ```
-    include ':apptentive-android-sdk', ':your-module'
-    ```
-
-6. Adjust the gradle versions to suit your app.
 
 
 ## Building from the command line and with CI
