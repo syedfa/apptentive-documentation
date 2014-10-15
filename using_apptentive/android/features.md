@@ -272,13 +272,13 @@ in **[Interaction](#interactions)** logic to to determine when they can be displ
 * [Apptentive.removeCustomPersonData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomPersonData-android.content.Context-java.lang.String-)
 * [Apptentive.setCustomPersonData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomPersonData-android.content.Context-java.util.Map-)
 
-## Specifying a Customer's Email Address
+## Specifying a Customer's Contact Information 
 
-If you are authorized to access the customer's email address, you may specify it during initialization so that in the
-event the customer does not open the app to view your reply, your message can still get to them via email. Note that if
-ths customer updates their email through an Apptentive UI, we will use that email instead.
+If you would like to see your customer's email and name, you can pass them to Apptentive. Passing us this information will let you address the customer by name,and reply to their feedback via email.
 
 [Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail-android.content.Context-java.lang.String-)
+
+[Apptentive.setInitialUserName(Context context, String name)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserName-android.content.Context-java.lang.String-)
 
 
 ## Building from the command line and with CI
