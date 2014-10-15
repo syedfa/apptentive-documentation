@@ -161,7 +161,7 @@ You can mix and match, but make sure they all integrate in one of the following 
 
 # Message Center
 
-The [Message Center](http://www.apptentive.com/docs/android/features/#message-center) is a self contained Activity that you can launch with [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter%28anroid.app.Activity%29).
+The [Message Center](http://www.apptentive.com/docs/android/features/#message-center) is a self contained Activity that you can launch with [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter-android.app.Activity-).
 
 You should find a place in your app where you can create a link or button that opens your **Message Center**.
 
@@ -195,8 +195,8 @@ you wish to add more custom data to another subsequent message, you will need to
 
 ### New Message Notification (Optional)
 
-If you would like to be notified when a new message is sent to the client, register a listener using [Apptentive.setUnreadMessageListener(UnreadMessageListener listener)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setUnreadMessagesListener%28com.apptentive.android.sdk.module.messagecenter.UnreadMessagesListener%29).
-When the number of unread messages changes, either because your customer read a message, or a new message came in, [onUnreadMessageCountChanged(int unreadMessages)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/messagecenter/UnreadMessagesListener.html#onUnreadMessageCountChanged%28int%29)
+If you would like to be notified when a new message is sent to the client, register a listener using [Apptentive.setUnreadMessageListener(UnreadMessageListener listener)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setUnreadMessagesListener-com.apptentive.android.sdk.module.messagecenter.UnreadMessagesListener-).
+When the number of unread messages changes, either because your customer read a message, or a new message came in, [onUnreadMessageCountChanged(int unreadMessages)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/messagecenter/UnreadMessagesListener.html#onUnreadMessageCountChanged-int-)
 will be called. Because this listener could be called at any time, you should store the value returned from this method,
 and then perform any user interaction you desire at the appropriate time.
 
@@ -232,7 +232,7 @@ Places where you might want to record a significant event:
 
 As you can see, there is some overlap in whether you want to just record an **Event**, or also show an **Interaction**.
 
-To add an **Event** and possibly show an **Interaction**, simply call [Apptentive.engage(Activity activity, String eventName)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29)
+To add an **Event** and possibly show an **Interaction**, simply call [Apptentive.engage(Activity activity, String eventName)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage-android.app.Activity-java.lang.String-)
 with an `eventName` of your choosing.
 
 ###### Example
@@ -302,7 +302,7 @@ The Urban Airship device ID is called *APID* (Airship Push ID). You can retreive
 1. If you set up Urban Airship using a BroadcastReceiver to listen to Intents that Urban Airship sends you, you can
 retreive the APID by listening for the Intent with action [PushManager.ACTION_REGISTRATION_FINISHED](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#ACTION_REGISTRATION_FINISHED),
 grabbing the extra data [PushManager.EXTRA_APID](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#EXTRA_APID),
-and passing it to [Apptentive.addUrbanAirshipPushIntegration(Context context, String apid](http://www.apptentive.com/docs/android/api/index.html?com/apptentive/android/sdk/ApptentiveActivity.html).
+and passing it to [Apptentive.addUrbanAirshipPushIntegration(Context context, String apid](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addUrbanAirshipPushIntegration-android.content.Context-java.lang.String-).
 
     ###### Example
 
@@ -331,7 +331,7 @@ actual APID.
 
 Amazon Web Services SNS uses GCM directly on the client, so you will need to use the GCM API to retreive the
 Registration ID. See the [GCM documentation](http://developer.android.com/google/gcm/client.html) if you are unsure how
-to retreive your Registration ID. When you have the Registration ID, pass it to [Apptentive.addAmazonSnsPushIntegration(Context context, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration%28android.content.Context,%20java.lang.String%29).
+to retreive your Registration ID. When you have the Registration ID, pass it to [Apptentive.addAmazonSnsPushIntegration(Context context, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration-android.content.Context-java.lang.String-).
 
 ###### Example
 
@@ -342,7 +342,7 @@ Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 
 #### Setting up the Parse Device Token
 
-Parse integration requires you to implement your own Application object. In the `onCreate()` method of your Application object, you will need to add the following code after your call to Parse.initialize(). This code will make sure that the deviceToken is sent to **Apptentive** as soon as it is registered with Parse.
+Parse integration requires you to implement your own `Application` object. In the `onCreate()` method of your `Application` object, you will need to add the following code after your call to `Parse.initialize()`. This code will make sure that the deviceToken is sent to **Apptentive** as soon as it is registered with Parse.
 
 ```java
 ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
@@ -362,7 +362,7 @@ if (parseInstallation == null || parseInstallation.get("deviceToken") == null) {
 
 ### Displaying a Push Notification from Parse
 
-Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. **Apptentive** needs to know this same information so that it can work seemlessly with your app. When you call `Apptentive.setParsePushCallback()`, you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register our `ViewActivity` with Parse so that push notifications that came from **Apptentive** get handled by our code. All **Apptentive** push notifications will be sent to the Parse channel called `apptentive`.
+Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. **Apptentive** needs to know this same information so that it can work seemlessly with your app. When you call [Apptentive.setParsePushCallback(Class<? extends Activity> activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setParsePushCallback-java.lang.Class-), you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register **Apptentive's** `ViewActivity` with Parse so that push notifications that came from **Apptentive** get handled by our code. All **Apptentive** push notifications will be sent to the Parse channel called `apptentive`.
 
 In your `Application.onCreate()` method, add the following after your call to `PushService.setDefaultPushCallback()`:
 
@@ -374,8 +374,8 @@ PushService.subscribe(this, "apptentive", ViewActivity.class);
 ### Displaying a Push Notification from all other providers
 
 Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
-pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification%28android.content.Context,%20android.content.Intent%29),
-launch your main Activity, and display the push notification with [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification%28android.app.Activity%29).
+pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-),
+launch your main Activity, and display the push notification with [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-).
 This two pass approach is necessary to avoid double displaying the push notification. Both of these methods do nothing
 if the push notification didn't come from Apptentive.
 
@@ -446,9 +446,11 @@ Parse integration is very simple. Because of this, you will need to create a `Br
 
     Note that this method will return immediately if the push notification that was previously saved using `Apptentive.setPendingPushNotification()` did not come from Apptentive.
 
-# Set Customer Email address
+# Set Customer Contact Information
 
-If you already know the customer's email address, you can pass it to us during initialization. Simple call [Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail%28android.content.Context,%20java.lang.String%29).
+If you already know the customer's email address, you can pass it to us during initialization. Simply call [Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail-android.content.Context-java.lang.String-).
+
+If you know their name, and would like to see it displayed when you are communicating with them through the Apptentive dashboard, call [Apptentive.setInitialUserName(Context context, String name)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserName-android.content.Context-java.lang.String-).
 
 # Custom Data
 
@@ -479,7 +481,7 @@ Apptentive.sendAttachmentText(this, "Message to display in the conversation view
 
 # Setting Rating Provider
 
-If you host your app in an app store other than Google Play, you will need to make sure customers who want to rate your app will be able to do so. To choose which app store the **Ratings Prompt Interaction** will take you to, we've built several **Rating Providers**. A **Rating Provider** is an implementation of the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and its job is to provide a simple interface to open the app store. To use another supported [rating provider](http://www.apptentive.com/docs/android/features/#setting-rating-provider), you can make a call to [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider%28com.apptentive.android.sdk.module.rating.IRatingProvider%29). If you would like to use an app store that we don't yet support, you can implement the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and pass your implementation to `setRatingProvider()`.
+If you host your app in an app store other than Google Play, you will need to make sure customers who want to rate your app will be able to do so. To choose which app store the **Ratings Prompt Interaction** will take you to, we've built several **Rating Providers**. A **Rating Provider** is an implementation of the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and its job is to provide a simple interface to open the app store. To use another supported [rating provider](http://www.apptentive.com/docs/android/features/#setting-rating-provider), you can make a call to [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider-com.apptentive.android.sdk.module.rating.IRatingProvider-). If you would like to use an app store that we don't yet support, you can implement the [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html) interface, and pass your implementation to `setRatingProvider()`.
 
 #### Supported Rating Providers
 

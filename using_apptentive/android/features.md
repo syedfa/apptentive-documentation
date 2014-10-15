@@ -58,7 +58,7 @@ least five **Events**. The more **Events** you define in your app, the more usef
 be.
 
 **Events** are invoked using the
-[Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29) method.
+[Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage-android.app.Activity-java.lang.String-) method.
 When your app invokes an **Event**, it will be sent to our server. It will show up on [apptentive.com](https://be.apptentive.com)
 under **_Interactions -> Events_**, so you can verify that **Events** are making it to our server. If you would like to
 predefine an **Event** name so that you can use it in an **Interaction** before you make any changes on the client, you
@@ -71,7 +71,7 @@ configure their content, the conditions necessary to show them, and the **Event*
 Apptentive SDK takes care of fetching them, evaluating the logic they contain, and displaying them. Each **Interaction**
 is configured on the server, so you can easily add or modify them after you've released your app, without modifying the
 source code. **Interactions** are displayed using the same
-[Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage%28android.app.Activity,%20java.lang.String%29)
+[Apptentive.engage()](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#engage-android.app.Activity-java.lang.String-)
 method as **Events**, which is why adding several **Events** to your app during development is important. It allows you
 to configure an **Interaction** to display at the **Event** of your choosing after you have shipped your app. The difference
 between an **Event** and an **Interaction** is that an **Event** is a record of the `engage()` method being called,
@@ -173,7 +173,7 @@ immediately.
 
 ### Displaying Message Center
 
-The **Message Center** is displayed by calling [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter%28android.app.Activity%29).
+The **Message Center** is displayed by calling [Apptentive.showMessageCenter(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter-android.app.Activity-).
 
 ### Passing Custom Data on Messages
 
@@ -186,19 +186,19 @@ data. If you wish to add more custom data to another subsequent message, you wil
 data again. When the message is sent to [apptentive.com](https://be.apptentive.com), it will have this custom data
 attached to help you understand what yoru customer was doing when they decided to send feedback.
 
-[Apptentive.showMessageCenter(Activity activity, Map<String, String> customData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter%28android.app.Activity,%20java.util.Map%29).
+[Apptentive.showMessageCenter(Activity activity, Map<String, String> customData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#showMessageCenter-android.app.Activity-java.util.Map-).
 
 ### New Message Notifications
 
 You can also receive a notification when the number of unread messages waiting to be viewed by the customer changes.
 
-[Apptentive.setUnreadMessageListener(UnreadMessageListener listener)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setUnreadMessagesListener%28com.apptentive.android.sdk.module.messagecenter.UnreadMessagesListener%29)
+[Apptentive.setUnreadMessageListener(UnreadMessageListener listener)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setUnreadMessagesListener-com.apptentive.android.sdk.module.messagecenter.UnreadMessagesListener-)
 
 ### Checking Unread Message Count
 
 You can also check to see how many messages are waiting to be read in the customer's **Message Center**.
 
-[Aptentive.getUnreadMessageCount(Context context)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#getUnreadMessageCount%28android.content.Context%29)
+[Aptentive.getUnreadMessageCount(Context context)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#getUnreadMessageCount-android.content.Context-)
 
 ### Sending Hidden Messages and Attachments
 
@@ -208,20 +208,20 @@ of the app, so you can better support your customers.
 
 #### Sending File Attachments
 
-* [Apptentive.sendAttachmentFile(Context context, byte&#91;&#93; data, String mimeType)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile%28android.content.Context,%20byte[],%20java.lang.String%29)
-* [Apptentive.sendAttachmentFile(Context context, InputStream is, String mimeType)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile%28android.content.Context,%20java.io.InputStream,%20java.lang.String%29)
-* [Apptentive.sendAttachmentFile(Context context, String Uri)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile%28android.content.Context,%20java.lang.String%29)
+* [Apptentive.sendAttachmentFile(Context context, byte&#91;&#93; data, String mimeType)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile-android.content.Context-byte:A-java.lang.String-)
+* [Apptentive.sendAttachmentFile(Context context, InputStream is, String mimeType)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile-android.content.Context-java.io.InputStream-java.lang.String-)
+* [Apptentive.sendAttachmentFile(Context context, String Uri)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentFile-android.content.Context-java.lang.String-)
 
 #### Sending Hidden Text Messages
 
-* [Apptentive.sendAttachmentText(Context context, String text)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentText%28android.content.Context,%20java.lang.String%29)
+* [Apptentive.sendAttachmentText(Context context, String text)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#sendAttachmentText-android.content.Context-java.lang.String-)
 
 # Miscellaneous
 
 ## Setting Rating Provider
 
 By default, the Ratings Prompt will open the Google Play app store. You can force the Ratings Prompt to use a different
-app store with the [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider%28com.apptentive.android.sdk.module.rating.IRatingProvider%29)
+app store with the [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider-com.apptentive.android.sdk.module.rating.IRatingProvider-)
 method. If you would like to open an app store we don't yet support, you can implement the
 [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html)
 interface.
@@ -238,7 +238,7 @@ The Apptentive SDK comes with support for these app stores.
 If you build a custom Rating Provider, you may require additional data to be passed in. You can pass properties in in
 this way.
 
-[Apptentive.putRatingProviderArg(String, key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#putRatingProviderArg%28java.lang.String,%20java.lang.String%29)
+[Apptentive.putRatingProviderArg(String, key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#putRatingProviderArg-java.lang.String-java.lang.String-)
 
 ## Push Notifications
 
@@ -265,20 +265,20 @@ You can send custom data associated with the **Device** or **Person**, that will
 key/value string pairs. You can use this data simply to fill in information about the customer, but you can also use it
 in **[Interaction](#interactions)** logic to to determine when they can be displayed.
 
-* [Apptentive.addCustomDeviceData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomDeviceData%28android.content.Context,%20java.lang.String,%20java.lang.String%29)
-* [Apptentive.removeCustomDeviceData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomDeviceData%28android.content.Context,%20java.lang.String%29)
-* [Apptentive.setCustomDeviceData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomDeviceData%28android.content.Context,%20java.util.Map%29)
-* [Apptentive.addCustomPersonData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomPersonData%28android.content.Context,%20java.lang.String,%20java.lang.String%29)
-* [Apptentive.removeCustomPersonData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomPersonData%28android.content.Context,%20java.lang.String%29)
-* [Apptentive.setCustomPersonData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomPersonData%28android.content.Context,%20java.util.Map%29)
+* [Apptentive.addCustomDeviceData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomDeviceData-android.content.Context-java.lang.String-java.lang.String-)
+* [Apptentive.removeCustomDeviceData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomDeviceData-android.content.Context-java.lang.String-)
+* [Apptentive.setCustomDeviceData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomDeviceData-android.content.Context-java.util.Map-)
+* [Apptentive.addCustomPersonData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomPersonData-android.content.Context-java.lang.String-java.lang.String-)
+* [Apptentive.removeCustomPersonData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomPersonData-android.content.Context-java.lang.String-)
+* [Apptentive.setCustomPersonData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomPersonData-android.content.Context-java.util.Map-)
 
-## Specifying a Customer's Email Address
+## Specifying a Customer's Contact Information 
 
-If you are authorized to access the customer's email address, you may specify it during initialization so that in the
-event the customer does not open the app to view your reply, your message can still get to them via email. Note that if
-ths customer updates their email through an Apptentive UI, we will use that email instead.
+If you would like to see your customer's email and name, you can pass them to Apptentive. Passing us this information will let you address the customer by name,and reply to their feedback via email.
 
-[Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail%28android.content.Context,%20java.lang.String%29)
+[Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail-android.content.Context-java.lang.String-)
+
+[Apptentive.setInitialUserName(Context context, String name)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserName-android.content.Context-java.lang.String-)
 
 
 ## Building from the command line and with CI
