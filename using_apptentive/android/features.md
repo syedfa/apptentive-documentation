@@ -221,7 +221,7 @@ of the app, so you can better support your customers.
 ## Setting Rating Provider
 
 By default, the Ratings Prompt will open the Google Play app store. You can force the Ratings Prompt to use a different
-app store with the [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider%28com.apptentive.android.sdk.module.rating.IRatingProvider%29)
+app store with the [Apptentive.setRatingProvider(IRatingProvider ratingProvider)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setRatingProvider-com.apptentive.android.sdk.module.rating.IRatingProvider-)
 method. If you would like to open an app store we don't yet support, you can implement the
 [IRatingProvider](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/module/rating/IRatingProvider.html)
 interface.
@@ -238,7 +238,7 @@ The Apptentive SDK comes with support for these app stores.
 If you build a custom Rating Provider, you may require additional data to be passed in. You can pass properties in in
 this way.
 
-[Apptentive.putRatingProviderArg(String, key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#putRatingProviderArg%28java.lang.String,%20java.lang.String%29)
+[Apptentive.putRatingProviderArg(String, key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#putRatingProviderArg-java.lang.String-java.lang.String-)
 
 ## Push Notifications
 
@@ -265,12 +265,12 @@ You can send custom data associated with the **Device** or **Person**, that will
 key/value string pairs. You can use this data simply to fill in information about the customer, but you can also use it
 in **[Interaction](#interactions)** logic to to determine when they can be displayed.
 
-* [Apptentive.addCustomDeviceData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomDeviceData%28android.content.Context,%20java.lang.String,%20java.lang.String%29)
-* [Apptentive.removeCustomDeviceData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomDeviceData%28android.content.Context,%20java.lang.String%29)
-* [Apptentive.setCustomDeviceData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomDeviceData%28android.content.Context,%20java.util.Map%29)
-* [Apptentive.addCustomPersonData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomPersonData%28android.content.Context,%20java.lang.String,%20java.lang.String%29)
-* [Apptentive.removeCustomPersonData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomPersonData%28android.content.Context,%20java.lang.String%29)
-* [Apptentive.setCustomPersonData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomPersonData%28android.content.Context,%20java.util.Map%29)
+* [Apptentive.addCustomDeviceData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomDeviceData-android.content.Context-java.lang.String-java.lang.String-)
+* [Apptentive.removeCustomDeviceData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomDeviceData-android.content.Context-java.lang.String-)
+* [Apptentive.setCustomDeviceData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomDeviceData-android.content.Context-java.util.Map-)
+* [Apptentive.addCustomPersonData(Context context, String key, String value)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addCustomPersonData-android.content.Context-java.lang.String-java.lang.String-)
+* [Apptentive.removeCustomPersonData(Context context, String key)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#removeCustomPersonData-android.content.Context-java.lang.String-)
+* [Apptentive.setCustomPersonData(Context context, Map<String, String> customDeviceData)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setCustomPersonData-android.content.Context-java.util.Map-)
 
 ## Specifying a Customer's Email Address
 
@@ -278,7 +278,7 @@ If you are authorized to access the customer's email address, you may specify it
 event the customer does not open the app to view your reply, your message can still get to them via email. Note that if
 ths customer updates their email through an Apptentive UI, we will use that email instead.
 
-[Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail%28android.content.Context,%20java.lang.String%29)
+[Apptentive.setInitialUserEmail(Context context, String email)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setInitialUserEmail-android.content.Context-java.lang.String-)
 
 
 ## Building from the command line and with CI
