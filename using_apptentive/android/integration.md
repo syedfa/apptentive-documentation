@@ -13,7 +13,7 @@ Our SDK is avilable from the central Maven repo.
 
 In your app's `build.gradle`, add the following to your `dependencies` section:
 
-```code
+```
 compile 'com.apptentive:apptentive-android:1.6.+@aar'
 ```
 
@@ -22,7 +22,7 @@ If you are using IntelliJ IDEA or Android Studio, your IDE project settings shou
 #### Using Maven
 
 Add the following to your app's pom.xml in the `dependencies` element:
-```code
+```xml
 <dependency>
     <groupId>com.apptentive</groupId>
     <artifactId>apptentive-android</artifactId>
