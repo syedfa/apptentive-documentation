@@ -2,17 +2,17 @@
 
 This document will help you verify that **Events** and **Interactions** have been properly configured within your app.
 
-### Dedicated Test API Token
+### Dedicated Test API Key
 
-We recommend using a dedicated test API token when exploring Apptentive features.
+We recommend using a dedicated test API key when exploring Apptentive features.
 
-Create a new app on your Apptentive dashboard, then find its API token in **_Settings -> API & Development -> Your API Token_**. Set the test API token in your `AndroidManifest.xml`.  
+Create a new app on your Apptentive dashboard, then find its API key in **_Settings -> API & Development -> Your API Key_**. Set the test API key in your `AndroidManifest.xml`.
 
 ```xml
 <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
 ```
 
-Using a test API token will allow you to modify Apptentive settings without fear of annoying the users of your live app.
+Using a test API key will allow you to modify Apptentive settings without fear of annoying the users of your live app.
 
 ### Testing the Rating Prompt
 
