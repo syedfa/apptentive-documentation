@@ -8,7 +8,7 @@ The Apptentive API provides programmatic access to the various data set by the A
 
 ## Authentication
 
-Authentication is required for accessing all API endpoints. The Apptentive API uses your API key as an OAuth token, and to authentication you must provide this token in the Authorization header. For example:
+Authentication is required for accessing all API endpoints. The Apptentive API uses your API key as an OAuth token, and to authenticate you must provide this token in the Authorization header. For example:
 
 ```
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations
@@ -92,7 +92,7 @@ All of the Messages associated with a given conversation may be retrieved with a
 curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations/5234f08cbca21f834800004d/messages
 ```
 
-The response will contain an array of Messages (in ascending creation order), as well as a flag indicating whether more Messages are available: 
+The response will contain an array of Messages (in ascending creation order), as well as a flag indicating whether more Messages are available:
 
 ```javascript
 {
