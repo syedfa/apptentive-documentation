@@ -10,8 +10,8 @@ Our Apptentive Android SDK is packaged as an Android Library Project. That means
 ## Modify Interaction Colors
 If your app has a significantly different color scheme than our SDK, you may choose to modify our colors by overriding them.
 
-1. Create a new file __*res/values/apptentive_colors.xml*__, and copy the relevant colors from apptentive's [res/values/colors.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/colors.xml)
-2. Change the values to suite your design. Make sure you use the original Apptentive name for your properties.
+1. In your app, create a new file __*res/values/apptentive_colors.xml*__, and copy the relevant colors from apptentive's [res/values/colors.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/colors.xml). The name you choose or this file isn't important, but the names of the keys are.
+2. Change the values to suite your design. Make sure you use the original Apptentive name for your keys.
 
   ```xml
   <color name="apptentive_dialog_title_text">#22AA22</color>
@@ -22,7 +22,7 @@ If your app has a significantly different color scheme than our SDK, you may cho
 ## Modify Interaction Dimensions
 You can also modify Interaction dimensions, such as margin, padding, and font size. Apptentive's dimensions are located in [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Note that since the Apptentive Android SDK supports multiple screen sizes and layouts, there are multiple `values` folders, each with a configuration qualifier, and to provide a consistent look, you will need to override the same dimension for each of these configurations.
 
-1. Create a new file __*res/values/apptentive_dimensions.xml*__, and copy the relevant colorsdimensions from apptentive's [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Make sure you also do this for the other supported configurations.
+1. In your app, create a new file __*res/values/apptentive_dimensions.xml*__, and copy the relevant colorsdimensions from apptentive's [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Make sure you also do this for the other supported configurations.
 
   | Supported Resource Configuration |
   | -------------------------------- |
