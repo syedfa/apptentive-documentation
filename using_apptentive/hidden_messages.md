@@ -15,8 +15,3 @@ Hidden Messages are treated in the same way as other messages in Message Center,
 1. Hidden Messages do _not_ trigger any integrations configured for the app.  Consequently, Hidden Messages will _not_ be pushed to third party systems such as Zendesk, UserVoice, or Desk.com, nor will Hidden Messages be included in the unread message notifications (Email, Urban  Airship).
 
 1. Hidden Messages are displayed slightly differently on the Apptentive Website to make them easy to identify.
-
-
-## Requirements
-
-To use Hidden Messages, you must be using iOS SDK version 1.2.6 or greater.  Hidden Messages are not yet supported on Android.
