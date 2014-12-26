@@ -496,8 +496,12 @@ Apptentive.setRatingProvider(new AmazonAppstoreRatingProvider);
 
 # Customizing the Look and Feel
 
-Our SDK is 100% open source. If you wish to customize the look and feel of any UI componenets, you can do so directly.
+Please see our [Customization Guide](http://www.apptentive.com/docs/android/customization/) for more information.
 
-Our [layouts](https://github.com/apptentive/apptentive-android/tree/master/apptentive-android-sdk/res/layout) and [styles](https://github.com/apptentive/apptentive-android/tree/master/apptentive-android-sdk/res/values) are stored in the Android standard `res` folder. Feel free to tweak colors, padding, fonts, etc.
+# Logging
+During development, Apptentive may log a considerable amount of information to logcat. This data is logged `VERBOSE` and `DEBUG` level. When the app is not built for developement, we stop logging all `VERBOSE` and `DEBUG` level information. If you would like to limit the amount of logging you see from Apptentive while you are in development, simply add the following element to your manifest inside the `<application>` element. Set the value to one of these strings: `VERBOSE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, or `ASSERT`.
 
-We recommend that you fork our repo and check in your changes to this fork. This makes it easy to integrate new features and other changes that we add into your modified repo.
+```xml
+<!-- This will prevent VERBOSE and INFO level information from being logged. -->
+<meta-data android:name="apptentive_log_level" android:value="INFO"/>
+```
