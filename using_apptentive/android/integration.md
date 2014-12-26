@@ -496,8 +496,4 @@ Apptentive.setRatingProvider(new AmazonAppstoreRatingProvider);
 
 # Customizing the Look and Feel
 
-Our SDK is 100% open source. If you wish to customize the look and feel of any UI componenets, you can do so directly.
-
-Our [layouts](https://github.com/apptentive/apptentive-android/tree/master/apptentive-android-sdk/res/layout) and [styles](https://github.com/apptentive/apptentive-android/tree/master/apptentive-android-sdk/res/values) are stored in the Android standard `res` folder. Feel free to tweak colors, padding, fonts, etc.
-
-We recommend that you fork our repo and check in your changes to this fork. This makes it easy to integrate new features and other changes that we add into your modified repo.
+Please see our [Customization Guide](http://www.apptentive.com/docs/android/customization/) for more information.
