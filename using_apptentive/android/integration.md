@@ -503,5 +503,5 @@ During development, Apptentive may log a considerable amount of information to l
 
 ```xml
 <!-- This will prevent VERBOSE and INFO level information from being logged. -->
-<meta-data android:name="apptentive_log_level"android:value="INFO"/>
+<meta-data android:name="apptentive_log_level" android:value="INFO"/>
 ```
