@@ -497,3 +497,11 @@ Apptentive.setRatingProvider(new AmazonAppstoreRatingProvider);
 # Customizing the Look and Feel
 
 Please see our [Customization Guide](http://www.apptentive.com/docs/android/customization/) for more information.
+
+# Logging
+During development, Apptentive may log a considerable amount of information to logcat. This data is logged VERBOSE and DEBUG level. When the app is not built for developement, we stop logging all VERBOSE AND DEBUG level information. If you would like to limit the amount of logging you see from Apptentive whileyou are in development, simply add the following element to your manifest inside the `<application>` element. Set the value to one of these strings: `VERBOSE`, `DEBUG`, `INFO`, `WARN`, `ERROR`, or `ASSERT`.
+
+```xml
+<!-- This will prevent VERBOSE and INFO level information from being logged. -->
+<meta-data android:name="apptentive_log_level"android:value="INFO"/>
+```
