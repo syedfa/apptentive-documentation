@@ -491,7 +491,7 @@ If you host your app in an app store other than Google Play, you will need to ma
 ###### Using the Amazon Appstore Rating Provider
 
 ```java
-Apptentive.setRatingProvider(new AmazonAppstoreRatingProvider);
+Apptentive.setRatingProvider(new AmazonAppstoreRatingProvider());
 ```
 
 # Customizing the Look and Feel
