@@ -46,9 +46,9 @@ Unfortunately, you'll currently need to set some appearance attributes on our cu
 ```objective-c
 Class apptentiveNavigationController = NSClassFromString(@"ATNavigationController");
 if (apptentiveNavigationController) {
-    [[UINavigationBar appearanceWhenContainedIn:apptentiveNavigationController, nil] 
+    [[UINavigationBar appearanceWhenContainedIn:apptentiveNavigationController, nil]
         setBarTintColor:[UIColor redColor]];
-    [[UINavigationBar appearanceWhenContainedIn:apptentiveNavigationController, nil] 
+    [[UINavigationBar appearanceWhenContainedIn:apptentiveNavigationController, nil]
         setTintColor:[UIColor whiteColor]];
 }
 NSDictionary *attributes = @{UITextAttributeTextColor: [UIColor whiteColor]};
@@ -61,7 +61,7 @@ which yields:
 
 ## Hiding Apptentive Branding
 
-The option to hide Apptentive branding is available to our Enterprise customers. For our Enterprise customers, branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
+The option to hide Apptentive branding is available to our [Enterprise](http://apptentive.com/plans/) customers. For our Enterprise customers, branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
 
 You should also use the `-initiallyHideBranding:` method to hide branding prior to your account's initial configuration download on the device.
 
