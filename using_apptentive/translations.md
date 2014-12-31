@@ -1,6 +1,6 @@
 # Translations
 
-To enable full translation support on an application for an [Enterprise](http://apptentive.com/plans/) account, please [email the Apptentive team directly](mailto:support@apptentive.com) to request translations be enabled.
+To enable full translation support on an application for an [Enterprise](http://www.apptentive.com/plans/) account, please [email the Apptentive team directly](mailto:support@apptentive.com) to request translations be enabled.
 
 ## Import and Export
 
