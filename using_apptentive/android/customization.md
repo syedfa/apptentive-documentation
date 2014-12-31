@@ -55,7 +55,7 @@ You can also modify Interaction dimensions, such as margin, padding, and font si
 
 ## Hiding Apptentive Branding
 
-The option to hide Apptentive branding is available to our [Enterprise](http://apptentive.com/plans/) customers. For our Enterprise customers, branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
+The option to hide Apptentive branding is available to our [Enterprise](http://www.apptentive.com/plans/) customers. For our Enterprise customers, branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
 
 Because the Apptentive Android SDK needs to connect to the server before this setting can take affect, you may also want to supply this `<meta-data>` element inside your manifest's `<application>` element. This will prevent Apptentive branding from being displayed until the client asks the server what to do.
 ```xml
