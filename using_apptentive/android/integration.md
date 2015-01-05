@@ -128,8 +128,7 @@ In order to keep track of Application state, we need to hook into the lifecycle 
 There are two ways of doing this: *Inheritance* and *Delegation*. Inheritance is the easiest method, while delegation is
 provided if you can't or don't want to inherit from our Activities.
 
-Integrate ALL of the Activities in your app with [ApptentiveActivity](http://www.apptentive.com/docs/android/api/index.html?com/apptentive/android/sdk/ApptentiveActivity.html).
-You can mix and match, but make sure they all integrate in one of the following two ways.
+Integrate ALL of the Activities in your app with Apptentive in one of the following two ways. You can mix and match, but make sure they all integrate Apptentive.
 
 1. **Inheritance**
 
@@ -142,7 +141,7 @@ You can mix and match, but make sure they all integrate in one of the following 
 2. **Delegation**
 
     ```java
-    import com.apptentive.android.sdk.ApptentiveActivity;
+    import com.apptentive.android.sdk.Apptentive;
 
     ...
 
