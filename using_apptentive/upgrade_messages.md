@@ -23,3 +23,18 @@ You can decide to publish your Upgrade Message immediately, or save it as a draf
 If you've provided an Upgrade Message for a release of your app, it will be displayed at the code point you've instrumented for (typically app launch).
 
 Upgrade Messages are only shown once for the given version and are only shown within the first week after someone upgrades. Finally, Upgrade Messages are only shown for upgrades-- if someone installs your app for the first time they will not see the Upgrade Message for that version.
+
+## Testing Upgrade Messages
+
+To test an Upgrade Message, you'll need to run a previous version of the app on your device and then "upgrade" to the version set in the Upgrade Message's configuration on the Apptentive Dashboard.
+
+1. Create an Upgrade Message on the website. Target its version to "1.05" and use "upgrade_test" as its event.
+2. Set app version to "1.04".
+3. Reset device/simulator. Run app for ~30 seconds.
+4. Quit app.
+5. Set app version to "1.05". Also increment the "build" of your app.
+6. You'll need to increment both the "version" (iOS: CFBundleShortVersionString) and "build" (iOS: CFBundleVersion) for it to be displayed.
+7. Run the new version. Engage the event "upgrade_test" in code.
+8. This should now trigger the upgrade message.
+
+The key is to **upgrade** your app from one version to another. An Upgrade Message will never be shown for the first version of the app used on any particular device.
