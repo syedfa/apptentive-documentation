@@ -30,10 +30,10 @@ To test an Upgrade Message, you'll need to run a previous version of the app on 
 
 1. Create an Upgrade Message on the website. Target its version to "1.05" and use "upgrade_test" as its event.
 2. Set app version to "1.04".
-3. Reset device/simulator. Run app for ~30 seconds.
-4. Quit app.
+3. Delete the app from your device or simulator. Run the new app for ~30 seconds.
+4. Quit the app.
 5. Set app version to "1.05". Also increment the "build" of your app.
-6. You'll need to increment both the "version" (iOS: CFBundleShortVersionString) and "build" (iOS: CFBundleVersion) for it to be displayed.
+6. You'll need to increment both the "version" (iOS: CFBundleShortVersionString) and "build" (iOS: CFBundleVersion) for the Upgrade Message to be displayed.
 7. Run the new version. Engage the event "upgrade_test" in code.
 8. This should now trigger the upgrade message.
 
