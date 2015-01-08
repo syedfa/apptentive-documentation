@@ -1,11 +1,3 @@
----
-layout: docs
-title: Android Customization
-subClass: android-customization
-description: A guide to customizing the Apptentive Android SDK.
-extra_css:
-  - syntax.css
----
 # Interface Customization
 
 Our Android SDK is 100% open source, and as such, you can modify the UI and underlying code at any time. However, the Apptentive Android SDK is built in such a way that simple UI style changes are very easy to make without having to modify our code.
