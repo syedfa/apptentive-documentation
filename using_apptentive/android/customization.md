@@ -18,11 +18,11 @@ If your app has a significantly different color scheme than our SDK, you may cho
 1. In your app, create a new file __*res/values/apptentive_colors.xml*__, and copy the relevant colors from Apptentive's [res/values/colors.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/colors.xml). The name you choose or this file isn't important, but the names of the keys are.
 2. Change the values to suite your design. Make sure you use the original Apptentive name for your keys.
 
-  ```xml
-  <color name="apptentive_dialog_title_text">#22AA22</color>
-  <color name="apptentive_dialog_button_negative_text">#FF0000</color>
-  <color name="apptentive_dialog_button_positive_text">#0000FF</color>
-  ```
+```xml
+<color name="apptentive_dialog_title_text">#22AA22</color>
+<color name="apptentive_dialog_button_negative_text">#FF0000</color>
+<color name="apptentive_dialog_button_positive_text">#0000FF</color>
+```
 
 #### Modified Color Examples
 ![Enjoyment Dialog With Modified Colors](https://raw.githubusercontent.com/apptentive/apptentive-documentation/android/using_apptentive/android/screenshots/customization_enjoyment_colors.png)
@@ -34,19 +34,19 @@ You can also modify Interaction dimensions, such as margin, padding, and font si
 
 1. In your app, create a new file __*res/values/apptentive_dimensions.xml*__, and copy the relevant colorsdimensions from Apptentive's [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Make sure you also do this for the other supported configurations.
 
-  | Supported Resource Configuration |
-  | -------------------------------- |
-  | `values-sw360dp-land` |
-  | `values-sw360dp-port` |
-  | `values-sw600dp-land` |
-  | `values-sw600dp-port` |
-  | `values`  (smaller screens) |
+| Supported Resource Configuration |
+| -------------------------------- |
+| `values-sw360dp-land` |
+| `values-sw360dp-port` |
+| `values-sw600dp-land` |
+| `values-sw600dp-port` |
+| `values`  (smaller screens) |
 
 2. Change the values to suite your design. Make sure you use the original Apptentive name for your properties.
 
-  ```xml
-  <dimen name="apptentive_activity_side_padding">40dp</dimen>
-  ```
+```xml
+<dimen name="apptentive_activity_side_padding">40dp</dimen>
+```
 
 #### Modified Dimension Examples
 ![Enjoyment Dialog With Modified Colors and Dimensions](https://raw.githubusercontent.com/apptentive/apptentive-documentation/android/using_apptentive/android/screenshots/customization_enjoyment_dimensions.png)
@@ -58,12 +58,11 @@ You can also modify Interaction dimensions, such as margin, padding, and font si
 The option to hide Apptentive branding is available to our [Enterprise](http://www.apptentive.com/plans/) customers. For our Enterprise customers, branding can be hidden remotely from your dashboard's Global App Settings. If the "Apptentive Branding" section is not visible, please contact support@apptentive.com to learn how to make this feature available for your account.
 
 Because the Apptentive Android SDK needs to connect to the server before this setting can take affect, you may also want to supply this `<meta-data>` element inside your manifest's `<application>` element. This will prevent Apptentive branding from being displayed until the client asks the server what to do.
+
 ```xml
 <meta-data android:name="apptentive_initially_hide_branding" android:value="true"/>
 ```
 
-
 "Hide Branding" hides the Apptentive logos at the top of the _Message Center_ and on the _About Apptentive_ screen.
 
 If you have customizations you'd like in our project, the best way to get them is to [let us know](http://apptentive.com/contact/). We're happy to discuss them!
-
