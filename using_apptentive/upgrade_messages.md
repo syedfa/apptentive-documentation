@@ -32,15 +32,14 @@ To test an Upgrade Message, you'll need to run a previous version of the app on 
 2. Set app version to "1.04".
 3. Delete the app from your device or simulator. Run the new app for ~30 seconds.
 4. Quit the app.
-5. Set app version to "1.05". Also increment the "build" of your app.
-6. You'll need to increment the app's "version" and "build" for the Upgrade Message to be displayed:
+5. Increment the app's "version" to 1.05, and increment the "build" as well:
   - iOS - In your app's target settings:
     - version: CFBundleShortVersionString
     - build: CFBundleVersion
   - Android - In your app's manifest:
     - version - android:versionName
     - build - android:versionCode
-7. Run the new version. Engage the event "upgrade_test" in code.
-8. This should now trigger the upgrade message.
+6. Run the new version. Engage the event "upgrade_test" in code.
+7. This should now trigger the upgrade message.
 
 The key is to **upgrade** your app from one version to another. An Upgrade Message will never be shown for the first version of the app used on any particular device.
