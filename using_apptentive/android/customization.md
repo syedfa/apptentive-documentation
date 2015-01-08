@@ -1,3 +1,11 @@
+---
+layout: docs
+title: Android Customization
+subClass: android-customization
+description: A guide to customizing the Apptentive Android SDK.
+extra_css:
+  - syntax.css
+---
 # Interface Customization
 
 Our Android SDK is 100% open source, and as such, you can modify the UI and underlying code at any time. However, the Apptentive Android SDK is built in such a way that simple UI style changes are very easy to make without having to modify our code.
@@ -32,7 +40,8 @@ If your app has a significantly different color scheme than our SDK, you may cho
 ## Modify Interaction Dimensions
 You can also modify Interaction dimensions, such as margin, padding, and font size. Apptentive's dimensions are located in [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Note that since the Apptentive Android SDK supports multiple screen sizes and layouts, there are multiple `values` folders, each with a configuration qualifier, and to provide a consistent look, you will need to override the same dimension for each of these configurations.
 
-1. In your app, create a new file __*res/values/apptentive_dimensions.xml*__, and copy the relevant colorsdimensions from Apptentive's [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Make sure you also do this for the other supported configurations.
+1. In your app, create a new file __*res/values/apptentive_dimensions.xml*__, and copy the relevant colors & dimensions from Apptentive's [res/values/dimensions.xml](https://github.com/apptentive/apptentive-android/blob/master/apptentive/res/values/dimensions.xml). Make sure you also do this for the other supported configurations, seen below.
+2. Change the values to suite your design. Make sure you use the original Apptentive name for your properties.
 
 | Supported Resource Configuration |
 | -------------------------------- |
@@ -41,8 +50,6 @@ You can also modify Interaction dimensions, such as margin, padding, and font si
 | `values-sw600dp-land` |
 | `values-sw600dp-port` |
 | `values`  (smaller screens) |
-
-2. Change the values to suite your design. Make sure you use the original Apptentive name for your properties.
 
 ```xml
 <dimen name="apptentive_activity_side_padding">40dp</dimen>
