@@ -11,10 +11,17 @@ Our SDK is avilable from the central Maven repo.
 
 #### Using Gradle
 
-In your app's `build.gradle`, add the following to your `dependencies` section:
+Add a reference to the latest version of Apptentive in your app's `build.gradle`. Refer [here](http://search.maven.org/#browse|1536749708) to find the latest version.
 
+###### Example
 ```
-compile 'com.apptentive:apptentive-android:1.6.+@aar'
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.apptentive:apptentive-android:1.6.6@aar'
+}
 ```
 
 If you are using IntelliJ IDEA or Android Studio, your IDE project settings should rebuild once you have made these modifications.
