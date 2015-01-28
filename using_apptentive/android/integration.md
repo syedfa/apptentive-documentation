@@ -250,7 +250,7 @@ Add an **Event** when your app's main Activity comes up.
 public void onWindowFocusChanged(boolean hasFocus) {
     super.onWindowFocusChanged(hasFocus);
     if (hasFocus) {
-        // Engage a code point called "init".
+        // Engage a code point called "main_activity_focused".
         boolean shown = Apptentive.engage(this, "main_activity_focused");
     }
 }
