@@ -84,7 +84,7 @@ Create an IBAction that calls `presentMessageCenterFromViewController:` and wire
 
 ``` objective-c
 - (IBAction)giveFeedback:(id)sender {
-	[[ATConnect sharedRatingFlow] presentMessageCenterFromViewController:self];
+	[[ATConnect sharedConnection] presentMessageCenterFromViewController:self];
 }
 ```
 
