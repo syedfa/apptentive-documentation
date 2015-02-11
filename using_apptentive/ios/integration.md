@@ -158,7 +158,7 @@ You should *seed* your app with certain Apptentive events at important points in
 
 Common app events that we recommend logging include:
 
- - When your app finishes loading and is ready to present a view. (`engage:@"init"` or `did_finish_loading`)
+ - When your app finishes loading and is ready to present a view. (`engage:@"app_became_active"`)
  - Completes an in-app purchase. (`engage:@"completed_in_app_purchase"`)
  - User finishes logging in. (`did_log_in`)
  - Completes a level. (`completed_level_8`)
@@ -233,15 +233,15 @@ In iOS 7, users are upgraded automatically when a new version of your app is rel
 
 Apptentive's Upgrade Message feature allows you to display a brief message when your app has been updated. You can speak directly to your users and let them know what has changed in the release.
 
-To present an upgrade message, engage the code point `init` when your application becomes active and is able to display a view:
+Upgrade Messages are targeted at an event via the Apptentive dashboard. You will likely want this event to be engaged soon after your app launches and is able to display a view.
 
 ```objective-c
 - (void)applicationDidBecomeActive:(UIApplication *)application {
-	[[ATConnect sharedConnection] engage:@"init" fromViewController:viewController];
+	[[ATConnect sharedConnection] engage:@"app_became_active" fromViewController:viewController];
 }
 ```
 
-Like the rating dialog, upgrade messages are created and configured online via your Apptentive dashboard.
+Like the Rating Dialog, Upgrade Messages are created and configured online via your Apptentive dashboard.
 
 #### Custom Data
 
