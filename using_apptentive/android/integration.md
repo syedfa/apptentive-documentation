@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.apptentive:apptentive-android:1.6.6@aar'
+    compile 'com.apptentive:apptentive-android:1.7.0@aar'
 }
 ```
 
