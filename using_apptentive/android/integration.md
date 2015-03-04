@@ -289,7 +289,7 @@ When you release a new version of your app, you should create an [Upgrade Messag
 
 * Urban Airship
 * Amazon Web Services SNS
-* Parse
+* Parse SDK 1.7.0+
 
 ### Configuring Your Push Credentials
 
@@ -366,13 +366,27 @@ ParsePush.subscribeInBackground("", new SaveCallback() {
 
 ### Displaying a Push Notification from Parse
 
-Parse requires you to call `PushService.setDefaultPushCallback()` so that Parse knows which of your Activities to launch when your customer opens a push notification. **Apptentive** needs to know this same information so that it can work seemlessly with your app. When you call [Apptentive.setParsePushCallback(Class<? extends Activity> activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setParsePushCallback-java.lang.Class-), you will most likely want to pass in the same Activity you passed to `PushService.setDefaultPushCallback()`. It also needs you to register **Apptentive's** `ViewActivity` with Parse so that push notifications that came from **Apptentive** get handled by our code. All **Apptentive** push notifications will be sent to the Parse channel called `apptentive`.
-
-In your `Application.onCreate()` method, add the following after your call to `PushService.setDefaultPushCallback()`:
+Parse integration involves adding a receiver entry in your manifest that points to `com.parse.ParsePushBroadcastReceiver`. This receiver will receive Intents when a user opens a push notification. In order to enable Apptentive to receive push notifications that are meant for us, you will need to subclass `ParsePushBroadcastReceiver` and replace the reference in your manifest to point to your subclass. Then, add the following in your subclass.
 
 ```java
-Apptentive.setParsePushCallback(YourActivity.class);
-PushService.subscribe(this, "apptentive", ViewActivity.class);
+  @Override
+  protected void onPushOpen(Context context, Intent intent) {
+    super.onPushOpen(context, intent);
+    boolean forApptentive = Apptentive.setPendingPushNotification(context, intent);
+  }
+```
+
+This previous step allows Apptentive to save a copy of the data that we sent in the push. If the push didn't come from Apptentie, this method has no effect. Next, you will need to tell Apptentive when it is appropriate to act on the push notification. By default, Parse will launch your default Activity when a user opens the push notification. Where you call Apptentive will depend on how you have build your app, but a good place is in `onWindowFocusChanged()`.
+
+```java
+@Override
+public void onWindowFocusChanged(boolean hasFocus) {
+  super.onWindowFocusChanged(hasFocus);
+  if (hasFocus) {
+    // Returns true if the push notification was for Apptentive, and we handled it.
+    boolean ranApptentive = Apptentive.handleOpenedPushNotification(this);
+  }
+}
 ```
 
 ### Displaying a Push Notification from all other providers
