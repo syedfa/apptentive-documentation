@@ -348,22 +348,20 @@ Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 
 #### Setting up the Parse Device Token
 
-Parse integration requires you to implement your own `Application` object. In the `onCreate()` method of your `Application` object, you will need to add the following code after your call to `Parse.initialize()`. This code will make sure that the deviceToken is sent to **Apptentive** as soon as it is registered with Parse.
+Parse integration requires you to implement your own `Application` object. If you haven't yet [set up Parse push notifications](https://www.parse.com/tutorials/android-push-notifications), please do so before continuing.
+
+In the `onCreate()` method of your `Application` object, you will need to read the `deviceToken` from Parse, and pass it to Apptentive. The following code assumes you are using the latest Parse SDK, and registering it to receive push notifications that are not sent to a specific channel. In the `done()` method of your `SaveCallback`, you must read the `deviceToken`, and pass it to Apptentive.
 
 ```java
-ParseInstallation parseInstallation = ParseInstallation.getCurrentInstallation();
-if (parseInstallation == null || parseInstallation.get("deviceToken") == null) {
-  ParseInstallation.getCurrentInstallation().saveInBackground(new SaveCallback() {
-    @Override
-    public void done(ParseException e) {
+ParsePush.subscribeInBackground("", new SaveCallback() {
+  @Override
+  public void done(ParseException e) {
+    if (e == null) {
       String deviceToken = (String) ParseInstallation.getCurrentInstallation().get("deviceToken");
       Apptentive.addParsePushIntegration(getApplicationContext(), deviceToken);
     }
-  });
-} else {
-  String deviceToken = (String) parseInstallation.get("deviceToken");
-  Apptentive.addParsePushIntegration(this, deviceToken);
-}
+  }
+});
 ```
 
 ### Displaying a Push Notification from Parse
