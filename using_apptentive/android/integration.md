@@ -16,11 +16,11 @@ Add a reference to the latest version of Apptentive in your app's `build.gradle`
 ###### Example
 ```
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    compile 'com.apptentive:apptentive-android:1.7.0@aar'
+  compile 'com.apptentive:apptentive-android:1.7.0@aar'
 }
 ```
 
@@ -32,9 +32,9 @@ Add the following to your app's pom.xml in the `dependencies` element:
 
 ```xml
 <dependency>
-    <groupId>com.apptentive</groupId>
-    <artifactId>apptentive-android</artifactId>
-    <version>1.6.+</version>
+  <groupId>com.apptentive</groupId>
+  <artifactId>apptentive-android</artifactId>
+  <version>1.6.+</version>
 </dependency>
 ```
 
@@ -91,39 +91,39 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
           package="com.apptentive.android.example"
           android:versionCode="1"
           android:versionName="1.0">
-    <!-- Required -->
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <!-- Optional - GET_ACCOUNTS is used to pre-populate customer's email in forms. -->
-    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+  <!-- Required -->
+  <uses-permission android:name="android.permission.INTERNET"/>
+  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+  <!-- Optional - GET_ACCOUNTS is used to pre-populate customer's email in forms. -->
+  <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
 
-    <!-- Make sure to support high resolution screens so Apptentive's UI looks great. -->
-    <supports-screens android:largeScreens="true"
-                      android:normalScreens="true"
-                      android:smallScreens="true"
-                      android:anyDensity="true"/>
+  <!-- Make sure to support high resolution screens so Apptentive's UI looks great. -->
+  <supports-screens android:largeScreens="true"
+                    android:normalScreens="true"
+                    android:smallScreens="true"
+                    android:anyDensity="true"/>
 
-    <!-- Your minSDKVersion is required to be at least 7. -->
-    <uses-sdk android:minSdkVersion="7"
-              android:targetSdkVersion="19"/>
+  <!-- Your minSDKVersion is required to be at least 7. -->
+  <uses-sdk android:minSdkVersion="7"
+            android:targetSdkVersion="19"/>
 
-    <application android:label="@string/app_name" android:icon="@drawable/icon">
-        <activity android:name=".ExampleActivity"
-                  android:label="@string/app_name"
-                  android:configChanges="orientation|keyboardHidden"
-                  android:launchMode="singleTop">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
+  <application android:label="@string/app_name" android:icon="@drawable/icon">
+    <activity android:name=".ExampleActivity"
+              android:label="@string/app_name"
+              android:configChanges="orientation|keyboardHidden"
+              android:launchMode="singleTop">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN"/>
+        <category android:name="android.intent.category.LAUNCHER"/>
+      </intent-filter>
+    </activity>
 
-        <!-- The following is required -->
-        <!-- Include your App's API key from Apptentive at "Settings -> API & Development" -->
-        <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
-        <activity android:name="com.apptentive.android.sdk.ViewActivity"
-                  android:theme="@style/Apptentive.Theme.Transparent"/>
-    </application>
+      <!-- The following is required -->
+      <!-- Include your App's API key from Apptentive at "Settings -> API & Development" -->
+      <meta-data android:name="apptentive_api_key" android:value="YOUR_API_KEY_GOES_HERE"/>
+      <activity android:name="com.apptentive.android.sdk.ViewActivity"
+                android:theme="@style/Apptentive.Theme.Transparent"/>
+  </application>
 </manifest>
 ```
 
@@ -154,14 +154,14 @@ Integrate ALL of the Activities in your app with Apptentive in one of the follow
 
     @Override
     protected void onStart() {
-        super.onStart();
-        Apptentive.onStart(this);
+      super.onStart();
+      Apptentive.onStart(this);
     }
 
     @Override
     protected void onStop() {
-        super.onStop();
-        Apptentive.onStop(this);
+      super.onStop();
+      Apptentive.onStop(this);
     }
 ```
 
@@ -178,9 +178,9 @@ Here is how you can show **Message Center** by hooking it up to a button in your
 ```java
 Button messageCenterButton = (Button)findViewById(R.id.your_message_center_button);
 messageCenterButton.setOnClickListener(new View.OnClickListener(){
-    public void onClick(View v) {
-        Apptentive.showMessageCenter(YourActivity.this);
-    }
+  public void onClick(View v) {
+    Apptentive.showMessageCenter(YourActivity.this);
+  }
 });
 ```
 
@@ -194,9 +194,9 @@ you wish to add more custom data to another subsequent message, you will need to
 ###### Example
 
 ```java
-    Map<String, String> customData = new HashMap<String, String>();
-    customData.put("restaurant", "Joe's Pizza");
-    Apptentive.showMessageCenter(YourActivity.this, customData);
+Map<String, String> customData = new HashMap<String, String>();
+customData.put("restaurant", "Joe's Pizza");
+Apptentive.showMessageCenter(YourActivity.this, customData);
 ```
 
 ### New Message Notification (Optional)
@@ -210,11 +210,11 @@ and then perform any user interaction you desire at the appropriate time.
 
 ```java
 Apptentive.setUnreadMessagesListener(
-    new UnreadMessagesListener() {
-        public void onUnreadMessageCountChanged(final int unreadMessages) {
-            // Use the updated count.
-        }
+  new UnreadMessagesListener() {
+    public void onUnreadMessageCountChanged(final int unreadMessages) {
+      // Use the updated count.
     }
+  }
 );
 ```
 
@@ -248,11 +248,11 @@ Add an **Event** when your app's main Activity comes up.
 ```java
 @Override
 public void onWindowFocusChanged(boolean hasFocus) {
-    super.onWindowFocusChanged(hasFocus);
-    if (hasFocus) {
-        // Engage a code point called "main_activity_focused".
-        boolean shown = Apptentive.engage(this, "main_activity_focused");
-    }
+  super.onWindowFocusChanged(hasFocus);
+  if (hasFocus) {
+    // Engage a code point called "main_activity_focused".
+    boolean shown = Apptentive.engage(this, "main_activity_focused");
+  }
 }
 ```
 
