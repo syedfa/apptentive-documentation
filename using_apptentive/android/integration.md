@@ -376,7 +376,7 @@ Parse integration involves adding a receiver entry in your manifest that points 
   }
 ```
 
-This previous step allows Apptentive to save a copy of the data that we sent in the push. If the push didn't come from Apptentie, this method has no effect. Next, you will need to tell Apptentive when it is appropriate to act on the push notification. By default, Parse will launch your default Activity when a user opens the push notification. Where you call Apptentive will depend on how you have build your app, but a good place is in `onWindowFocusChanged()`.
+This previous step allows Apptentive to save a copy of the data that we sent in the push. If the push didn't come from Apptentive, this method has no effect. Next, you will need to tell Apptentive when it is appropriate to act on the push notification. By default, Parse will launch your default Activity when a user opens the push notification. Where you call Apptentive will depend on how you have build your app, but a good place is in `onWindowFocusChanged()`.
 
 ```java
 @Override
@@ -397,7 +397,6 @@ launch your main Activity, and display the push notification with [Apptentive.ha
 This two pass approach is necessary to avoid double displaying the push notification. Both of these methods do nothing
 if the push notification didn't come from Apptentive.
 
-
 ###### Example
 
 Push notification opened.
@@ -406,8 +405,6 @@ Push notification opened.
 Apptentive.setPendingPushNotification(context, intent);
 // Then launch your main Activity.
 ```
-
-
 
 In your main Activity, handle the push notification.
 
@@ -424,45 +421,6 @@ public void onWindowFocusChanged(boolean hasFocus) {
   }
 }
 ```
-
-##### Parse is a little Different
-
-Parse integration is very simple. Because of this, you will need to create a `BroadcastReceiver` to intercept incoming notifications and pass them to Apptentive. Simple follow the steps below to do this.
-
-1. Create a new class called ParsePushReceiver. Copy in and modify the code below to fit your package.
-
-    ```java
-    public class ParsePushReceiver extends BroadcastReceiver {
-      @Override
-      public void onReceive(Context context, Intent intent) {
-        Apptentive.setPendingPushNotification(context, intent);
-      }
-    }
-    ```
-
-2. In your manifest, add the following right before the closing `</application>` element. Replace *com.apptentive.parse.example* with your package name.
-
-    ```xml
-    <receiver android:name="com.apptentive.parse.example.ParsePushReceiver" android:exported="false">
-      <intent-filter>
-        <action android:name="com.apptentive.PUSH"/>
-      </intent-filter>
-    </receiver>
-    ```
-
-3. Let Apptentive handle the push notification when it is opened. When you set up Parse, you most likely configured it to open an Activity when the push notification is opened by calling `PushService.setDefaultCallback(). In this Activity, you will want to allow Apptentive to handle the opened push notification. To do so, you will need to call `Apptentive.handleOpenedPushNotification()`. Here is the recommended implementation:
-
-    ```java
-    @Override
-    public void onWindowFocusChanged(boolean hasFocus) {
-      super.onWindowFocusChanged(hasFocus);
-      if (hasFocus) {
-        Apptentive.handleOpenedPushNotification(this);
-      }
-    }
-    ```
-
-    Note that this method will return immediately if the push notification that was previously saved using `Apptentive.setPendingPushNotification()` did not come from Apptentive.
 
 # Set Customer Contact Information
 
