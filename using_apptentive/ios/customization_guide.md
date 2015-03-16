@@ -8,7 +8,7 @@ In the meantime, this information should be correct for the current version of t
 
 ## Customizing Text
 
-You can now customize the text in the ratings prompt from your Apptentive dashboard. Just go to "Interactions" on the top tab, then to "Ratings Prompt" on the left, and you'll be able to customize all of the text for the ratings flow.
+You can now customize the text in the ratings prompt from your Apptentive dashboard. Just go to "Interactions" on the top tab, then to "Ratings Prompt" on the left, and you'll be able to customize all of the text for the Ratings Prompt.
 
 For example:
 

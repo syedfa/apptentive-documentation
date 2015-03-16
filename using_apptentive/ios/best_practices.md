@@ -17,7 +17,6 @@ After including Apptentive in your Xcode project, the first step of integration 
 
 ``` objective-c
 #import "ATConnect.h"
-#import "ATAppRatingFlow.h"
 
 //...
 
@@ -26,7 +25,7 @@ After including Apptentive in your Xcode project, the first step of integration 
 	[ATConnect sharedConnection].apiKey = @"YOUR_APPTENTIVE_API_KEY";
 	
 	// App Store ID
-	[ATAppRatingFlow sharedRatingFlow].appID = @"YOUR_APP_ID_FROM_THE_APP_STORE";
+	[ATConnect sharedConnection].appID = @"YOUR_APP_ID_FROM_THE_APP_STORE";
 	
 	/* ... */
 }
@@ -34,23 +33,23 @@ After including Apptentive in your Xcode project, the first step of integration 
 
 ###Do you Love Apptentive?
 
-Apptentive's rating flow displays a "Do you love *app_name*?" dialog to the user. Your app's *Love Ratio* is determined by people's answer to this question.
+Apptentive's Ratings Prompt displays a "Do you love *app_name*?" dialog to the user. Your app's *Love Ratio* is determined by people's answer to this question.
 
-The dialog is shown by engaging a certain event in your app that you have targeted, online, to run the rating prompt. If the current rating conditions are satisfied, the enjoyment dialog will be shown.
+The dialog is shown by engaging a certain event in your app that you have targeted, online, to run the Ratings Prompt. If the current rating conditions are satisfied, the enjoyment dialog will be shown.
 
 	[[ATConnect sharedConnection] engage:@"test_rating_prompt" fromViewController:viewController];
 
-These rating flow conditions can be changed at any time via the Apptentive website. This feature enables you to remotely change Apptentive rating flow settings without issuing an iOS app update.
+These Ratings Prompt conditions can be changed at any time via the Apptentive website. This feature enables you to remotely change the Ratings Prompt settings without issuing an iOS app update.
 
-###App Store Rating Prompt
+###App Store Ratings Prompt
 
 Asking people who love your app to rate it in the App Store is a great way to increase your App Store star rating.
 
-The rating prompt is triggered by engaging an event in your app, which you then target via your Apptentive dashboard settings:  
+The Ratings Prompt is triggered by engaging an event in your app, which you then target via your Apptentive dashboard settings:  
 
 	[[ATConnect sharedConnection] engage:@"test_rating_prompt" fromViewController:viewController];
 
-Despite being triggered, the rating prompt is shown only if your set conditions are met. For example, you might decide the rating prompt should be shown after 5 days of use, 10 app launches, and 3 significant events. These settings can be modified on the Apptentive website.
+Despite being triggered, the Ratings Prompt is shown only if your set conditions are met. For example, you might decide the Ratings Prompt should be shown after 5 days of use, 10 app launches, and 3 significant events. These settings can be modified on the Apptentive website.
 
 When presented with the "Do you love *app_name*?" dialog, the user can select "Yes" or "No". They will be presented with different behaviors based on their answer to the question.
 
@@ -62,7 +61,7 @@ Those who indicate they do not like the app will be prompted to send feedback di
 
 Apptentive surveys are used to collect information from the people using your app.
 
-Like the rating prompt, surveys are created online and targeted at events in your app. 
+Like the Ratings Prompt, surveys are created online and targeted at events in your app. 
 
 	[[ATConnect sharedConnection] engage:@"test_survey" fromViewController:viewController];
 
@@ -70,7 +69,7 @@ These surveys can be released completely remotely, between App Store updates, as
 
 ###Feedback from Users (Apptentive Message Center)
 
-The Apptentive rating flow will prompt some users to send you direct feedback. You can respond to this feedback from your online Apptentive dashboard.
+The Apptentive Ratings Prompt will prompt some users to send you direct feedback. You can respond to this feedback from your online Apptentive dashboard.
 
 It is important to implement a Feedback button, so that users can open up the Apptentive Message Center at any time. 
 
@@ -86,7 +85,7 @@ Create an IBAction that calls `presentMessageCenterFromViewController:` and wire
 
 ``` objective-c
 - (IBAction)giveFeedback:(id)sender {
-	[[ATConnect sharedRatingFlow] presentMessageCenterFromViewController:self];
+	[[ATConnect sharedConnection] presentMessageCenterFromViewController:self];
 }
 ```
 

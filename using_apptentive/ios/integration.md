@@ -132,7 +132,7 @@ If listening for the notification via the code above, you would then implement t
 ```
 ### Events
 
-The rating prompt and other Apptentive **interactions** are targeted to certain Apptentive **events**. For example, you could decide to show the rating prompt at the event `user_completed_level`. You can then, later, reconfigure the rating prompt interaction to show at `user_logged_in`. 
+The Ratings Prompt and other Apptentive **interactions** are targeted to certain Apptentive **events**. For example, you could decide to show the Ratings Prompt at the event `user_completed_level`. You can then, later, reconfigure the Ratings Prompt interaction to show at `user_logged_in`. 
 
 An **event** is a record of your customer performing an action in your app. Generate events by calling `engage:fromViewController:`. Apptentive stores a record of all events, which you can later use show specific interactions to your customer.
 
@@ -168,11 +168,11 @@ Common app events that we recommend logging include:
  - Switches navigation tabs.
  - Etc., depending on the specifics of your app.
 
-Be sure to add these events *prior* to uploading the app to the App Store, even if you are not currently using all of the events to show interactions. Later, without having to re-upload a new version, you can re-target the rating prompt or other Apptentive interactions to different events.
+Be sure to add these events *prior* to uploading the app to the App Store, even if you are not currently using all of the events to show interactions. Later, without having to re-upload a new version, you can re-target the Ratings Prompt or other Apptentive interactions to different events.
 
 ### Interactions
 
-An Apptentive **interaction** is a specific piece of your app that can be shown in response to a person's events. For example, Surveys, Message Center, and the Apptentive Rating Flow are all unique interactions. When users engage certain **events**, you can decide (based on pre-defined conditions) to show a specific interaction in your app.
+An Apptentive **interaction** is a specific piece of your app that can be shown in response to a person's events. For example, Surveys, Message Center, and the Apptentive Ratings Prompt are all unique interactions. When users engage certain **events**, you can decide (based on pre-defined conditions) to show a specific interaction in your app.
 
 #### Interactions are Configurable via the Apptentive Website
 
@@ -188,21 +188,21 @@ Later, after shipping the app, you can configure the interactions that will run 
  
 Interactions can be modified, remotely, without shipping a new app update to the App Store. You can easily change a particular event to show a Survey rather than collect Feedback.  The remote configurability of Apptentive interactions make them perfect for A/B testing and quick iteration.
 
-### Rating Prompt
+### Ratings Prompt
 
-Apptentive provides an app rating prompt interaction that aims to provide the best feedback for both you and your customers.
+Apptentive provides an app Ratings Prompt interaction that aims to provide the best feedback for both you and your customers.
 
 Customers who love your app are asked to rate the app on the App Store. Those who dislike your app are instead directed to the Apptentive Message Center, where they can communicate directly with your team. You are then able to respond directly to customer issues or feature requests.
 
-The rating prompt is configured online in your Apptentive dashboard. At that time you will configure it to be shown when a certain event is engaged. You can also edit the exact text that will be displayed.
+The Ratings Prompt is configured online in your Apptentive dashboard. At that time you will configure it to be shown when a certain event is engaged. You can also edit the exact text that will be displayed.
 
-Thus, the only code needed to display a Rating Prompt is to engage events using the `engage:fromViewController:` method. The rating prompt is otherwise configured from your Apptentive dashboard.
+Thus, the only code needed to display a Ratings Prompt is to engage events using the `engage:fromViewController:` method. The Ratings Prompt is otherwise configured from your Apptentive dashboard.
 
 ``` objective-c
 	[[ATConnect sharedConnection] engage:@"completed_level" fromViewController:viewController];
 ```
 
-One you have engaged some events, you can create a rating prompt and modify the parameters which determine when it will be shown in your interaction settings on [Apptentive](http://www.apptentive.com).
+One you have engaged some events, you can create a Ratings Prompt and modify the parameters which determine when it will be shown in your interaction settings on [Apptentive](http://www.apptentive.com).
 
 ![Enjoyment dialog](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/rating_prompt_enjoyment_dialog.png) ![spacer image](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/space.png) ![Rating dialog](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/rating_prompt_rating_dialog.png) ![spacer image](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/space.png) ![feedback dialog image](https://raw.github.com/apptentive/apptentive-documentation/master/using_apptentive/ios/screenshots/rating_prompt_feedback_dialog.png)
 
@@ -307,9 +307,9 @@ For information on customizing the UI and text of `apptentive-ios`, please see t
 
 ## Testing Apptentive Features
 
-Apptentive interactions are only shown if the conditions set on your Apptentive dashboard are met. Your Rating Prompt might only show 3 days after installing the app, for example.
+Apptentive interactions are only shown if the conditions set on your Apptentive dashboard are met. Your Ratings Prompt might only show 3 days after installing the app, for example.
 
 This can make some Apptentive features somewhat hard to invoke and test. An interaction may or may not be shown whenever you engage and event in your app.
 
-Please see the [Apptentive testing guide](http://www.apptentive.com/docs/ios/testing/) for directions on how to test that the Rating Prompt, Surveys, and other Apptentive features have been configured correctly.
+Please see the [Apptentive testing guide](http://www.apptentive.com/docs/ios/testing/) for directions on how to test that the Ratings Prompt, Surveys, and other Apptentive features have been configured correctly.
 
