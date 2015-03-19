@@ -105,7 +105,7 @@ You will need to make the following changes to your AndroidManifest.xml. Comment
 
   <!-- Your minSDKVersion is required to be at least 7. -->
   <uses-sdk android:minSdkVersion="7"
-            android:targetSdkVersion="19"/>
+            android:targetSdkVersion="21"/>
 
   <application android:label="@string/app_name" android:icon="@drawable/icon">
     <activity android:name=".ExampleActivity"
