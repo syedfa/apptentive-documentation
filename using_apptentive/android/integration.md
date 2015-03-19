@@ -283,55 +283,73 @@ When you release a new version of your app, you should create an [Upgrade Messag
 
 # Push Notifications
 
-**Apptentive** can send [push notifications](http://www.apptentive.com/docs/android/features/#push-notifications) to your app when you reply to your customers. Your replies are more likely to be seen by your customer when you do this. To set up push notifications, you will need to enter your push credentials on [apptentive.com](https://be.apptentive.com), send us the id that your push provider uses to identify the device, and call into our SDK when you receive and open a push notification.
+**Apptentive** can send [push notifications](http://www.apptentive.com/docs/android/features/#push-notifications) to your app when you reply to your customers. Your replies are more likely to be seen by your customer when you do this. To set up push notifications, you will need to enter your push credentials on [apptentive.com](https://be.apptentive.com), send us the id that your push provider uses to identify the device, and call into our SDK when a user opens a push notification.
 
-### Supported Push Providers
+#### Supported Push Providers
 
-* Urban Airship
+* Urban Airship (5.1.6)
 * Amazon Web Services SNS
 * Parse SDK 1.7.0+
 
-### Configuring Your Push Credentials
+## Configuring Your Push Credentials
 
 To enter your push credentials, go to [apptentive.com](https://be.apptentive.com), select *Settings -> Integrations*,
 choose *Urban Airship*, *Amazon Web Services SNS*, or *Parse*, and follow the instructions on that page.
 
-### Setting the Device Token
+## Configuring Apptentive to Work With Your Push Provider
 
-In order for **Apptentive** to send push notifications to the correct device, you will need to pass us the device
-identifier for the push provider you are using.
+### Urban Airship
 
-#### Setting the Urban Airship APID
+#### Setting the Channel ID
+First, make sure you have [integrated Urban Airship push notifications](http://docs.urbanairship.com/platform/android.html#urban-airship-sdk-setup) into your app.
 
-The Urban Airship device ID is called *APID* (Airship Push ID). You can retreive it in one of two ways:
+Urban Airship creates a token called a **Channel ID** to identify each device. You will need to get the **Channel ID** and pass it to **Apptentive**.
 
-1. If you set up Urban Airship using a BroadcastReceiver to listen to Intents that Urban Airship sends you, you can
-retreive the APID by listening for the Intent with action [PushManager.ACTION_REGISTRATION_FINISHED](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#ACTION_REGISTRATION_FINISHED),
-grabbing the extra data [PushManager.EXTRA_APID](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#EXTRA_APID),
-and passing it to [Apptentive.addUrbanAirshipPushIntegration(Context context, String apid](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addUrbanAirshipPushIntegration-android.content.Context-java.lang.String-).
+First, you must make sure you are defining your own IntentReceiver that subclasses Urban Airship's [BaseIntentReceiver](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html). You will need to follow the instructions in that link to add your IntentReceiver to your app's manifest. When you subclass `BaseIntentReceiver`, you will need to implement the abstract method [onChannelRegistrationSucceeded()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onChannelRegistrationSucceeded%28android.content.Context,%20java.lang.String%29). Inside this method, you will need to pass the **Channel ID** to Apptentive.
 
-    ###### Example
+[Apptentive.addUrbanAirshipPushIntegration(Context context, String channelId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addUrbanAirshipPushIntegration-android.content.Context-java.lang.String-)
 
-    ```java
-    String apid = intent.getStringExtra(PushManager.EXTRA_APID);
-    Apptentive.addUrbanAirshipPushIntegration(context, apid);
-    ```
+###### Example
+```java
+@Override
+protected void onChannelRegistrationSucceeded(Context context, String channelId) {
+  Apptentive.addUrbanAirshipPushIntegration(context, channelId);
+}
+```
 
-    This method is preferable, because you will get the APID at the earliest possible time after the app is registered with
-    UA, and will only need to give it to the Apptentive SDK once.
+#### Saving the Urban Airship Push Notification with Apptentive
 
-2. If you are not using a broadcast receiver, you can call [PushManager.getAPID()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/PushManager.html#getAPID%28%29).
-This method may return null if Urban Airship hasn't finished registering, so don't give it to us until it returns an
-actual APID.
+Urban Airship's `BaseBroadcastReceiver` also requires you to implement the abstract method [onNotificationOpened()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onNotificationOpened%28android.content.Context,%20com.urbanairship.push.PushMessage,%20int%29). Inside this method, you will need to pass Apptentive the extra Bundle from teh opened push notification. If this push notificaiton came from Apptentive, we will save the data it contains. Otherwise, it will have no effect.
 
-    ###### Example
+[Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-)
 
-    ```java
-    String apid = PushManager.getAPID();
-    if (apid != null) {
-      Apptentive.addUrbanAirshipPushIntegration(context, apid);
-    }
-    ```
+###### Example
+```java
+@Override
+protected boolean onNotificationOpened(Context context, PushMessage pushMessage, int i) {
+	Apptentive.setPendingPushNotification(context, pushMessage.getPushBundle());
+	return false;
+}
+```
+
+#### Displaying an Urban Airship Push Notification
+
+You will either choose an Activity to launch when the push notification is opened, or by default let your MainActivity handle the opened push notification. Either way, you will need to give Apptentive a chance to display the push notification. If there is no saved push notification, this method will have no effect.
+
+[Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-)
+
+###### Example
+Allowing Apptentive to handle the push notification when your Activity gains focus is a good practice.
+
+```java
+@Override
+public void onWindowFocusChanged(boolean hasFocus) {
+	super.onWindowFocusChanged(hasFocus);
+	if (hasFocus) {
+		boolean displayed = Apptentive.handleOpenedPushNotification(this);
+	}
+}
+```
 
 #### Setting the Amazon Web Services SNS Registration ID
 
