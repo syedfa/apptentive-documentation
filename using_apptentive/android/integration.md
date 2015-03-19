@@ -291,29 +291,31 @@ When you release a new version of your app, you should create an [Upgrade Messag
 * Amazon Web Services SNS
 * Parse SDK 1.7.0+
 
-## Configuring Your Push Credentials
+## Configuring Apptentive to Work With Your Push Provider
+
+### Configuring Your Push Credentials
 
 To enter your push credentials, go to [apptentive.com](https://be.apptentive.com), select *Settings -> Integrations*,
 choose *Urban Airship*, *Amazon Web Services SNS*, or *Parse*, and follow the instructions on that page.
 
-## Configuring Apptentive to Work With Your Push Provider
+### Using Urban Airship
 
-### Urban Airship
+#### Setting the Urban Airship Channel ID
 
-#### Setting the Channel ID
 First, make sure you have [integrated Urban Airship push notifications](http://docs.urbanairship.com/platform/android.html#urban-airship-sdk-setup) into your app.
 
-Urban Airship creates a token called a **Channel ID** to identify each device. You will need to get the **Channel ID** and pass it to **Apptentive**.
+Urban Airship creates a token called a *Channel ID* to identify each device. You will need to get the *Channel ID* and pass it to **Apptentive**.
 
-First, you must make sure you are defining your own IntentReceiver that subclasses Urban Airship's [BaseIntentReceiver](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html). You will need to follow the instructions in that link to add your IntentReceiver to your app's manifest. When you subclass `BaseIntentReceiver`, you will need to implement the abstract method [onChannelRegistrationSucceeded()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onChannelRegistrationSucceeded%28android.content.Context,%20java.lang.String%29). Inside this method, you will need to pass the **Channel ID** to Apptentive.
+First, you must make sure you are defining your own `IntentReceiver` that subclasses Urban Airship's [BaseIntentReceiver](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html). You will need to follow the instructions in that link to add your `IntentReceiver` to your app's manifest. When you subclass `BaseIntentReceiver`, you will need to implement its abstract methods, including [onChannelRegistrationSucceeded()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onChannelRegistrationSucceeded%28android.content.Context,%20java.lang.String%29). Inside this method, you will need to pass the *Channel ID* to **Apptentive**.
 
 [Apptentive.addUrbanAirshipPushIntegration(Context context, String channelId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addUrbanAirshipPushIntegration-android.content.Context-java.lang.String-)
 
 ###### Example
+
 ```java
 @Override
 protected void onChannelRegistrationSucceeded(Context context, String channelId) {
-  Apptentive.addUrbanAirshipPushIntegration(context, channelId);
+	Apptentive.addUrbanAirshipPushIntegration(context, channelId);
 }
 ```
 
@@ -324,6 +326,7 @@ Urban Airship's `BaseBroadcastReceiver` also requires you to implement the abstr
 [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-)
 
 ###### Example
+
 ```java
 @Override
 protected boolean onNotificationOpened(Context context, PushMessage pushMessage, int i) {
@@ -339,6 +342,7 @@ You will either choose an Activity to launch when the push notification is opene
 [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-)
 
 ###### Example
+
 Allowing Apptentive to handle the push notification when your Activity gains focus is a good practice.
 
 ```java
@@ -346,55 +350,57 @@ Allowing Apptentive to handle the push notification when your Activity gains foc
 public void onWindowFocusChanged(boolean hasFocus) {
 	super.onWindowFocusChanged(hasFocus);
 	if (hasFocus) {
-		boolean displayed = Apptentive.handleOpenedPushNotification(this);
+		boolean ranApptentive = Apptentive.handleOpenedPushNotification(this);
 	}
 }
 ```
 
-#### Setting the Amazon Web Services SNS Registration ID
+### Using Parse
 
-Amazon Web Services SNS uses GCM directly on the client, so you will need to use the GCM API to retreive the
-Registration ID. See the [GCM documentation](http://developer.android.com/google/gcm/client.html) if you are unsure how
-to retreive your Registration ID. When you have the Registration ID, pass it to [Apptentive.addAmazonSnsPushIntegration(Context context, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration-android.content.Context-java.lang.String-).
+#### Setting the Parse Device Token
+
+First, make sure you have [integrated Parse push notifications](https://www.parse.com/tutorials/android-push-notifications) into your app.
+
+Parse integration requires you to implement your own `Application` object. In the `onCreate()` method of your `Application` object, you will need to read the `deviceToken` from Parse, and pass it to Apptentive. Apptentive sends pushes to Parse in the `apptentive` channel. The following code assumes you are using the latest Parse SDK, and registering it to receive push notifications sent to the `apptentive` channel. In the `done()` method of your `SaveCallback`, you must read the `deviceToken`, and pass it to Apptentive.
+
+[Apptentive.addParsePushIntegration(Context context, String deviceToken)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addParsePushIntegration-android.content.Context-java.lang.String-)
 
 ###### Example
 
 ```java
-String registrationId;
-Apptentive.addAmazonSnsPushIntegration(this, registrationId);
-```
-
-#### Setting up the Parse Device Token
-
-Parse integration requires you to implement your own `Application` object. If you haven't yet [set up Parse push notifications](https://www.parse.com/tutorials/android-push-notifications), please do so before continuing.
-
-In the `onCreate()` method of your `Application` object, you will need to read the `deviceToken` from Parse, and pass it to Apptentive. The following code assumes you are using the latest Parse SDK, and registering it to receive push notifications that are not sent to a specific channel. In the `done()` method of your `SaveCallback`, you must read the `deviceToken`, and pass it to Apptentive.
-
-```java
-ParsePush.subscribeInBackground("", new SaveCallback() {
-  @Override
-  public void done(ParseException e) {
-    if (e == null) {
-      String deviceToken = (String) ParseInstallation.getCurrentInstallation().get("deviceToken");
-      Apptentive.addParsePushIntegration(getApplicationContext(), deviceToken);
-    }
-  }
+ParsePush.subscribeInBackground("apptentive", new SaveCallback() {
+	@Override
+	public void done(ParseException e) {
+		if (e == null) {
+			String deviceToken = (String) ParseInstallation.getCurrentInstallation().get("deviceToken");
+			Apptentive.addParsePushIntegration(getApplicationContext(), deviceToken);
+		}
+	}
 });
 ```
+#### Saving the Parse Push Notification with Apptentive
 
-### Displaying a Push Notification from Parse
+Integrating **Parse** into your app involves adding a receiver entry in your manifest that points to `com.parse.ParsePushBroadcastReceiver`. This receiver will receive `Intents` when a user opens a push notification. In order to enable **Apptentive** to receive push notifications that are meant for us, you will need to subclass `ParsePushBroadcastReceiver` and replace the reference in your manifest to point to your subclass. Then, add the following in your subclass's `onPushOpen()` method.
 
-Parse integration involves adding a receiver entry in your manifest that points to `com.parse.ParsePushBroadcastReceiver`. This receiver will receive Intents when a user opens a push notification. In order to enable Apptentive to receive push notifications that are meant for us, you will need to subclass `ParsePushBroadcastReceiver` and replace the reference in your manifest to point to your subclass. Then, add the following in your subclass.
+[Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-)
+
+###### Example
 
 ```java
-  @Override
-  protected void onPushOpen(Context context, Intent intent) {
-    super.onPushOpen(context, intent);
-    boolean forApptentive = Apptentive.setPendingPushNotification(context, intent);
-  }
+@Override
+protected void onPushOpen(Context context, Intent intent) {
+	super.onPushOpen(context, intent);
+	Apptentive.setPendingPushNotification(context, intent);
+}
 ```
 
-This previous step allows Apptentive to save a copy of the data that we sent in the push. If the push didn't come from Apptentive, this method has no effect. Next, you will need to tell Apptentive when it is appropriate to act on the push notification. By default, Parse will launch your default Activity when a user opens the push notification. Where you call Apptentive will depend on how you have build your app, but a good place is in `onWindowFocusChanged()`.
+#### Displaying a Push Notification from Parse
+
+This previous step allows Apptentive to save a copy of the data that we sent in the push. If the push didn't come from **Apptentive**, this method has no effect. Next, you will need to tell **Apptentive** when it is appropriate to act on the push notification. By default, **Parse** will launch your default `Activity` when a user opens the push notification. Where you call **Apptentive** will depend on how you have build your app, but a good place is inside `onWindowFocusChanged()`.
+
+[Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-)
+
+###### Example
 
 ```java
 @Override
@@ -407,36 +413,52 @@ public void onWindowFocusChanged(boolean hasFocus) {
 }
 ```
 
-### Displaying a Push Notification from all other providers
+### Using Amazon SNS
 
-Opening an Apptentive push notification involves three easy steps: When the push notification is tapped by your customer,
-pass it to [Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-),
-launch your main Activity, and display the push notification with [Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-).
-This two pass approach is necessary to avoid double displaying the push notification. Both of these methods do nothing
-if the push notification didn't come from Apptentive.
+#### Setting the Amazon Web Services SNS GCM Registration ID
+
+**Amazon Web Services SNS** uses **GCM** directly on the client, so you will need to use the **GCM** API to retreive the
+*Registration ID*. See the [GCM documentation](http://developer.android.com/google/gcm/client.html) if you are unsure how
+to retreive your *Registration ID*. When you have the *Registration ID*, pass it to **Apptentive**.
+
+[Apptentive.addAmazonSnsPushIntegration(Context context, String registrationId)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#addAmazonSnsPushIntegration-android.content.Context-java.lang.String-)
 
 ###### Example
 
-Push notification opened.
-
 ```java
-Apptentive.setPendingPushNotification(context, intent);
-// Then launch your main Activity.
+String registrationId;
+Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 ```
 
-In your main Activity, handle the push notification.
+### Saving the Amazon SNS / GCM Push Notification with Apptentive
+
+Opening an **Apptentive** push notification involves two easy steps: When the push notification is tapped by your customer,
+pass it to **Apptentive**.
+
+[Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-)
+
+###### Example
+
+```java
+@Override
+public void onReceive(Context context, Intent intent) {
+	Apptentive.setPendingPushNotification(context, intent);
+}
+```
+
+You must then launch one of your Activities. In that Activity, call Apptentive to display the push notification. A good place to do this is when your Activity gains focus. This method has no effect if the push notification is not from Apptentive.
+
+[Apptentive.handleOpenedPushNotification(Activity activity)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#handleOpenedPushNotification-android.app.Activity-)
+
+###### Example
 
 ```java
 @Override
 public void onWindowFocusChanged(boolean hasFocus) {
-  super.onWindowFocusChanged(hasFocus);
-  if (hasFocus) {
-    boolean ranApptentive = Apptentive.handleOpenedPushNotification(this);
-    if (ranApptentive) {
-      // Don't try to take any action here. Wait until the customer closes our UI.
-      return;
-    }
-  }
+	super.onWindowFocusChanged(hasFocus);
+	if (hasFocus) {
+		boolean ranApptentive = Apptentive.handleOpenedPushNotification(this);
+	}
 }
 ```
 
