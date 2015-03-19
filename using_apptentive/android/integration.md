@@ -34,7 +34,7 @@ Add the following to your app's pom.xml in the `dependencies` element:
 <dependency>
   <groupId>com.apptentive</groupId>
   <artifactId>apptentive-android</artifactId>
-  <version>1.1.7</version>
+  <version>1.7.1</version>
 </dependency>
 ```
 
