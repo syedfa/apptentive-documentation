@@ -16,7 +16,7 @@ Add a reference to the latest version of Apptentive in your app's `build.gradle`
 ###### Example
 ```
 repositories {
-  mavenCentral()
+  jcenter()
 }
 
 dependencies {
