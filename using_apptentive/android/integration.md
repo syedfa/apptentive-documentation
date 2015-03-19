@@ -430,7 +430,7 @@ String registrationId;
 Apptentive.addAmazonSnsPushIntegration(this, registrationId);
 ```
 
-### Saving the Amazon SNS / GCM Push Notification with Apptentive
+#### Saving the Amazon SNS / GCM Push Notification with Apptentive
 
 Opening an **Apptentive** push notification involves two easy steps: When the push notification is tapped by your customer,
 pass it to **Apptentive**.
@@ -445,6 +445,8 @@ public void onReceive(Context context, Intent intent) {
 	Apptentive.setPendingPushNotification(context, intent);
 }
 ```
+
+#### Displaying a Push Notification from Amazon SNS / GCM
 
 You must then launch one of your Activities. In that Activity, call Apptentive to display the push notification. A good place to do this is when your Activity gains focus. This method has no effect if the push notification is not from Apptentive.
 
