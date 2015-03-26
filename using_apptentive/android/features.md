@@ -198,7 +198,7 @@ You can also receive a notification when the number of unread messages waiting t
 
 You can also check to see how many messages are waiting to be read in the customer's **Message Center**.
 
-[Aptentive.getUnreadMessageCount(Context context)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#getUnreadMessageCount-android.content.Context-)
+[Apptentive.getUnreadMessageCount(Context context)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#getUnreadMessageCount-android.content.Context-)
 
 ### Sending Hidden Messages and Attachments
 
