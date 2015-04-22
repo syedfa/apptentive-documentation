@@ -142,5 +142,3 @@ If your project already has an Objective-C Bridging Header, skip to the last ste
 ```
 
 The `ATConnect` class will now be available for use in your Swift source files.
-
--
