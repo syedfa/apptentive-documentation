@@ -49,7 +49,7 @@ An additional step is needed to use the Apptentive SDK in a Swift project: the S
 
 If your project already has an Objective-C Bridging Header, skip to the last step. Otherwise you will need to create a new header file and configure the build settings for your target so that the compiler can find it.
 
-1. Create a new file (File > New) and choose Header File as the type (in the Source group under iOS or OS X). Xcode's convention is to name the file `ProductName-Bridging-Header.h` (replacing `ProductName` with the Product Name build setting for your target).
+1. Create a new file (File > New > File…) and choose Header File as the type (in the Source group under iOS or OS X). Xcode's convention is to name the file `ProductName-Bridging-Header.h` (replacing `ProductName` with the Product Name build setting for your target).
 2. Go to your target's build settings under Swift Compiler - Code Generation, and add the path to the header file you just created (for example, `$(SRCROOT)/$(PRODUCT_NAME)/ProductName-Bridging-Header.h`).
 3. Edit your bridging header and add the following lines (before the `#endif` line):
 
