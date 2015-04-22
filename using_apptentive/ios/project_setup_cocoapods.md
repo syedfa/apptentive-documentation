@@ -28,9 +28,9 @@ $ pod install
 If all goes well, you should see:
 
  > [!] From now on use `YourProject.xcworkspace`.
- 
+
 CocoaPods has created an Xcode Workspace containing your original project plus a project containing Apptentive your other project dependencies.
- 
+
 ##### Begin using Apptentive
 
 After running `pod install`, open the newly created Xcode Workspace.
@@ -42,5 +42,22 @@ You can now begin [using Apptentive in your project](../README.md). For example,
 ...
 [ATConnect sharedConnection].apiKey = @"abc_xyz_abc_xyz";
 ```
+
+### Using Apptentive in a Swift Project
+
+An additional step is needed to use the Apptentive SDK in a Swift project: the Swift compiler requires a special file (called an *Objective-C Bridging Header*) to allow Objective-C code to be called from Swift code.
+
+If your project already has an Objective-C Bridging Header, skip to the last step. Otherwise you will need to create a new header file and configure the build settings for your target so that the compiler can find it.
+
+1. Create a new file (File > New > File…) and choose Header File as the type (in the Source group under iOS or OS X). Xcode's convention is to name the file `ProductName-Bridging-Header.h` (replacing `ProductName` with the Product Name build setting for your target).
+2. Go to your target's build settings under Swift Compiler - Code Generation, and add the path to the header file you just created (for example, `$(SRCROOT)/$(PRODUCT_NAME)/ProductName-Bridging-Header.h`).
+3. Edit your bridging header and add the following lines (before the `#endif` line):
+
+```
+#import <UIKit/UIKit.h>
+#import "ATConnect.h"
+```
+
+The `ATConnect` class will now be available for use in your Swift source files.
 
 -
