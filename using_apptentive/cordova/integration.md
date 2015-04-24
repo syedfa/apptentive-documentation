@@ -1,11 +1,8 @@
 # Integrating the Apptentive Cordova SDK Plugin
 
-This document will show you how to integrate the Apptentive Cordova SDK Plugin into your app, configure it, and test to make
-sure it's working properly. Each section lists the minimum necessary configuration, as well as optional steps.
+This document will show you how to integrate the Apptentive Cordova SDK Plugin into your existing Cordova app, configure it, and test to make sure it's working properly.
 
-# Requirements
-
-## Supported platforms
+## Supported Platforms
 
 This Cordova Plugin wraps our native SDKs. The complete descriptions for the features contained in our SDKs are located here:
 
@@ -14,7 +11,7 @@ This Cordova Plugin wraps our native SDKs. The complete descriptions for the fea
 
 ## Registering Apps
 
-You will need to create an app on https://be.apptentive.com for each of the platforms you wish to use Apptentive on. Even though there is a single plugin for Cordova that works on both Android and iOS, you will need to create a separate Android and iOS app on our website.
+You will need to create an app in your [Apptentive account](https://be.apptentive.com) for each of the platforms you wish to use Apptentive on. Even though there is a single plugin for Cordova that works on both Android and iOS, you will need to create a separate Android and iOS app on our website.
 
 Once you have created an Android and iOS app, you will need to access both of their API Keys at _**Settings -> API & Development**_.
 
@@ -26,7 +23,7 @@ Our plugin is hosted in a [Github repo](https://github.com/apptentive/apptentive
 cordova plugin add https://github.com/apptentive/apptentive-cordova.git --variable ANDROID_API_KEY="your_android_api_key" --variable IOS_API_KEY="your_ios_api_key"
 ```
 
-**Note: Do not use the same API Key for Android and iOS.*
+**Note: Do not reuse the same API Key for Android and iOS.*
 
 If you need to remove this plugin in the future, it can easily be removed with the following command:
 
@@ -67,17 +64,12 @@ This example accomplishes three things
 
 # Message Center
 
-The Message Center is a messaging UI that allows you to talk to your customer.
-
-* Android
-* iOS
-
-You should find a place in your app where you can create a link or button that opens your **Message Center**.
+The Message Center is a messaging UI that allows you to talk to your customer. You should find a place in your app where you can create a link or button that opens your **Message Center**.
 
 ###### Example
 
 ```javascript
-    Apptentive.showMessageCenter(successCallback, failureCallback);
+Apptentive.showMessageCenter(successCallback, failureCallback);
 }
 ```
 
@@ -91,13 +83,13 @@ you wish to add more custom data to another subsequent message, you will need to
 ###### Example
 
 ```javascript
-    Apptentive.showMessageCenter(successCallback, failureCallback, {"key": "value"});
+Apptentive.showMessageCenter(successCallback, failureCallback, {"key": "value"});
 }
 ```
 
 ### New Message Notification (Optional)
 
-You can be notified any time the number of unread messages in Message Center changes, by registering a listener when your device finishes initializing. You can add this next to your existing call to _Apptentive.deviceReady();_
+You can be notified any time the number of unread messages in Message Center changes, by registering a listener when your device finishes initializing. You can add this next to your existing call to `Apptentive.deviceReady();`
 
 ```javascript
     Apptentive.setUnreadMessagesListener(function(int){});
@@ -138,13 +130,13 @@ Places where you might want to record an Event:
 
 As you can see, there is some overlap in whether you want to just record an **Event**, or also show an **Interaction**.
 
-To add an **Event** and possibly show an **Interaction**, simply call **Apptentive.engage(eventName)**
+To add an **Event** and possibly show an **Interaction**, simply call `Apptentive.engage(eventName)`
 with an `eventName` of your choosing.
 
 ###### Example
 
 ```javascript
-    Apptentive.engage("myEventName");
+Apptentive.engage("myEventName");
 ```
 
 **Note:** Each **Event** should have a unique name.
@@ -161,8 +153,6 @@ To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#
 #### Surveys
 
 [Surveys](http://www.apptentive.com/docs/android/features/#surveys) can also be configured from the server. First, make sure you have [created some Events](#adding-events), then go to *Interactions -> Surveys*. Create a new survey. You can give it a title and description, then add questions, and finally set targeting and limiting constraints so it's shown to the right people. After your survey is live, you will start to see results in the *Surveys* page.
-
-**Note:** If you were using surveys prior to version 1.5.0 of the Apptentive Android SDK, see this [Migration Guide] (https://github.com/apptentive/apptentive-android/blob/master/docs/migrating_to_1.5.0.md) for instructions.
 
 #### Upgrade Messages
 
@@ -206,7 +196,7 @@ Our native SDKs support sending attachments to our server. This is useful for se
 
 # Setting Rating Provider
 
-If you are deploying your Cordova app to Amazon's Appstore instead of Google Play, you will need to use the following function. Pass in the string **"amazon"**. If you publish your app with Google Play, this step is not necessary.
+If your app is built for Android and are deploying your Cordova app to Amazon's Appstore instead of Google Play, you will need to use the following function. Pass in the string **"amazon"**. If you publish your app with Google Play, this step is not necessary.
 
 ```javascript
 Apptentive.setRatingProvider("amazon");
