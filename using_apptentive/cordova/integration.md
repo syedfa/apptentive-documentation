@@ -7,8 +7,10 @@ sure it's working properly. Each section lists the minimum necessary configurati
 
 ## Supported platforms
 
-* Android
-* iOS
+This Cordova Plugin wraps our native SDKs. The complete descriptions for the features contained in our SDKs are located here:
+
+* [Android](https://www.apptentive.com/docs/android/integration/)
+* [iOS](https://www.apptentive.com/docs/ios/integration/)
 
 ## Registering Apps
 
