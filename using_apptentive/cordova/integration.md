@@ -23,7 +23,7 @@ Our plugin is hosted in a [Github repo](https://github.com/apptentive/apptentive
 cordova plugin add https://github.com/apptentive/apptentive-cordova.git --variable ANDROID_API_KEY="your_android_api_key" --variable IOS_API_KEY="your_ios_api_key"
 ```
 
-**Note: Do not reuse the same API Key for Android and iOS.*
+**Note: Do not reuse the same API Key for Android and iOS.**
 
 If you need to remove this plugin in the future, it can easily be removed with the following command:
 
@@ -53,7 +53,7 @@ var app = {
     onPause: function() {
         Apptentive.pause(app.successLogger, app.errorAlert);
     }
-}
+};
 app.initialize();
 ```
 
@@ -64,13 +64,12 @@ This example accomplishes three things
 
 # Message Center
 
-The Message Center is a messaging UI that allows you to talk to your customer. You should find a place in your app where you can create a link or button that opens your **Message Center**.
+The Message Center is a messaging UI that allows you to talk with your customer. You should find a place in your app where you can create a link or button that opens your **Message Center**.
 
 ###### Example
 
 ```javascript
 Apptentive.showMessageCenter(successCallback, failureCallback);
-}
 ```
 
 ### Send Custom Data With a Message (Optional)
@@ -84,7 +83,6 @@ you wish to add more custom data to another subsequent message, you will need to
 
 ```javascript
 Apptentive.showMessageCenter(successCallback, failureCallback, {"key": "value"});
-}
 ```
 
 ### New Message Notification (Optional)
@@ -94,7 +92,7 @@ You can be notified any time the number of unread messages in Message Center cha
 ```javascript
     Apptentive.setUnreadMessagesListener(function(int){});
 ```
-The listener function you pass in will be passed an integer when it is called.
+When the number of unread messages changes, this listener will be called, and an integer representing the number of unread messages will be passed to it.
     
 ###### Example
 ```javascript
@@ -120,7 +118,7 @@ Places where you might want to show an **Interaction**:
 * Customer performs an action that indicates they are confused
 * There is a natural pause in the app's UI where starting a conversation would not interrupt the customer
 
-Places where you might want to record an Event:
+Places where you might want to record an **Event**:
 * Customer makes a purchase
 * Customer declines to make a purchase
 * Customer beats a level
@@ -139,7 +137,7 @@ with an `eventName` of your choosing.
 Apptentive.engage("myEventName");
 ```
 
-**Note:** Each **Event** should have a unique name.
+**Note:** Each **Event** must have a unique name.
 
 
 # Configure Interactions
@@ -148,7 +146,7 @@ Once you have configured your app to use several **Events**, you can configure *
 
 #### Ratings Prompt
 
-To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have [create a few Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. In the tab labeled *The Prompt*, you can customize the text and behavior of the dialogs that make up the **Ratings Prompt**. The *Targeting* tab lets you create user segments that will see the **Ratings Prompt**, as well as define the conditions necessary for the **Ratings Prompt** to display. You will also need to pick which **Event** will display the **Ratings Prompt** will be shown, by entering an **Event** name in the *Where* section of that page.
+To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have [created a few Events](#adding-events) in your app. Then, go to *Interactions -> Ratings Prompt*. In the tab labeled *The Prompt*, you can customize the text and behavior of the dialogs that make up the **Ratings Prompt**. The *Targeting* tab lets you create user segments that will see the **Ratings Prompt**, as well as define the conditions necessary for the **Ratings Prompt** to display. You will also need to pick which **Event** will display the **Ratings Prompt** will be shown, by entering an **Event** name in the *Where* section of that page.
 
 #### Surveys
 
@@ -158,7 +156,7 @@ To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#
 
 When you release a new version of your app, you should create an [Upgrade Message](http://www.apptentive.com/docs/android/features/#upgrade-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
 
-**Note**: **Upgrade Messages** are only shown if the app is upgrading from a previous version. If you are installing a version of your app that has an **Upgrade Message** targeted to it, but it is not upgradeing from a previous version, the **Upgrade Message** will not be shown.
+**Note**: **Upgrade Messages** are only shown if the app is upgrading from a previous version. If you are installing a version of your app that has an **Upgrade Message** targeted to it, but it is not upgrading from a previous version, the **Upgrade Message** will not be shown.
 
 # Push Notifications
 
@@ -192,11 +190,11 @@ Apptentive.addCustomPersonData(key, value);
 
 # Attachments
 
-Our native SDKs support sending attachments to our server. This is useful for sending logs and other artifacts that help you understand customer issues. This is not currently supported in the Cordova Plugin, but if you are interested in this feature, please let us know at [support@apptentive.com](email:support@apptentive.com)
+Our native SDKs support sending attachments to our server. This is useful for sending logs and other artifacts that help you understand customer issues. This is not currently supported in the Cordova Plugin, but if you are interested in this feature, please let us know at [support@apptentive.com](mailto:support@apptentive.com?subject=Cordova%20Attachments).
 
 # Setting Rating Provider
 
-If your app is built for Android and are deploying your Cordova app to Amazon's Appstore instead of Google Play, you will need to use the following function. Pass in the string **"amazon"**. If you publish your app with Google Play, this step is not necessary.
+If your app is built for Android and you are deploying your Cordova app to Amazon's Appstore instead of Google Play, you will need to use the following function. Pass in the string **"amazon"**. If you publish your app with Google Play, this step is not necessary.
 
 ```javascript
 Apptentive.setRatingProvider("amazon");
