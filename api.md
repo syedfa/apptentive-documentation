@@ -61,6 +61,19 @@ The response will contain an array of Conversations (in ascending creation order
 
 Each Conversation will include the `id` for the Conversation, the `person_id` for the associated Person, and the `device_id` for the associated Device.
 
+Conversations are in one of four possible states:
+
+* **new** indicates that the conversation has been created but has not yet received any messages.
+* **open** indicates that the the person associated with the conversation has left a message that has not yet been responded to.
+* **waiting** indicates that the person associated with the conversation has been responded to.
+* **archived** indicates that the conversation has been archived.
+
+You may optionally filter for conversations in a specific state by including the `state` argument along with a comma-separated list of states to match.  For example, to return all conversations where at least one message has been received:
+
+```
+curl -i -H "Authorization: OAuth ea0b3686bfadf43245944e841e611c8a7d25cdd21098a9f83c3030553a593a71" https://api.apptentive.com/conversations?state=open,waiting,archived
+```
+
 You may provide two optional arguments to page through the results:
 
 * **skip** indicates the number of Conversations to skip in the results.
