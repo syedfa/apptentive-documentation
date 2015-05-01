@@ -378,6 +378,9 @@ ParsePush.subscribeInBackground("apptentive", new SaveCallback() {
 	}
 });
 ```
+
+** Note: Because of the way parse initializes, ou may need to restart your app in order for the deviceToken to be available.**
+
 #### Saving the Parse Push Notification with Apptentive
 
 Integrating **Parse** into your app involves adding a receiver entry in your manifest that points to `com.parse.ParsePushBroadcastReceiver`. This receiver will receive `Intents` when a user opens a push notification. In order to enable **Apptentive** to receive push notifications that are meant for us, you will need to subclass `ParsePushBroadcastReceiver` and replace the reference in your manifest to point to your subclass. Then, add the following in your subclass's `onPushOpen()` method.
