@@ -321,9 +321,9 @@ protected void onChannelRegistrationSucceeded(Context context, String channelId)
 
 #### Saving the Urban Airship Push Notification with Apptentive
 
-Urban Airship's `BaseBroadcastReceiver` also requires you to implement the abstract method [onNotificationOpened()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onNotificationOpened%28android.content.Context,%20com.urbanairship.push.PushMessage,%20int%29). Inside this method, you will need to pass Apptentive the extra Bundle from teh opened push notification. If this push notificaiton came from Apptentive, we will save the data it contains. Otherwise, it will have no effect.
+Urban Airship's `BaseBroadcastReceiver` also requires you to implement the abstract method [onNotificationOpened()](http://docs.urbanairship.com/reference/libraries/android/latest/reference/com/urbanairship/push/BaseIntentReceiver.html#onNotificationOpened%28android.content.Context,%20com.urbanairship.push.PushMessage,%20int%29). Inside this method, you will need to pass Apptentive the extra Bundle from the opened push notification. If this push notification came from Apptentive, we will save the data it contains. Otherwise, it will have no effect.
 
-[Apptentive.setPendingPushNotification(Context context, Intent intent)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.content.Intent-)
+[Apptentive.setPendingPushNotification(Context context, Bundle bundle)](http://www.apptentive.com/docs/android/api/com/apptentive/android/sdk/Apptentive.html#setPendingPushNotification-android.content.Context-android.os.Bundle-)
 
 ###### Example
 
