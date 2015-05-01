@@ -287,9 +287,9 @@ When you release a new version of your app, you should create an [Upgrade Messag
 
 #### Supported Push Providers
 
-* Urban Airship (5.1.6)
+* Urban Airship (6.0.1)
+* Parse SDK (1.8.3)
 * Amazon Web Services SNS
-* Parse SDK 1.7.0+
 
 ## Configuring Apptentive to Work With Your Push Provider
 
