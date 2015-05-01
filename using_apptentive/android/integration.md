@@ -379,7 +379,7 @@ ParsePush.subscribeInBackground("apptentive", new SaveCallback() {
 });
 ```
 
-** Note: Because of the way parse initializes, ou may need to restart your app in order for the deviceToken to be available.**
+**Note: Because of the way Parse initializes, you may need to restart your app in order for the `deviceToken` to be available.**
 
 #### Saving the Parse Push Notification with Apptentive
 
