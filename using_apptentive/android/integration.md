@@ -20,7 +20,7 @@ repositories {
 }
 
 dependencies {
-  compile 'com.apptentive:apptentive-android:1.7.1@aar'
+  compile 'com.apptentive:apptentive-android:1.7.2@aar'
 }
 ```
 
@@ -34,7 +34,7 @@ Add the following to your app's pom.xml in the `dependencies` element:
 <dependency>
   <groupId>com.apptentive</groupId>
   <artifactId>apptentive-android</artifactId>
-  <version>1.7.1</version>
+  <version>1.7.2</version>
 </dependency>
 ```
 
