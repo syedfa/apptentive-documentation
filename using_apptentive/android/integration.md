@@ -279,8 +279,6 @@ To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#
 
 When you release a new version of your app, you should create an [Upgrade Message](http://www.apptentive.com/docs/android/features/#upgrade-messages) to tell your customers what's new. To do so, go to *Interactions -> Upgrade Messages*. You can use the editor to write out details about this release, and then target the message to display when a customer upgrades your app to a specific [version name or code](http://developer.android.com/tools/publishing/versioning.html).
 
-**Note**: **Upgrade Messages** are always targeted to the special `init` **Event**. You should trigger `init` at the first opportunity when your app starts up by calling `Apptentive.engage(this, "init")`.
-
 **Note**: **Upgrade Messages** are only shown if the app is upgrading from a previous version. If you are installing a version of your app that has an **Upgrade Message** targeted to it, but it is not upgradeing from a previous version, the **Upgrade Message** will not be shown.
 
 # Push Notifications
