@@ -218,6 +218,8 @@ Apptentive.setUnreadMessagesListener(
 );
 ```
 
+**Note:** This listener does not run on the UI thread, and can be called from a diferent Activity than the one that set the listener.
+
 # Adding Events
 
 You should add a handful of [Events](http://www.apptentive.com/docs/android/features/#events) to your app when you integrate. Since **Events** are both records of an action within your app being performed, and an opportunity to show an [Interaction](http://www.apptentive.com/docs/android/features/#interactions), you should choose places within your app that would be appropriate to interact with your customer, as well as places where a significant event has occured. The more **Events** you add during integration, the more you will learn about your customers, and the more fine tuned your communications with them can be. Here is a list of potential places to add **Events**.
