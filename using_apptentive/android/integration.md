@@ -258,7 +258,7 @@ public void onWindowFocusChanged(boolean hasFocus) {
 }
 ```
 
-**Note:** Each **Event** should have a unique name.
+**Note:** You should choose a unique name for each of your **Events**.
 
 
 # Configure Interactions
