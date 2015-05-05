@@ -267,7 +267,7 @@ Once you have configured your app to use several **Events**, you can configure *
 
 #### Ratings Prompt
 
-To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you have [create a few Events](#adding-events) in your app. Then, go to your [Ratings Prompt](https://be.apptentive.com/apps/current/ratings_prompt). In the tab labeled *The Prompt*, you can customize the text and behavior of the dialogs that make up the **Ratings Prompt**. The *Targeting* tab lets you create user segments that will see the **Ratings Prompt**, as well as define the conditions necessary for the **Ratings Prompt** to display. You will also need to pick which **Event** will display the **Ratings Prompt** will be shown, by entering an **Event** name in the *Where* section of that page.
+To set up the [Ratings Prompt](http://www.apptentive.com/docs/android/features/#ratings-prompt) **Interaction**, first make sure you [engage a few Events](#adding-events) in your app. Then, go to your [Ratings Prompt](https://be.apptentive.com/apps/current/ratings_prompt). In the tab labeled *The Prompt*, you can customize the text and behavior of the dialogs that make up the **Ratings Prompt**. The *Targeting* tab lets you create user segments that will see the **Ratings Prompt**, as well as define the conditions necessary for the **Ratings Prompt** to display. You will also need to pick which **Event** will display the **Ratings Prompt** by entering an **Event** name in the *Where* section of that page.
 
 #### Surveys
 
