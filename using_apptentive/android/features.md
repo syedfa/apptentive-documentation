@@ -18,8 +18,11 @@ allows us to use newer XML syntax for forward compatibility.
 
 ### SDK Size
 
-Our SDK is very small. It will add **250k - 300k** to the size of your app.
+* Our SDK is very small. It will add **250k - 300k** to the size of your app.
+* **Method Count:** 2135 methods
+
 ###Supported Languages
+
 
 | Locale Qualifier | Language Name |
 | ---------------- | ------------- |
