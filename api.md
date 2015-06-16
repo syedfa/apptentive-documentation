@@ -137,8 +137,8 @@ Each message will include the following attributes:
 * **nonce** A unique identifier provided by the Message creator to ensure that duplicate Messages are not accidentally created.
 * **custom_data** Message-specific key/value pairs provided by the Message creator.
 * **type** The type of message.  One of "AutomatedMessage", "TextMessage", or "FileMessage"
-* **client_created_at** The timestamp (with fractional seconds) that the client provided when creating the Message.  Note that the time provided by the client cannot always be trusted due to incorrectly configured clocks, etc.
-* **client_created_at_utc_offset** The offset, in seconds, from UTC that client_created_at represents.
+* **client\_created\_at** The timestamp (with fractional seconds) that the client provided when creating the Message.  Note that the time provided by the client cannot always be trusted due to incorrectly configured clocks, etc.
+* **client\_created\_at\_utc\_offset** The offset, in seconds, from UTC that client\_created\_at represents.
 * **created_at** The timestamp (with fractional seconds) that the Message was created at on the server.  In UTC.
 * **sender** An object containing the id, name, and profile photo URL of the Person who sent the Message.
 * **body** The body of the Message (FileMessage and AutomatedMessage only).
@@ -270,7 +270,7 @@ Each Device may include the following attributes:
 * **os_name** The operating system name
 * **os_version** The version of the operating system
 * **os_buid** The operating system build identifier
-* **os_api_level** The operating system API level (Android only)
+* **os\_api\_level** The operating system API level (Android only)
 * **manufacturer** The manufacturer of the Device
 * **model** The model of the Device
 * **board** The name of the Device's board
@@ -286,8 +286,8 @@ Each Device may include the following attributes:
 * **bootloader_versoin** The version number of the bootloader for the Device
 * **radio_version** The version number for the radio firmware on the Device
 * **custom_data** Device-specific key/value pairs provided by the Device creator.
-* **locale_country_code** The two character country code for the Device's current locale
-* **locale_language_code** The two character language code for the Device's current locale
+* **locale\_country\_code** The two character country code for the Device's current locale
+* **locale\_language\_code** The two character language code for the Device's current locale
 * **locale_raw** The raw locale string for the Device
 * **utc_offset** UTC offset for the timezone the Device is currently operating in in seconds
 
